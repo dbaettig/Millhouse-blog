@@ -8,12 +8,10 @@
  
     
     <form action="register_form.php" method="POST">
-       <input type="text" name="username" value ="Username">
-       <input type="text" name="password" value ="Password">
-        <input type="text" name="email" value="Email">
-       <input type="submit" name="submit" value="Register">
-        
-        
+       <input type="text" name="username" placeholder = "Username">
+       <input type="text" name="password" placeholder = "Password">
+        <input type="text" name="email" placeholder = "Email">
+       <input type="submit" name="submit" value = "Register">   
     </form>
     
 
