@@ -9,8 +9,6 @@ if(isset($_SESSION["user"])){
 echo "Du är nu inloggad" . "</br>" .
 $_SESSION["user"]["username"];
 }
-
-
 ?>
 
 	<a href="logout.php">logout</a> 
