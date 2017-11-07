@@ -8,8 +8,8 @@
     
     
     <form action="login_form.php" method="POST">
-       <input type="text" name="username">
-       <input type="text" name="password">
+       <input type="text" name="username" placeholder="username">
+       <input type="text" name="password" placeholder="password">
        <input type="submit" name="submit" value="Login">
         
         
@@ -18,6 +18,7 @@
     <a href="register.php">Sign up</a> 
     
     
-       
 </body>
 </html>
+
+
