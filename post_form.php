@@ -9,12 +9,12 @@ else {
 require("database.php");
 
 $new_post = $pdo->prepare(
-    "INSERT INTO posts (title, post, created, category)
-    VALUES (:title, :post, NOW(), :category)"
+    "INSERT INTO posts (userID, title, post, created, category)
+    VALUES (:userID, :title, :post, NOW(), :category)"
 );
 
 $new_post->execute(array(
-//    ":userID" => $_SESSION['user'],
+  	":userID" => $_SESSION['user']['id'],
     ":title" => $_POST['title'],
     ":post" => $_POST['text'],
 	":category" => $_POST['category']
