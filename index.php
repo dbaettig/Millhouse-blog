@@ -30,6 +30,6 @@ $_SESSION["user"]["username"];
 </head>
 
 <body>
-	
+	<a href="logout.php">logout</a> 
 </body>
 </html>
