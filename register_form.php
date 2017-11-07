@@ -3,14 +3,16 @@
 
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $username = $_POST["username"];
+    $email = $_POST["email"];
 
     $statement = $pdo->prepare("
-      INSERT INTO users (username, password)
-      VALUES (:username, :password)");
+      INSERT INTO users (username, password, email)
+      VALUES (:username, :password, :email)");
 
     $statement->execute(array(
       ":username" => $username,
-      ":password" => $password
+      ":password" => $password,
+      ":email" => $email
     )); 
 
     header("Location: register.php");
