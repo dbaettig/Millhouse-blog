@@ -18,9 +18,7 @@
     <a href="register.php">Sign up</a> 
     
     
-    
-    
-    
 </body>
 </html>
+
 
