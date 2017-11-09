@@ -1,16 +1,31 @@
-body{
-            text-align: right;
-            font-family: monospace;
-            font-size:1.5em;
-            background-color: #D4EA17;
-            color:deeppink;
+
+$headerfont: 'Helvetica Neue', 'Helvetica', sans-serif;
+$bodyfont: 'Helvetica Neue', 'Helvetica', sans-serif;
+
+$brandColor1: #1c3045; //dark blue
+$bodyFontColor: #212121;
+
+body {
+		font-size:1.5em;
+		background-color: #D4EA17;
+		color:deeppink;
         }
 
-.posts{
- 
+.posts {
     text-align: center;
 }
 
-.each{
+.each {
        margin-top:30px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headerFont;
+	color: $brandColor1;
+}
+
+p {
+	font-family: $bodyFont;
+	color: $bodyFontColor;
 }
