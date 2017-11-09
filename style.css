@@ -2,7 +2,7 @@ body{
             text-align: right;
             font-family: monospace;
             font-size:1.5em;
-            background-color: #D4EA17;
+            background-color: #E6E7E8;
             color:deeppink;
         }
 
@@ -13,4 +13,9 @@ body{
 
 .each{
        margin-top:30px;
+}
+footer{
+    background-color: #032838;
+    height:400px;
+    margin-top:50px;
 }
