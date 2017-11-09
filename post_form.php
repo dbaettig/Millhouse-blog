@@ -21,3 +21,4 @@ $new_post->execute(array(
 ));
 
 }
+  header("Location: index.php");
