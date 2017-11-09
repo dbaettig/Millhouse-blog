@@ -1,22 +1,22 @@
-
+//TYPOGRAPHY
 $headerFont: 'Helvetica Neue', 'Helvetica', sans-serif;
 $bodyFont: 'Helvetica Neue', 'Helvetica', sans-serif;
 
+//COLORS
 $brandColor1: #1c3045; //dark blue
-$bodyFontColor: #212121;
+$bodyFontColor: #212121; //dark grey
 
 body {
-		font-size:1.5em;
-		background-color: #D4EA17;
-		color:deeppink;
-        }
+	padding: 20px;
+	font-family:$bodyFont;
+}
 
 .posts {
     text-align: center;
 }
 
 .each {
-       margin-top:30px;
+	margin-top:30px;
 }
 
 /* TYPOGRAPHY */
@@ -28,4 +28,21 @@ h1, h2, h3, h4, h5, h6 {
 p {
 	font-family: $bodyFont;
 	color: $bodyFontColor;
+}
+
+/* HEADER */
+.header__user--loggedin {
+	text-align:right;
+}
+
+.header, .header__inner {
+	display:flex;
+}
+
+.header {
+	border-bottom: 1px solid black;
+}
+
+.logo {
+	margin:auto;
 }
