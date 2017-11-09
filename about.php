@@ -3,14 +3,14 @@ require 'header.php';
 ?>
 
 <style>
-	.about_wrapper {
-		width: 700px;
+	
+	.about_image_wrapper {
+		width: 60%;
 		margin: 0px auto;
 	}
 	
-	.about_image_wrapper {
-		width: 80%;
-		margin: 0px auto;
+	.about_image {
+		width: 100%;
 	}
 	
 	.about_text_wrapper {
@@ -21,7 +21,7 @@ require 'header.php';
 
 <div class="about_wrapper">
 <div class="about_image_wrapper">
-<img class= "about_image" src="img/watch3.jpeg">
+<img class= "about_image" src="img/watch2.jpeg">
 </div>
 
 <div class="about_text_wrapper">
