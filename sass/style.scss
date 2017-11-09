@@ -7,7 +7,6 @@ $brandColor1: #1c3045; //dark blue
 $bodyFontColor: #212121; //dark grey
 
 body {
-	padding: 20px;
 	font-family:$bodyFont;
 }
 
@@ -33,16 +32,24 @@ p {
 /* HEADER */
 .header__user--loggedin {
 	text-align:right;
+	padding:20px 20px 0 0;
+	margin-bottom:0;
 }
 
-.header, .header__inner {
+.header__inner {
 	display:flex;
-}
-
-.header {
-	border-bottom: 1px solid black;
+	height:33vh;
 }
 
 .logo {
-	margin:auto;
+	margin:20px auto;
+}
+
+.navbar-brand.mobile {
+	display:none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-left:2rem;
+	padding-right:2rem;
 }
