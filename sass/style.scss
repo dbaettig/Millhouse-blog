@@ -10,6 +10,12 @@ body {
 	font-family:$bodyFont;
 }
 
+.wrapper {
+	max-width:980px;
+	margin: 0px auto;
+	padding:80px;
+}
+
 .posts {
     text-align: center;
 }
