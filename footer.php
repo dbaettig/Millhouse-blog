@@ -1,31 +1,4 @@
-<style>
-footer {
-	background-color:#1c3145;
-	height:500px;
-	margin-top:50px;
-}
-footer ul {
-	padding-top:50px;
-	display:flex;
-	flex-direction: row;
-	list-style: none;
-	justify-content: space-around;
-}
 
-footer ul div li {
-	padding:30px;
-	text-align: left;
-}
-
-footer h3, footer p {
-	 color:#d3d0d1;
-}
-	
-.about, .contact, .shop {
-	width:333px;
-}
-</style> 
-       
          <footer>
         <ul>
         <div class="about">
