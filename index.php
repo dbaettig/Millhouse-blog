@@ -9,20 +9,6 @@ INNER JOIN users ON posts.userID = users.id");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
-if(isset($_SESSION["user"])){
-echo "Du är nu inloggad" . "</br>" .
-$_SESSION["user"]["username"];
-}
-
-
-?>
-<br/>
-<a href="logout.php">logout</a> 
-<br/>
-<br/>
-
-<?php
-
 foreach($blog as $blogpost) {
 	echo $blogpost['title'] . '<br/>' . $blogpost['post'] . '<br/>' . 
 		$blogpost['category'] . '<br/>' . $blogpost['created'] . '<br/>' . $blogpost['userID'] . '<br/>';
