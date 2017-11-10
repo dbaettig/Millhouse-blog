@@ -6,6 +6,8 @@ $bodyFont: 'Helvetica Neue', 'Helvetica', sans-serif;
 $brandColor1: #1c3045; //dark blue
 $bodyFontColor: #212121; //dark grey
 
+$footerFontColor: #d3d0d1; //light gray
+
 body {
 	font-family:$bodyFont;
 }
@@ -73,14 +75,24 @@ footer ul {
 	justify-content: space-around;
 }
 
-footer ul div li {
+footer ul li {
 	padding:30px;
 	text-align: left;
 }
 
 footer h3, footer p {
-	 color:#d3d0d1;
+	 color:$footerFontColor;
 }
+
+.fa {
+	font-size:2em;
+	color:inherit;
+	padding:30px 30px 0 0;
+}
+
+a .fa {
+	color:$footerFontColor;
+} 
 	
 .about, .contact, .shop {
 	width:333px;
