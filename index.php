@@ -8,11 +8,6 @@ $statement = $pdo->prepare("SELECT * FROM posts
 INNER JOIN users ON posts.userID = users.id");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
-
-foreach($blog as $blogpost) {
-	echo $blogpost['title'] . '<br/>' . $blogpost['post'] . '<br/>' . 
-		$blogpost['category'] . '<br/>' . $blogpost['created'] . '<br/>' . $blogpost['userID'] . '<br/>';
-}
 ?>
 
 	<div class="posts">
