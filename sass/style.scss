@@ -53,32 +53,3 @@ p {
 	padding-left:2rem;
 	padding-right:2rem;
 }
-
-/* FOOTER */ 
-
-footer {
-	background-color:#1c3145;
-	height:500px;
-	margin-top:50px;
-}
-footer ul {
-	padding-top:50px;
-	display:flex;
-	flex-direction: row;
-	list-style: none;
-	justify-content: space-around;
-}
-
-footer ul li {
-	padding:30px;
-	text-align: left;
-}
-	
-footer h3, footer p {
-	 color:#d3d0d1;
-}
-	
-.about, .contact, .shop {
-	width:333px;
-}
-
