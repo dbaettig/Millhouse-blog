@@ -14,7 +14,7 @@ require 'header.php';
 	}
 	
 	.about_text_wrapper {
-		width: 70%;
+		width: 55%;
 		margin: 0px auto;
 	}
 </style>
