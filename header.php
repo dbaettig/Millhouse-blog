@@ -25,7 +25,13 @@
 		if(isset($_SESSION["user"])){ ?>
 		<p class="header__user--loggedin">Du är nu inloggad
 			<?= $_SESSION["user"]["username"]; ?>
-				<?php } ?> | <a href="logout.php">Sign out</a></p>
+			| <a href="logout.php">Sign out</a></p>
+			
+			  <?php } else {
+			echo '<p class="header__user--loggedout">
+			<a href="login.php">Sign in</a> | <a href="register.php">Sign up</a></p>';
+		}
+	?>
 
 		<div class="header__inner">
 			<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">

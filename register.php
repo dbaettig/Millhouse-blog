@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+require "header.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +20,10 @@
        <input type="submit" name="submit" value = "Register">   
     </form>
     
+<?php
+	require "footer.php";
+?>
+</html>
 
 
     

@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+require "header.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +26,9 @@
     
     
 </body>
+<?php
+	require "footer.php";
+?>
 </html>
 
 

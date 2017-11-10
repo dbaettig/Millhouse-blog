@@ -38,7 +38,7 @@ p {
 }
 
 /* HEADER */
-.header__user--loggedin {
+.header__user--loggedin, .header__user--loggedout {
 	text-align:right;
 	padding:20px 20px 0 0;
 	margin-bottom:0;
