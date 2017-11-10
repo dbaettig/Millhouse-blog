@@ -11,13 +11,31 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 	<div class="posts">
+		
+		<img src="img/watch3.jpeg" width="800px" alt="glasses">
+		
 		<?php
 			foreach($blog as $blogpost) { ?>
-				<div class="each"> <? echo $blogpost['title'] . '<br/>' . $blogpost['post'] . '<br/>' . 
-				$blogpost['category'] . '<br/>' . $blogpost['created'] . '<br/>' . $blogpost['username'] . '<br/>';
-			} ?>
+			<div class="blogpost">
+			
+				<div class="blogpost__image"></div>
+				
+				<div class="blogpost__text">
+					<div class="blogpost__text--meta">
+						<h2> <?= $blogpost['title'] ?></h2>
+						<small>
+							By <?=  $blogpost['username'] ?> in
+								<?= $blogpost['category'] ?> 
+								<?= $blogpost['created'] ?>
+						</small>
+					</div>
+					<div class="blogpost__text--bodytext">
+						<p><?= $blogpost['post'] ?></p>
+					</div>
+				</div>
 			</div>
-	</div>
+		<?php } ?>
+	</div> <!-- close .posts -->
 
 <?php
 	require 'footer.php';

@@ -18,13 +18,6 @@ body {
 	padding:80px;
 }
 
-.posts {
-    text-align: center;
-}
-
-.each {
-	margin-top:30px;
-}
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
@@ -62,6 +55,27 @@ p {
 	padding-right:2rem;
 }
 
+/*BLOG POST*/
+
+.blogpost {
+	margin-top:3rem;
+}
+
+.blogpost__text {
+	display:flex;
+	margin-top:2.5rem;
+}
+
+.blogpot__text--meta, .blogpost__text--bodytext {
+//	flex-basis: 1;
+}
+
+.blogpost__text--bodytext {
+	padding-left:2rem;
+}
+
+
+/* FOOTER */
 footer {
 	background-color:#1c3145;
 	height:500px;
