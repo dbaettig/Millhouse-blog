@@ -26,11 +26,11 @@ require 'header.php';
 </div>
 
 <div class="about_text_wrapper">
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<p>In this blog we at Millhouse write about topics that affect the company Millhouse and the line of business we are in. Everything from big events to small anecdotes you may not be able to read about anywhere else. 
 <br/>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+Millhouse was founded 60 years ago by Millhouse Simpson. His idea was that men and women everywhere should have the possibility to be welldresses to a reasonable price.
 <br/>
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+Millhouse Simpsons successful business revolutionized the clothing trade and his thinking still affects many fashion campanies as of today.</p>
 </div>
 </div>
 
