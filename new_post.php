@@ -1,13 +1,24 @@
-<form action="post_form.php" method="POST">
-	<input type="text" name="title" placeholder="title"> <br/>
-	<textarea name="text" placeholder="Write your post..." rows="40" cols="80"></textarea> <br/>
-	<select name="category">
-		<option value="category">Choose category...</option>
-		<option value="news">News</option>
-		<option value="style">Style</option>
-		<option value="interior">Interior</option>
-		<option value="featured">Featured</option>
-	</select>
-	<input type="submit" name="submit" value="Publish">
-	
-</form>
+<?php require 'header.php'; ?>
+
+<div class="wrapper">
+
+	<div class="container">
+		<form action="post_form.php" method="POST" enctype="multipart/form-data">
+			<input type="text" name="title" placeholder="title"> <br/>
+			<textarea name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
+
+			<input type="file" name="uploaded_file">
+			
+			<select name="category">
+				<option value="category">Choose category...</option>
+				<option value="news">News</option>
+				<option value="style">Style</option>
+				<option value="interior">Interior</option>
+				<option value="featured">Featured</option>
+			</select>
+			<br />
+			<input type="submit" name="submit" value="Publish">
+		</form>
+	</div>
+</div>
+<?php require 'footer.php'; ?>
