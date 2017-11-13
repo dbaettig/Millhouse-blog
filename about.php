@@ -3,24 +3,6 @@ session_start();
 require 'header.php';
 ?>
 
-<style>
-	
-	.about_image_wrapper {
-		width: 60%;
-		margin: 0px auto;
-	}
-	
-	.about_image {
-		width: 100%;
-	}
-	
-	.about_text_wrapper {
-		width: 55%;
-		margin: 0px auto;
-		margin-top:3rem;
-	}
-</style>
-
 <div class="wrapper">
 <div class="about_image_wrapper">
 <img class= "about_image" src="img/watch2.jpeg">
