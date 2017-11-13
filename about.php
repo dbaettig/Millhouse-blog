@@ -17,20 +17,27 @@ require 'header.php';
 	.about_text_wrapper {
 		width: 55%;
 		margin: 0px auto;
+		margin-top:3rem;
 	}
 </style>
 
-<div class="about_wrapper">
+<div class="wrapper">
 <div class="about_image_wrapper">
 <img class= "about_image" src="img/watch2.jpeg">
 </div>
 
 <div class="about_text_wrapper">
-<p>In this blog we at Millhouse write about topics that affect the company Millhouse and the line of business we are in. Everything from big events to small anecdotes you may not be able to read about anywhere else. 
+<p> Millhouse is a wholesale company that sells clothes, accessories and smaller interior design items to hundreds of fashion and lifestyle stores.
 <br/>
-Millhouse was founded 60 years ago by Millhouse Simpson. His idea was that men and women everywhere should have the possibility to be welldresses to a reasonable price.
 <br/>
-Millhouse Simpsons successful business revolutionized the clothing trade and his thinking still affects many fashion campanies as of today.</p>
+The company was founded 60 years ago by Millhouse Simpson. His idea was that men and women everywhere should have the possibility to be welldresses at a reasonable price.
+<br/>
+<br/>
+Millhouse Simpsons successful business revolutionized the clothing industry and his thinking still affects many fashion campanies today.
+<br/>
+<br/>
+In the fall of 2017 Millhouse started our own webshop, selling our products directly to the consumers for the first time.
+</p>
 </div>
 </div>
 
