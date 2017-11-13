@@ -1,26 +1,34 @@
 //TYPOGRAPHY
-$headerFont: 'Helvetica Neue', 'Helvetica', sans-serif;
-$bodyFont: 'Helvetica Neue', 'Helvetica', sans-serif;
+$headerFont: 'Helvetica Neue',
+'Helvetica',
+sans-serif;
+$bodyFont: 'Helvetica Neue',
+'Helvetica',
+sans-serif;
 
 //COLORS
 $brandColor1: #1c3045; //dark blue
 $bodyFontColor: #212121; //dark grey
-
 $footerFontColor: #d3d0d1; //light gray
-
 body {
-	font-family:$bodyFont;
+	font-family: $bodyFont;
 }
 
 .wrapper {
-	max-width:980px;
+	max-width: 980px;
 	margin: 0px auto;
-	padding:80px;
+	padding: 80px;
 }
 
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $headerFont;
 	color: $brandColor1;
 }
@@ -31,165 +39,190 @@ p {
 }
 
 /* HEADER */
-.header__user--loggedin, .header__user--loggedout {
-	text-align:right;
-	padding:20px 20px 0 0;
-	margin-bottom:0;
+
+.header__user--loggedin,
+.header__user--loggedout {
+	text-align: right;
+	padding: 20px 20px 0 0;
+	margin-bottom: 0;
 }
 
 .header__inner {
-	display:flex;
-	height:33vh;
+	display: flex;
+	height: 33vh;
 }
 
 .logo {
-	margin:20px auto;
+	margin: 20px auto;
 }
 
 .navbar-brand.mobile {
-	display:none;
+	display: none;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-	padding-left:2rem;
-	padding-right:2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 /*BLOG POST*/
 
 .blogpost {
-	margin-top:3rem;
+	margin-top: 3rem;
 }
 
 .blogpost__text {
-	display:flex;
-	margin-top:2.5rem;
+	display: flex;
+	margin-top: 2.5rem;
 }
 
-.blogpot__text--meta, .blogpost__text--bodytext {
-//	flex-basis: 1;
+.blogpot__text--meta,
+.blogpost__text--bodytext {
+	//	flex-basis: 1;
 }
 
 .blogpost__text--bodytext {
-	padding-left:2rem;
+	padding-left: 2rem;
 }
 
+
+/*ABOUT*/
+
+.about_image {
+	width: 100%;
+}
+
+.about_text_wrapper {
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 3rem;
+}
 
 /* FOOTER */
+
 footer {
-	background-color:#1c3145;
-	height:500px;
-	
+	background-color: #1c3145;
+	height: 500px;
+
 }
+
 footer ul {
-	padding-top:50px;
-	display:flex;
+	padding-top: 50px;
+	display: flex;
 	flex-direction: row;
 	list-style: none;
 	justify-content: space-around;
 }
 
 footer ul li {
-	padding:30px;
+	padding: 30px;
 	text-align: left;
 }
 
-footer h3, footer p {
-	 color:$footerFontColor;
+footer h3,
+footer p {
+	color: $footerFontColor;
 }
 
 .fa {
-	font-size:2em;
-	color:inherit;
-	padding:30px 30px 0 0;
+	font-size: 2em;
+	color: inherit;
+	padding: 30px 30px 0 0;
 }
 
 a .fa {
-	color:$footerFontColor;
-} 
-	
-.about, .contact, .shop {
-	width:333px;
+	color: $footerFontColor;
+}
+
+.about,
+.contact,
+.shop {
+	width: 333px;
 }
 
 /* LOGIN/REGISTER */
 
 .background__wrapper--login {
-  background-image: url(img/glasses1.jpeg);
-  background-size: cover;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 500px;
+	background-image: url(/img/glasses1.jpeg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 500px;
 }
 
 
-.login h3, .register h3 {
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 40px;
+.login h3,
+.register h3 {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 40px;
 
 }
 
 .sign__up--paragraph p {
-  color: white;
-  font-size: 14px;
+	color: white;
+	font-size: 14px;
 }
 
 .sign__up--paragraph a {
-  font-size: 14px;
+	font-size: 14px;
 }
 
-.login, .register {
-  margin-top: 130px;
-  margin-bottom: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: center;
-  width: 40%;
+.login,
+.register {
+	margin-top: 130px;
+	margin-bottom: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-items: center;
+	width: 40%;
 
 }
 
-.login form, .register form {
-  width: 70%;
+.login form,
+.register form {
+	width: 70%;
 }
 
-.input_login, .input_register {
-  box-shadow: 0;
-  border:0;
-  background-color:rgba(255,255,255,0.1);
-  width: 90%;
-  margin-bottom: 25px;
-  height: 30px;
-  border: solid 2px rgba(255,255,255,0.5);
-  font-size: 18px;
-  color:#fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-align: left;
-  transition: all 250ms ease;
+.input_login,
+.input_register {
+	box-shadow: 0;
+	border: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 90%;
+	margin-bottom: 25px;
+	height: 30px;
+	border: solid 2px rgba(255, 255, 255, 0.5);
+	font-size: 18px;
+	color: #fff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: left;
+	transition: all 250ms ease;
 }
 
-.input__login--button, .input__signup--button {
-  text-align: center;
+.input__login--button,
+.input__signup--button {
+	text-align: center;
 }
 
-.button_login, .button_signup {
-  box-shadow: 0;
-  border:0;
-  background-color: rgba(255,255,255,0.1);
-  width: 50%;
-  margin-bottom: 25px;
-  height: 30px;
-  border: solid 2px rgba(255,255,255,0.5);
-  font-size: 18px;
-  color:#fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  text-align:center;
-  transition: all 250ms ease;
+.button_login,
+.button_signup {
+	box-shadow: 0;
+	border: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 50%;
+	margin-bottom: 25px;
+	height: 30px;
+	border: solid 2px rgba(255, 255, 255, 0.5);
+	font-size: 18px;
+	color: #fff;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: center;
+	transition: all 250ms ease;
 }
-
