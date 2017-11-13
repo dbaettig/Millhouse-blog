@@ -9,7 +9,7 @@ INNER JOIN users ON posts.userID = users.id");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
-
+<div class="wrapper">
 	<div class="posts">
 		
 		<img src="img/watch3.jpeg" width="800px" alt="glasses">
@@ -36,6 +36,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 			</div>
 		<?php } ?>
 	</div> <!-- close .posts -->
+</div> <!--wrapper-->
 
 <?php
 	require 'footer.php';
