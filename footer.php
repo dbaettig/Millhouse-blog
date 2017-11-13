@@ -1,4 +1,3 @@
-	</div> <!-- stänger wrappern-->
 </main>
         
 <footer>
