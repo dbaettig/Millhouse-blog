@@ -6,14 +6,18 @@ require "database.php";
 	<div class="wrapper">
 		<?php
 	
-	$statement = $pdo->prepare("SELECT * FROM posts WHERE postID = :postid");
+	$statement = $pdo->prepare("SELECT * 
+	FROM posts 
+	JOIN users ON posts.userID = users.id 
+	WHERE posts.postID = :postid 
+	");
 	$statement->execute(array(
 		":postid" => $_GET["postid"]
 	));
-	$single_post = $statement->fetch(PDO::FETCH_ASSOC);
+	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 		
 foreach($single_post as $blogpost) { 
-		var_dump($blogpost); ?>
+ ?>
 
 			<h2>
 				<?=$blogpost['title']?>
