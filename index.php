@@ -23,7 +23,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 				
 				<div class="blogpost__text">
 					<div class="blogpost__text--meta">
-						<a href="single_post.php?postid=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
+						<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
 						<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
