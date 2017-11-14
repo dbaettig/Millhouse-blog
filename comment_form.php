@@ -17,5 +17,7 @@ $new_comment->execute(array(
 	":comment" => $_POST['comment']
 ));
 
-header("Location:index.php");
+$id = $_POST['postID'];
+
+header("Location:single_post.php?postID=".$id);
 ?>
