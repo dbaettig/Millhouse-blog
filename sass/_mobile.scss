@@ -3,7 +3,7 @@ body {
 	font-family: $bodyFont;
 }
 .wrapper {
-	max-width: 980px;
+	max-width: $contentWidth;
 	margin: 0px auto;
 	padding: 80px;
 }
@@ -156,7 +156,6 @@ p {
 
 
 /*ABOUT*/
-
 .about_image {
 	width: 100%;
 }
@@ -169,43 +168,40 @@ p {
 
 
 /* FOOTER */
-
 footer {
-	background-color: #1c3145;
+	background-color: $brandColor1;	
 	height: 500px;
-
-}
-
-footer ul {
+	display:flex;
+	
+	.footer-inner {
+		display:flex;
+	}
+	
+	p, h3, a, a .fa {
+		color: $footerFontColor;
+	}
+	
+	ul {
 	padding-top: 50px;
 	display: flex;
 	flex-direction: row;
 	list-style: none;
 	justify-content: space-around;
-}
-
-footer ul li {
-	padding: 30px;
-	text-align: left;
-}
-
-footer h3,
-footer p {
-	color: $footerFontColor;
-}
-
-.fa {
-	font-size: 2em;
-	color: inherit;
-	padding: 30px 30px 0 0;
-}
-
-a .fa {
-	color: $footerFontColor;
-}
-
-.about,
-.contact,
-.shop {
-	width: 333px;
+	font-size: .9em;
+		
+		li {
+			padding: 30px;
+			text-align: left;
+		}
+	}
+	
+	.fa {
+		font-size: 2em;
+		color: inherit;
+		padding: 1em 1em 0 0;
+	}
+	
+	.footer-inner__info {
+		flex-basis: 100%;
+	}
 }
