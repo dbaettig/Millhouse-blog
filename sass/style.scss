@@ -1,65 +1,10 @@
-//TYPOGRAPHY
-$headerFont: 'Helvetica Neue', 'Helvetica', sans-serif;
-$bodyFont: 'Helvetica Neue', 'Helvetica', sans-serif;
+@import "_mixin.scss";
 
-//COLORS
-$brandColor1: #1c3045; //dark blue
-$bodyFontColor: #212121; //dark grey
+@import "_mobile.scss";
 
-html { 
-	-webkit-font-smoothing: antialiased; 
-	-moz-osx-font-smoothing: grayscale; 
-}
+@media screen and (min-width:500px) {
+	@import "_tablet.scss";
 
-body {
-	font-family:$bodyFont;
-}
-
-.posts {
-    text-align: center;
-}
-
-.each {
-	margin-top:30px;
-}
-
-/* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-	font-family: $headerFont;
-	color: $brandColor1;
-}
-
-p {
-	font-family: $bodyFont;
-	color: $bodyFontColor;
-}
-
-/* HEADER */
-.header__usernav {
-	display:flex;
-	justify-content: space-between;
-	padding:1.5em 1.5em 0;
-	
-	.header__usernav--loggedin {
-		text-align:right;
-		margin-bottom:0;
-	}
-}
-
-.header__inner {
-	display:flex;
-	height:33vh;
-}
-
-.logo {
-	margin:20px auto;
-}
-
-.navbar-brand.mobile {
-	display:none;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-	padding-left:2rem;
-	padding-right:2rem;
+@media screen and (min-width:900px) {
+	@import "_desktop.scss";
 }

@@ -1,13 +1,27 @@
 <?php
+session_start();
 require 'header.php';
 ?>
 
-<img>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<div class="wrapper">
+<div class="about_image_wrapper">
+<img class= "about_image" src="img/watch2.jpeg">
+</div>
+
+<div class="about_text_wrapper">
+<p> Millhouse is a wholesale company that sells clothes, accessories and smaller interior design items to hundreds of fashion and lifestyle stores.
 <br/>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 <br/>
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+The company was founded 60 years ago by Millhouse Simpson. His idea was that men and women everywhere should have the possibility to be welldresses at a reasonable price.
+<br/>
+<br/>
+Millhouse Simpsons successful business revolutionized the clothing industry and his thinking still affects many fashion campanies today.
+<br/>
+<br/>
+In the fall of 2017 Millhouse started our own webshop, selling our products directly to the consumers for the first time.
+</p>
+</div>
+</div>
 
 <?php
 require 'footer.php';
