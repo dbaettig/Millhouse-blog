@@ -1,0 +1,8 @@
+.footer-inner {
+	max-width: $contentWidth;
+	margin:0 auto;
+	.footer-inner__info {
+		flex-basis: 33%;
+		justify-content: space-between;
+	}
+}
