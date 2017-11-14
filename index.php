@@ -23,7 +23,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 				
 				<div class="blogpost__text">
 					<div class="blogpost__text--meta">
-						<a href="single_post.php?postid=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
+						<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
 						<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
@@ -42,3 +42,12 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 <?php
 	require 'footer.php';
 ?>
+
+
+<select name="category">
+				<option value="category">Choose category...</option>
+				<option value="news">News</option>
+				<option value="style">Style</option>
+				<option value="interior">Interior</option>
+				<option value="featured">Featured</option>
+			</select>
