@@ -6,6 +6,11 @@ $bodyFont: 'Helvetica Neue', 'Helvetica', sans-serif;
 $brandColor1: #1c3045; //dark blue
 $bodyFontColor: #212121; //dark grey
 
+html { 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale; 
+}
+
 body {
 	font-family:$bodyFont;
 }
@@ -30,10 +35,15 @@ p {
 }
 
 /* HEADER */
-.header__user--loggedin {
-	text-align:right;
-	padding:20px 20px 0 0;
-	margin-bottom:0;
+.header__usernav {
+	display:flex;
+	justify-content: space-between;
+	padding:1.5em 1.5em 0;
+	
+	.header__usernav--loggedin {
+		text-align:right;
+		margin-bottom:0;
+	}
 }
 
 .header__inner {
