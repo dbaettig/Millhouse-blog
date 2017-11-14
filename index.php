@@ -15,14 +15,15 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 		<img src="img/watch3.jpeg" width="800px" alt="glasses">
 		
 		<?php
-			foreach($blog as $blogpost) { ?>
+			foreach($blog as $blogpost) {
+		?>
 			<div class="blogpost">
 			
 				<div class="blogpost__image"></div>
 				
 				<div class="blogpost__text">
 					<div class="blogpost__text--meta">
-						<a href="single_post.php"><h2><?= $blogpost['title'] ?></h2></a>
+						<a href="single_post.php?postid=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
 						<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 

@@ -26,4 +26,4 @@ $new_post->execute(array(
 	":category" => $_POST['category']
 ));
 	
-header("Location: index.php");
+header("Location:index.php");
