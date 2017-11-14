@@ -18,29 +18,23 @@ require "database.php";
 		
 foreach($single_post as $blogpost) { 
  ?>
+			<div class="blogpost">
 
-			<h2>
-				<?=$blogpost['title']?>
-			</h2>
-			</a>
-			<small>
+				<h2>
+					<?=$blogpost['title']?>
+				</h2>
+				</a>
+				<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>
 						</small>
+			</div>
+			<p>
+				<?= $blogpost['post'] ?>
+			</p>
 	</div>
-	<p>
-		<?= $blogpost['post'] ?>
-	</p>
-	</div>
-	</div>
-	</div>
+</div>
 	<?php }
-?>
-
-
-
-	</div>
-	<?php
 require "footer.php";
 ?>
