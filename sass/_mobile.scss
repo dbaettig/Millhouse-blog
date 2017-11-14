@@ -4,16 +4,17 @@ html {
 	-moz-osx-font-smoothing: grayscale; 
 }
 
-body {
-	font-family: $bodyFont;
-}
 .wrapper {
 	max-width: $contentWidth;
-	margin: 0px auto;
-	padding: 80px;
+	margin: 0 auto;
+	padding: 8%;
 }
 
 /* TYPOGRAPHY */
+body {
+	font-family: $bodyFont;
+}
+
 h1,
 h2,
 h3,
@@ -37,13 +38,11 @@ p {
 /* HEADER */
 
 .header__usernav {
+	padding:1.5rem 1.5rem 0;
 	display:flex;
 	justify-content: space-between;
-	padding:1.5em 1.5em 0;
-	
 	.header__usernav--loggedin {
-		text-align:right;
-		margin-bottom:0;
+		text-align: right;
 	}
 }
 
@@ -143,24 +142,31 @@ p {
 /*BLOG POST*/
 
 .blogpost {
-	margin-top: 3rem;
-}
+	margin:0 auto 6rem;
+	img {
+		width:100%;
+	}
+	.blogpost__image {
+		img {
+			width:100%;
+		}
+	}
+	.blogpost__text {
+		display: flex;
+		margin-top: 2.5rem;
+		justify-content: space-between;
 
-.blogpost__text {
-	display: flex;
-	margin-top: 2.5rem;
-	justify-content: space-between;
-}
+		.blogpot__text--meta {
+			flex-basis:25%;
+			flex-grow: 1;
+		}
 
-.blogpot__text--meta {
-	flex-basis:25%;
-	flex-grow: 1;
-}
-
-.blogpost__text--bodytext {
-	padding-left: 2rem;
-	flex-basis:75%;
-	flex-grow: 2;
+		.blogpost__text--bodytext {
+			padding-left: 2rem;
+			flex-basis:75%;
+			flex-grow: 2;
+		}
+	}
 }
 
 
