@@ -43,9 +43,11 @@
 					<?php } ?> | <a href="logout.php">Sign out</a>
 				</p>
 			</div>
-			<div class="header__inner">
-				<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
-			</div>
+			<a href="index.php">
+				<div class="header__inner">
+					<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
+				</div>
+			</a>
 
 		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark justify-content-end">
 			<a class="navbar-brand mobile" href="#">Navbar</a>
@@ -61,7 +63,7 @@
 						<a class="nav-link" href="about.php">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://millhouse.com" target"_blank">Shop</a>
+						<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 					</li>
 				</ul>
 			</div>
