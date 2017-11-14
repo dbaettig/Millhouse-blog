@@ -12,14 +12,14 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 <div class="wrapper">
 	<div class="posts">
 		
-		<img src="img/watch3.jpeg" width="800px" alt="glasses">
-		
 		<?php
 			foreach($blog as $blogpost) {
 		?>
 			<div class="blogpost">
 			
-				<div class="blogpost__image"></div>
+				<div class= "blogpost__image">
+				  <img src="<?= $blogpost['image'] ?>" >
+				</div>
 				
 				<div class="blogpost__text">
 					<div class="blogpost__text--meta">
