@@ -35,23 +35,22 @@ foreach($single_post as $blogpost) {
 			</div>
 			<?php }
 		?>
-			<div class="container">
+			<br/>
+				<div class="container">
 
-				<h3>Leave a comment</h3>
-				<form action="comment_form.php" method="POST">
+				<h3>Comments</h3>
+				<form action="comment_form.php" method="POST" class="comment_form">
 					<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
 					<br /><input type="text" name="name" placeholder="Name">
-					<br/>
 					<input type="text" name="email" placeholder="Email">
 					<br/>
 					<input type="hidden" name="postID" value="<?=$_GET['postID']?>">
 
-					<input type="submit" name="submit" value="Publish">
+					<input type="submit" name="submit" value="Post comment">
 				</form>
 			</div>
 	
 	<br/>
-	<h3>Comments</h3>
 	<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
 	WHERE postID = :postID");
@@ -64,14 +63,14 @@ $statement = $pdo->prepare("SELECT * FROM comments
 				   foreach($comments as $comment) { 
  ?>
 		<div class="blogpost">
-
-			<h4> By <?=  $comment['name']; ?> </h4>
-			<small> <?= $comment['created']; ?> </small>
-			<p>
-				<?= $comment['comment'] ?>
-			</p>
+			<p> <?= $comment['comment'] ?> </p>
+			<small><?=  $comment['name']; ?> </small>
+			<small><?= $comment['created']; ?> </small>
+			
 		</div>
+		
+		<?php } ?>
 		</div>
-		<?php }
+		<?php
 require "footer.php";
 ?>
