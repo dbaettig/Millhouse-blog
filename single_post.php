@@ -23,7 +23,7 @@ foreach($single_post as $blogpost) {
 				<h2>
 					<?=$blogpost['title']?>
 				</h2>
-				<img src="<?= $blogpost['image'] ?>">
+				<img class="single_post_image" src="<?= $blogpost['image'] ?>">
 				<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
@@ -36,9 +36,9 @@ foreach($single_post as $blogpost) {
 			<?php }
 		?>
 			<br/>
-				<div class="container">
+				<div class="comments_wrapper">
 
-				<h3>Comments</h3>
+				<h3 class="comments_header">Comments</h3>
 				<form action="comment_form.php" method="POST" class="comment_form">
 					<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
 					<br /><input type="text" name="name" placeholder="Name">
@@ -46,7 +46,7 @@ foreach($single_post as $blogpost) {
 					<br/>
 					<input type="hidden" name="postID" value="<?=$_GET['postID']?>">
 
-					<input type="submit" name="submit" value="Post comment">
+					<input class="comment_submit" type="submit" name="submit" value="Post comment">
 				</form>
 			</div>
 	
@@ -62,11 +62,11 @@ $statement = $pdo->prepare("SELECT * FROM comments
 				   
 				   foreach($comments as $comment) { 
  ?>
-		<div class="blogpost">
+		<div class="comment">
 			<p> <?= $comment['comment'] ?> </p>
 			<small><?=  $comment['name']; ?> </small>
 			<small><?= $comment['created']; ?> </small>
-			
+			<br/>
 		</div>
 		
 		<?php } ?>
