@@ -10,7 +10,16 @@ $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <div class="wrapper">
-	<div class="posts">
+
+<form action="single_category.php" method="POST">
+<input type="submit" name="news" value= "News">
+<input type="submit" name="style" value="Style">
+<input type="submit" name="interior" value="Interior">
+<input type="submit" name="featured" value="Featured">
+</form>
+
+<div class="posts">
+			
 		
 		<?php
 			foreach($blog as $blogpost) {
@@ -44,10 +53,4 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 
-<select name="category">
-				<option value="category">Choose category...</option>
-				<option value="news">News</option>
-				<option value="style">Style</option>
-				<option value="interior">Interior</option>
-				<option value="featured">Featured</option>
-			</select>
+
