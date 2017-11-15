@@ -17,7 +17,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 		?>
 			<div class="blogpost">
 			
-				<div class= "blogpost__image">
+				<div class="blogpost__image">
 				  <img src="<?= $blogpost['image'] ?>" >
 				</div>
 				

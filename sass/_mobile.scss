@@ -4,16 +4,17 @@ html {
 	-moz-osx-font-smoothing: grayscale; 
 }
 
-body {
-	font-family: $bodyFont;
-}
 .wrapper {
 	max-width: $contentWidth;
-	margin: 0px auto;
-	padding: 80px;
+	margin: 0 auto;
+	padding:5%;
 }
 
 /* TYPOGRAPHY */
+body {
+	font-family: $bodyFont;
+}
+
 h1,
 h2,
 h3,
@@ -32,18 +33,17 @@ h3 {
 p {
 	font-family: $bodyFont;
 	color: $bodyFontColor;
+	margin-bottom:.8em!important;
 }
 
 /* HEADER */
 
 .header__usernav {
+	padding:1.5rem 1.5rem 0;
 	display:flex;
 	justify-content: space-between;
-	padding:1.5em 1.5em 0;
-	
-	.header__usernav--loggedin {
-		text-align:right;
-		margin-bottom:0;
+	.header__usernav--loggedin, .header__usernav--loggedout {
+		text-align: right;
 	}
 }
 
@@ -78,7 +78,6 @@ p {
 	text-align: center;
 }
 
-
 .login h3,
 .register h3 {
 	color: white;
@@ -86,11 +85,7 @@ p {
 
 .sign__up--paragraph p {
 	color: white;
-	font-size: 14px;
-}
-
-.sign__up--paragraph a {
-	font-size: 14px;
+	font-size: 1rem;
 }
 
 .login,
@@ -99,12 +94,12 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content:center;
-	width: 40%;
+	width: 100%;
 }
 
 .login form,
 .register form {
-	width: 70%;
+	width: 100%;
 }
 
 .button_login,
@@ -114,14 +109,15 @@ p {
 	box-shadow: 0;
 	border: 0;
 	background-color: rgba(255, 255, 255, 0.1);
-	height: 30px;
+	height: 40px;
 	color: #fff;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin-bottom: 25px;
 	border: solid 2px rgba(255, 255, 255, 0.5);
 	transition: all 250ms ease;
-	font-size: 18px;
+	font-size: 1.1rem;
+	padding:3%;
 }
 
 .input_login,
@@ -143,24 +139,48 @@ p {
 /*BLOG POST*/
 
 .blogpost {
-	margin-top: 3rem;
-}
+	margin:0 auto 6rem;
+	
+	h2 {
+		margin:3rem auto;
+		text-align: center;
+	}
+	
+	img {
+		width:100%;
+		margin-bottom: 4rem;
+	}
+	
+	small {
+		display: block;
+		margin:0 auto 2rem;
+		text-align:center;
+		margin-bottom: 3rem;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+	}
+	
+	.blogpost__image {
+		img {
+			width:100%;
+		}
+	}
+	.blogpost__text {
+		display: flex;
+		margin-top: 2.5rem;
+		justify-content: space-between;
 
-.blogpost__text {
-	display: flex;
-	margin-top: 2.5rem;
-	justify-content: space-between;
-}
+		.blogpot__text--meta {
+			flex-basis:25%;
+			flex-grow: 1;
+		}
 
-.blogpot__text--meta {
-	flex-basis:25%;
-	flex-grow: 1;
-}
-
-.blogpost__text--bodytext {
-	padding-left: 2rem;
-	flex-basis:75%;
-	flex-grow: 2;
+		.blogpost__text--bodytext {
+			padding-left: 2rem;
+			flex-basis:75%;
+			flex-grow: 2;
+		}
+	}
 }
 
 

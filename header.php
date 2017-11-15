@@ -40,12 +40,24 @@
 				</a>
 				<p class="header__usernav--loggedin">
 					Du är nu inloggad <?= $_SESSION["user"]["username"]; ?>
-					<?php } ?> | <a href="logout.php">Sign out</a>
+					| <a href="logout.php">Sign out</a>
 				</p>
 			</div>
-			<div class="header__inner">
-				<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
-			</div>
+			<?php } else { ?>
+				<div class="header__usernav">
+					<div></div>
+					<p class="header__usernav--loggedout">
+						<a href="login.php">Log in </a> | <a href="register.php">Sign up</a>
+					</p>
+				</div>
+			<?php } ?>
+				
+			
+			<a href="index.php">
+				<div class="header__inner">
+					<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
+				</div>
+			</a>
 
 		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark justify-content-end">
 			<a class="navbar-brand mobile" href="#">Navbar</a>
@@ -61,7 +73,7 @@
 						<a class="nav-link" href="about.php">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="http://millhouse.com" target"_blank">Shop</a>
+						<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 					</li>
 				</ul>
 			</div>
