@@ -1,6 +1,59 @@
+// BASIC STYLING
+.wrapper {
+	padding:3%;
+	padding-bottom: 9%;
+}
+
+/* HEADER */
+.navbar-nav {
+	width: 40%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* BLOG POST*/
+.blogpost {
+	.blogpost__text {
+	flex-direction: row;
+		.blogpost__text--bodytext {
+			padding-top: 1.1rem;
+		}
+		.blogpost__text--meta {
+			width: 50%;
+		}
+}
+	p {
+		width:80%;
+		margin:auto;
+	}
+}
+
+/*SINGLE POST*/
+.single_post_image {
+	margin-bottom: 1rem;
+}
+
+/* LOGIN/REGISTER */
+.login,
+.register {
+	width:60vw;
+	max-width:400px;
+}
+
+/*ABOUT*/
+
+.about_image_wrapper{
+	margin-bottom: 2.5rem;
+}
+
+/*FOOTER*/
 .footer-inner {
 	max-width: $contentWidth;
 	margin:0 auto;
+	ul {
+		flex-direction:row;
+	}
 	.footer-inner__info {
 		flex-basis: 33%;
 		justify-content: space-between;
@@ -8,19 +61,3 @@
 }
 
 
-.login,
-.register {
-	width:60vw;
-	max-width:400px;
-}
-
-.wrapper {
-	padding:3rem 1rem;
-}
-
-.blogpost {
-	p {
-		width:80%;
-		margin:auto;
-	}
-}
