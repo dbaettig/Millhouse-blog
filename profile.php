@@ -60,18 +60,14 @@ echo "ANTAL KOMMENTARER SOM GJORTS</br>";
        }
 
        /*Här hämtas de fem senaste kommentarerna*/
-       $statement = $pdo->prepare("SELECT name, email, comment, created FROM comments where userID = :userID order by commentID DESC LIMIT 5");
+       $statement = $pdo->prepare("SELECT name, email, comment, created FROM comments where userID = :userID order by userID DESC LIMIT 5");
        $statement->execute(array(
        ":userID" => $_SESSION["user"]["id"]
    )); 
 
-$statement = $pdo->prepare("SELECT * FROM comments
-INNER JOIN users ON comments.userID = users.id");
-$statement->execute();
-
 
     echo "FEM SENASTE KOMMENTARER SOM GJORTS</br>";
-  
+         $count = $statement->fetchAll(PDO::FETCH_ASSOC);
        foreach($count as $c) {
            echo $c['comment'];
            echo "</br>";
