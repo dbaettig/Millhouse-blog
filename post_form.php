@@ -8,24 +8,6 @@ if(empty($_POST["title"] || $_POST["text"])){
 require("database.php");
 }
 
-$path = $_FILES["uploaded_file"]["tmp_name"];
-$filename = $_FILES["uploaded_file"]["name"];
-
-move_uploaded_file($path, "img/" . $filename);
-	
-$new_post = $pdo->prepare(
-	"INSERT INTO posts (userID, title, post, image, created, category)
-	VALUES (:userID, :title, :post, :image, NOW(), :category)"
-);
-
-$new_post->execute(array(
-	":userID" => $_SESSION['user']['id'],
-	":title" => $_POST['title'],
-	":post" => $_POST['text'],
-	":image" => "img/" . $filename,
-	":category" => $_POST['category']
-));
-	
 
 //Create image resize function
 function resize_image($file, $new_width, $new_height) {
@@ -52,6 +34,12 @@ function resize_image($file, $new_width, $new_height) {
   return $destination;
 }
 
+
+$path = $_FILES["uploaded_file"]["tmp_name"];
+$filename = $_FILES["uploaded_file"]["name"];
+
+move_uploaded_file($path, "img/" . $filename);
+
 /***************************
  *        USE CASE         *
  ***************************/
@@ -60,8 +48,45 @@ function resize_image($file, $new_width, $new_height) {
 //first argument is file to convert
 //second is width
 //third is height
-$resized_image = resize_image("img/" . $filename, 1920, 1080);
+$file = $_FILES["uploaded_file"];
+
+$info = getimagesize($file);
+$width = $info[0]; //first value in $info array is width
+$height = $info[1]; //second is height
+
+//Calculate the ratio between width and height
+$ratio = $height / $width;
+
+//calcualate the new height in relation to the fixed with in order to resize proportionally
+$new_height = 1920 * $ratio;
+
+$resized_image = resize_image("img/" . $filename, 1920, $new_height);
+
 //Save the image to disk
 imagejpeg($resized_image, "resized/" . $filename, 100);
+
+
+//
+//$resized_image = resize_image("img/" . $filename, 1920, 1080);
+////Save the image to disk
+//imagejpeg($resized_image, "resized/" . $filename, 100);	
+
+
+
+
+	
+$new_post = $pdo->prepare(
+	"INSERT INTO posts (userID, title, post, image, created, category)
+	VALUES (:userID, :title, :post, :image, NOW(), :category)"
+);
+
+$new_post->execute(array(
+	":userID" => $_SESSION['user']['id'],
+	":title" => $_POST['title'],
+	":post" => $_POST['text'],
+	":image" => "resized/" . $filename,
+	":category" => $_POST['category']
+));
+	
 
 header("Location:index.php");
