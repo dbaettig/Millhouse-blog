@@ -57,7 +57,7 @@ foreach($single_post as $blogpost) {
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?> ">
 							<input type="hidden" name="userID" value=" <?=$_SESSION["user"]["id"]?> ">
-							<input type="hidden" name="name" value=" <?=$_SESSION["user"]["name"] ?>" >
+							<input type="hidden" name="name" value=" <?=$_SESSION["user"]["username"] ?>" >
 							<input type="hidden" name="email" value=" <?=$_SESSION["user"]["email"] ?>" >
 							<input class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
