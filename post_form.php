@@ -56,7 +56,6 @@ $info = getimagesize($file);
 $width = $info[0]; //first value in $info array is width
 $height = $info[1]; //second is height
 
-
 //Calculate the ratio between width and height
 $ratio = $height / $width;
 
