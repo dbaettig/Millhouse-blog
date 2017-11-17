@@ -40,6 +40,8 @@ $filename = $_FILES["uploaded_file"]["name"];
 
 move_uploaded_file($path, "img/" . $filename);
 
+
+
 /***************************
  *        USE CASE         *
  ***************************/
@@ -48,11 +50,12 @@ move_uploaded_file($path, "img/" . $filename);
 //first argument is file to convert
 //second is width
 //third is height
-$file = $_FILES["uploaded_file"];
+$file = "img/" . $filename;
 
 $info = getimagesize($file);
 $width = $info[0]; //first value in $info array is width
 $height = $info[1]; //second is height
+
 
 //Calculate the ratio between width and height
 $ratio = $height / $width;
@@ -66,15 +69,6 @@ $resized_image = resize_image("img/" . $filename, 1920, $new_height);
 imagejpeg($resized_image, "resized/" . $filename, 100);
 
 
-//
-//$resized_image = resize_image("img/" . $filename, 1920, 1080);
-////Save the image to disk
-//imagejpeg($resized_image, "resized/" . $filename, 100);	
-
-
-
-
-	
 $new_post = $pdo->prepare(
 	"INSERT INTO posts (userID, title, post, image, created, category)
 	VALUES (:userID, :title, :post, :image, NOW(), :category)"
