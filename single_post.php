@@ -23,7 +23,9 @@ foreach($single_post as $blogpost) {
 				<h2>
 					<?=$blogpost['title']?>
 				</h2>
-				<img class="single_post_image" src="<?= $blogpost['image'] ?>">
+				<div class="blogpost__image">
+					<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
+				</div>
 				<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
