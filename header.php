@@ -22,6 +22,9 @@
 		
 		<!-- Font Awesome -->
 		<script src="https://use.fontawesome.com/d108b6d77d.js"></script>
+       
+        <!-- Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		
 		<!-- CK WYSIWYG editor -->
 		<script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.1/classic/ckeditor.js"></script>
