@@ -13,6 +13,7 @@ html {
 
 img {
 	width: 100%;
+    
 }
 
 /* TYPOGRAPHY */
@@ -123,6 +124,27 @@ p {
 .button_signup {
 	width: 50%;
 }
+
+/*CATEGORIES*/
+
+.categorymenu{
+margin-top:20px;
+display: flex;
+justify-content: space-around;
+  
+}
+.input_category{
+font-family: $bodyFont;
+font-size:1em;
+font-family: 'Fjalla One', sans-serif;
+border:none;
+color: #5d7e93;
+background-color:transparent;
+width:70px;
+border-radius:0px;
+text-decoration: underline;
+}
+
 
 /*BLOG POST*/
 

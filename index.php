@@ -9,8 +9,21 @@ INNER JOIN users ON posts.userID = users.id");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
+
 <div class="wrapper">
-	<div class="posts">
+
+<div class="categorymenu">
+
+<form action= "single_category.php" method="POST">
+<input class= "input_category" type="submit" name="news" value= "News">
+<input class= "input_category" type="submit" name="style" value="Style">
+<input class= "input_category" type="submit" name="interior" value="Interior">
+<input class= "input_category" type="submit" name="featured" value="Featured">
+</form>
+</div>
+
+<div class="posts">
+			
 		
 		<?php
 			foreach($blog as $blogpost) {
