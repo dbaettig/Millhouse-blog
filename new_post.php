@@ -1,4 +1,6 @@
-<?php require 'header.php'; ?>
+<?php 
+session_start();
+require 'header.php'; ?>
 
 <div class="wrapper">
 
