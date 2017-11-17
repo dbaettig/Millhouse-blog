@@ -5,7 +5,8 @@ require 'database.php';
 require 'header.php';
 
 $statement = $pdo->prepare("SELECT * FROM posts
-INNER JOIN users ON posts.userID = users.id");
+INNER JOIN users ON posts.userID = users.id
+ORDER BY postID DESC");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
