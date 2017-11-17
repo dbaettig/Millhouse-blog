@@ -30,15 +30,14 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 			foreach($blog as $blogpost) {
 		?>
 			<div class="blogpost">
-			
 				<div class="blogpost__image">
 				  <img class="index_image" src="<?= $blogpost['image'] ?>" >
 				</div>
 				
 				<div class="blogpost__text">
 					<div class="blogpost__text--meta">
-						<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2><?=$blogpost['title']?></h2></a>
-						<small>
+						<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2 class="left"><?=$blogpost['title']?></h2></a>
+						<small class="left">
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>

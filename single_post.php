@@ -20,11 +20,11 @@ foreach($single_post as $blogpost) {
  ?>
 			<div class="blogpost">
 
-				<h2><?=$blogpost['title']?></h2>
+				<h2 class="center"><?=$blogpost['title']?></h2>
 				<div class="blogpost__image">
 					<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
 				</div>
-				<small>
+				<small class="center">
 					By <?=  $blogpost['username'] ?> in
 						<?= $blogpost['category'] ?> 
 						<?= $blogpost['created'] ?>

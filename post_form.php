@@ -60,9 +60,10 @@ $height = $info[1]; //second is height
 $ratio = $height / $width;
 
 //calcualate the new height in relation to the fixed with in order to resize proportionally
-$new_height = 1920 * $ratio;
+$new_width = 1000;
+$new_height = $new_width * $ratio;
 
-$resized_image = resize_image("img/" . $filename, 1920, $new_height);
+$resized_image = resize_image("img/" . $filename, $new_width, $new_height);
 
 //Save the image to disk
 imagejpeg($resized_image, "resized/" . $filename, 100);
