@@ -250,7 +250,7 @@ font-weight: bold;
 	foreach($count1 as $c1) {
 	?>
 	
-	<a href="">See all posts (<?= $c1 ?>) -></a>
+	<a href="index.php">See all posts (<?= $c1 ?>) -></a>
 
 <?php } ?> <!--stänger loop-->
 
