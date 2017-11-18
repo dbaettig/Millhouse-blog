@@ -149,7 +149,7 @@ text-decoration: underline;
 /*BLOG POST*/
 
 .blogpost {
-	margin:0 auto;
+	margin:0 auto 10%;
 	
 	h2 {
 		margin:1rem auto;
@@ -177,13 +177,17 @@ text-decoration: underline;
 	}
 	
 	.blogpost__image {
-		height:75vh;
+		//set dimensions of crop box
+		height:0;
+		padding-top: $responsiveHeight;
 		overflow:hidden;
 		position:relative;
+		margin-bottom:1.5%;
 		img {
+			//place image in crop box
 			width:100%;
 			position:relative;
-			height:auto;
+			margin-top:-$responsiveHeight;
 		}
 	}
 	.blogpost__text {
@@ -198,7 +202,6 @@ text-decoration: underline;
 		}
 
 		.blogpost__text--bodytext {
-			padding-left: 2rem;
 			flex-basis:75%;
 			flex-grow: 2;
 		}
