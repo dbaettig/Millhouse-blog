@@ -26,30 +26,41 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 <div class="posts">
 			
 		
-		<?php
-			foreach($blog as $blogpost) {
-		?>
-			<div class="blogpost">
-				<div class="blogpost__image">
-				  <img class="index_image" src="<?= $blogpost['image'] ?>" >
-				</div>
-				
-				<div class="blogpost__text">
-					<div class="blogpost__text--meta">
-						<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2 class="left"><?=$blogpost['title']?></h2></a>
-						<small class="left">
-							By <?=  $blogpost['username'] ?> in
-								<?= $blogpost['category'] ?> 
-								<?= $blogpost['created'] ?>
-						</small>
-					</div>
-					<div class="blogpost__text--bodytext">
-						<p><?= $blogpost['post'] ?></p>
-					</div>
-				</div>
-				<p class ="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
+	<?php
+		foreach($blog as $blogpost) {
+	?>
+		<div class="blogpost">
+			<div class="blogpost__image">
+			  <img class="index_image" src="<?= $blogpost['image'] ?>" >
 			</div>
-		<?php } ?>
+
+			<div class="blogpost__text">
+				<div class="blogpost__text--meta">
+					<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><h2 class="left"><?=$blogpost['title']?></h2></a>
+					
+					<small class="left">
+						By <?=  $blogpost['username'] ?> in
+							<?= $blogpost['category'] ?> 
+							<?= $blogpost['created'] ?>
+					</small>
+					
+					<?php
+						if (($_SESSION['user']['id']) == ($blogpost['userID'])) { ?>
+							<button>
+								<a href="new_post.php">Edit post</a>
+							</button>
+							<button>
+								<a href="delete_post.php?postID=<?= $blogpost['postID'] ?>">Delete post</a>
+							</button>
+					<?php } ?>
+				</div>
+				<div class="blogpost__text--bodytext">
+					<p><?= $blogpost['post'] ?></p>
+				</div>
+			</div>
+			<p class ="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
+		</div>
+	<?php } ?>
 	</div> <!-- close .posts -->
 </div> <!--wrapper-->
 
