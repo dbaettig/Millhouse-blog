@@ -8,16 +8,14 @@ require "database.php";
 	
 	$statement = $pdo->prepare("SELECT * 
 	FROM posts 
-	JOIN users ON posts.userID = users.id 
 	WHERE posts.postID = :postID 
 	");
 	$statement->execute(array(
 		":postID" => $_GET["postID"]
 	));
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
-		
-foreach($single_post as $blogpost) { 
- ?>
+	
+	foreach($single_post as $blogpost) { ?>
 			<div class="blogpost">
 
 				<h2 class="center"><?=$blogpost['title']?></h2>
@@ -32,9 +30,10 @@ foreach($single_post as $blogpost) {
 				<p>
 					<?= $blogpost['post'] ?>
 				</p>
+				<br/><br/>
+				<?php include 'edit_buttons.php'?>
 			</div>
-			<?php }
-		?>
+			<?php } ?>
 			<br/>
 				<div class="comments_wrapper container">
 

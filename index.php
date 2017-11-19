@@ -42,17 +42,8 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 						By <?=  $blogpost['username'] ?> in
 							<?= $blogpost['category'] ?> 
 							<?= $blogpost['created'] ?>
-					</small>
-					
-					<?php
-						if (($_SESSION['user']['id']) == ($blogpost['userID'])) { ?>
-							<button>
-								<a href="new_post.php">Edit post</a>
-							</button>
-							<button>
-								<a href="delete_post.php?postID=<?= $blogpost['postID'] ?>">Delete post</a>
-							</button>
-					<?php } ?>
+					</small>	
+					<?php include 'edit_buttons.php'?>
 				</div>
 				<div class="blogpost__text--bodytext">
 					<p><?= $blogpost['post'] ?></p>
