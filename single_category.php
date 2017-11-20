@@ -35,13 +35,30 @@ WHERE category = 'featured'");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
-    foreach($blog as $blogpost) {
-    ?>
-    <div class="wrapper">
-        <div class="posts">
-            <div class="blogpost">
+?>
 
-                <div class="blogpost__image">
+<div class="wrapper">
+<div class="categorymenu">
+
+<form action= "single_category.php" method="POST">
+<input class= "input_category" type="submit" name="news" value= "News">
+<input class= "input_category" type="submit" name="style" value="Style">
+<input class= "input_category" type="submit" name="interior" value="Interior">
+<input class= "input_category" type="submit" name="featured" value="Featured">
+</form>
+</div>
+
+<div class="categorywrapper">
+
+
+  
+   <?php foreach($blog as $blogpost) {
+    ?>
+     
+       <div class="categoryblogpost">
+            
+
+                <div class="categoryblogpost__image">
                     <img src="<?= $blogpost['image'] ?>">
                 </div>
 
@@ -64,12 +81,12 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- close .posts -->
-    </div>
-    <!--wrapper-->
+               </div>
+
     <?php } ?>
-    <?php
+ 
+  </div> 
+  </div> 
+<?php
 require "footer.php";
 ?>
