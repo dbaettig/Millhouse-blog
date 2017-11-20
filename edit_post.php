@@ -15,6 +15,7 @@ foreach($single_post as $blogpost) { ?>
 	<div class="wrapper">
 		<div class="container">
 			<form action="edit_post_form.php" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
 				<input type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
 				<textarea name="text" id="editor" rows="30">
 					<?= $blogpost['post']; ?>

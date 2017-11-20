@@ -8,6 +8,7 @@ require "database.php";
 	
 	$statement = $pdo->prepare("SELECT * 
 	FROM posts 
+	JOIN users ON posts.userID = users.id 
 	WHERE posts.postID = :postID 
 	");
 	$statement->execute(array(
