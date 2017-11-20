@@ -1,5 +1,5 @@
 <?php
-require 'session.php';;
+require 'session.php';
 require 'database.php';
 require 'header.php';
 

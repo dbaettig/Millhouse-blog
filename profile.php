@@ -1,5 +1,5 @@
 <?php
-session_start();
+require 'session.php';
 require "database.php";
 require "profile_form.php"
 

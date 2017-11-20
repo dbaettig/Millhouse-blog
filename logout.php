@@ -1,5 +1,5 @@
 <?php
-session_start();
+require 'session.php';
 
 session_destroy();
 unset($_SESSION["loggedIn"]);
