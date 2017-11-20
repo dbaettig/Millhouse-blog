@@ -1,7 +1,8 @@
 <?php
 require 'session.php';
-require "header.php";
-require "database.php";
+require 'head.php';
+require 'navbar.php';
+require 'database.php';
 
 
 if (isset ($_POST["news"])){
@@ -37,56 +38,56 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
 ?>
 
-<div class="wrapper">
-<div class="categorymenu">
+	<body id="index">
+		<main>
+			<div class="wrapper">
+				<div class="categorymenu">
 
-<form action= "single_category.php" method="POST">
-<input class= "input_category" type="submit" name="news" value= "News">
-<input class= "input_category" type="submit" name="style" value="Style">
-<input class= "input_category" type="submit" name="interior" value="Interior">
-<input class= "input_category" type="submit" name="featured" value="Featured">
-</form>
-</div>
+					<form action="single_category.php" method="POST">
+						<input class="input_category <?php if($_POST['news']) echo 'active'; ?>" type="submit" name="news" value="News">
+						<input class="input_category <?php if($_POST['style']) echo 'active'; ?>" type="submit" name="style" value="Style">
+						<input class="input_category <?php if($_POST['interior']) echo 'active'; ?>" type="submit" name="interior" value="Interior">
+						<input class="input_category <?php if($_POST['featured']) echo 'active'; ?>" type="submit" name="featured" value="Featured">
+					</form>
+				</div>
 
-<div class="categorywrapper">
+				<div class="categorywrapper">
+					<?php 
+					
+					foreach($blog as $blogpost) { ?>
+
+					<div class="categoryblogpost">
 
 
-  
-   <?php foreach($blog as $blogpost) {
-    ?>
-     
-       <div class="categoryblogpost">
-            
+						<div class="categoryblogpost__image">
+							<img src="<?= $blogpost['image'] ?>">
+						</div>
 
-                <div class="categoryblogpost__image">
-                    <img src="<?= $blogpost['image'] ?>">
-                </div>
-
-                <div class="blogpost__text">
-                    <div class="blogpost__text--meta">
-                        <a href="single_post.php?postID=<?= $blogpost['postID'] ?>">
-                            <h2>
-                                <?=$blogpost['title']?>
-                            </h2>
-                        </a>
-                        <small>
+						<div class="blogpost__text">
+							<div class="blogpost__text--meta">
+								<a href="single_post.php?postID=<?= $blogpost['postID'] ?>">
+									<h2>
+										<?=$blogpost['title']?>
+									</h2>
+								</a>
+								<small>
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>
 						</small>
-                    </div>
-                    <div class="blogpost__text--bodytext">
-                        <p>
-                            <?= $blogpost['post'] ?>
-                        </p>
-                    </div>
-                </div>
-               </div>
+							</div>
+							<div class="blogpost__text--bodytext">
+								<p>
+									<?= $blogpost['post'] ?>
+								</p>
+							</div>
+						</div>
+					</div>
 
-    <?php } ?>
- 
-  </div> 
-  </div> 
-<?php
+					<?php } ;?>
+
+				</div>
+			</div>
+			<?php
 require "footer.php";
 ?>
