@@ -1,4 +1,7 @@
 <?php
+ini_set("session.cookie_lifetime", 7200);
+ini_set("session.gc_maxlifetime", 7200);
+session_set_cookie_params(7200, "/");
 session_start();
 
 require 'database.php';
