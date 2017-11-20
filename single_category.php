@@ -109,7 +109,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 				</div>
 			</div>
-			<?php
+		
                     </div>
                     <div class="blogpost__text--bodytext">
                         <p>
