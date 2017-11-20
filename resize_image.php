@@ -57,16 +57,3 @@ $resized_image = resize_image("img/" . $filename, $new_width, $new_height);
 
 //Save the image to disk
 imagejpeg($resized_image, "resized/" . $filename, 100);
-
-$new_post = $pdo->prepare(
-	"INSERT INTO posts (userID, title, post, image, created, category)
-	VALUES (:userID, :title, :post, :image, NOW(), :category)"
-);
-
-$new_post->execute(array(
-	":userID" => $_SESSION['user']['id'],
-	":title" => $_POST['title'],
-	":post" => $_POST['text'],
-	":image" => "resized/" . $filename,
-	":category" => $_POST['category']
-));

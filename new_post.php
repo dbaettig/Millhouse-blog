@@ -9,10 +9,11 @@ require 'header.php'; ?>
 			<input type="text" name="title" placeholder="title"> <br/>
 			<textarea name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
 
-			<input type="file" name="uploaded_file"><small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
+			<input type="file" name="uploaded_file">
+			<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
 			
 			<select name="category">
-				<option value="category">Choose category...</option>
+				<option value="0">Choose category...</option>
 				<option value="news">News</option>
 				<option value="style">Style</option>
 				<option value="interior">Interior</option>
