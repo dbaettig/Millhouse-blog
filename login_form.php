@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+require 'session.php';
 require 'database.php';
 
 $password = $_POST["password"];
@@ -14,7 +13,6 @@ $statement->execute(array(
 $fetched_user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if( password_verify($password, $fetched_user["password"]) ){
-
   $_SESSION["user"] = $fetched_user;
   $_SESSION["loggedIn"] = true;
 
