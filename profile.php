@@ -37,109 +37,7 @@ require "profile_form.php"
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	
-	<style>
-	.profileWrapper {
-		width: 70%;
-		min-height: 1200px;
-		margin: 0 auto;
-		padding-left: 50px;
-		padding-top: 100px; 
-	}
-
-	.profileHeader {
-display: flex;
-width: 100%;
-height: 300px;
-	}
-
-	.profileImage {
-	flex: 1;
-	}
-
-	.profileImage img {
-		width: 100%;
-		overflow: hidden;
-		height: 300px;
-
-	}
-
-
-	.profileInfo {
-		display:flex;
-		flex:1;
-		margin-left: 40px;
-		height: 300px;
-		flex-direction: column;
-	}
-
-.profileName {
-	flex:1;
-	height: 100px;
-}
-
-.numberInfo {
-	flex:1;
-	display: flex;
-	flex-direction: row;
-	height: 200px;
 	
-}
-
-p.number {
-	font-size: 46px;
-	font-weight: bold;
-	padding-top: 0px;
-}
-
-.numberOfposts {
-flex:1;
-box-sizing: border-box;
-}
-
-.numberOfposts h2 {
-font-size: 28px;
-font-weight: bold;
-}
-
-.numberOfcomments h2 {
-font-size: 28px;
-font-weight: bold;
-}
-
-.numberOfcomments {
-	flex:1;
-	box-sizing: border-box;
-	width: 50%;
-}
-	.latestInfo {
-		display:flex;
-		width: 100%;
-		padding-top: 40px;
-		
-	}
-
-	.latestPosts {
-		flex:1;
-	}
-	
-	.latestPosts h3 {
-		font-size: 34px;
-		font-weight: bold;
-	}
-
-	.latestComments {
-		flex:1;
-		margin-left: 50px;
-	}
-
-	.latestComments h3 {
-		font-size: 34px;
-		font-weight: bold;
-	}
-
-
-</style>
-
 <body>
 	<header>
 		<?php
@@ -192,11 +90,11 @@ font-weight: bold;
 <main>
 
 <div class="profileWrapper">
-  <div class="profileHeader">
+  <div class="headerWrapper">
 	<div class="profileImage">
 		<img src="img/glasses1.jpeg" alt="">
 	</div>
-	
+	<div class="profileHeader">
 	<div class="profileInfo">
 		<div class="profileName">
 			<h1><?= $_SESSION["user"]["username"]; ?></h1>
@@ -230,7 +128,7 @@ font-weight: bold;
 		</div> <!--stänger numberInfo-->
 	</div> <!--stänger profileInfo-->
 </div> <!--stänger profileHeader-->
-
+</div> <!--stänger headerWrapper-->
 
 <div class="latestInfo">
 	<div class="latestPosts">
@@ -250,7 +148,7 @@ font-weight: bold;
 	foreach($count1 as $c1) {
 	?>
 	
-	<a href="index.php">See all posts (<?= $c1 ?>) -></a>
+	<a href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 <?php } ?> <!--stänger loop-->
 
@@ -274,7 +172,7 @@ font-weight: bold;
 	foreach($count3 as $c3) {
 	?>
 	
-	<a href="index.php">See all comments (<?= $c3 ?>) -></a>
+	<a href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 	<?php } ?><!--stänger loop-->
 

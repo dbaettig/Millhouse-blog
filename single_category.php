@@ -37,26 +37,27 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
 ?>
 
-<div class="wrapper">
-<div class="categorymenu">
+    <div class="wrapper">
+        <div class="categorymenu">
+           
+            <!--Categories-->
+            <form action="single_category.php" method="POST">
+                <input class="input_category" type="submit" name="news" value="News">
+                <input class="input_category" type="submit" name="style" value="Style">
+                <input class="input_category" type="submit" name="interior" value="Interior">
+                <input class="input_category" type="submit" name="featured" value="Featured">
+            </form>
+        </div>
 
-<form action= "single_category.php" method="POST">
-<input class= "input_category" type="submit" name="news" value= "News">
-<input class= "input_category" type="submit" name="style" value="Style">
-<input class= "input_category" type="submit" name="interior" value="Interior">
-<input class= "input_category" type="submit" name="featured" value="Featured">
-</form>
-</div>
-
-<div class="categorywrapper">
+        <div class="categorywrapper">
 
 
-  
-   <?php foreach($blog as $blogpost) {
+
+            <?php foreach($blog as $blogpost) {
     ?>
-     
-       <div class="categoryblogpost">
-            
+
+            <div class="categoryblogpost">
+
 
                 <div class="categoryblogpost__image">
                     <img src="<?= $blogpost['image'] ?>">
@@ -81,12 +82,12 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                         </p>
                     </div>
                 </div>
-               </div>
+            </div>
 
-    <?php } ?>
- 
-  </div> 
-  </div> 
-<?php
+            <?php } ?>
+
+        </div><!--categorywrapper close-->
+    </div> <!--wrapper close-->
+    <?php
 require "footer.php";
 ?>
