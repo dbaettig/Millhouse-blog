@@ -18,6 +18,7 @@ require 'head.php';
 
 					<select name="category">
 				<option value="category">Choose category...</option>
+
 				<option value="news">News</option>
 				<option value="style">Style</option>
 				<option value="interior">Interior</option>

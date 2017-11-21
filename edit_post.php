@@ -19,16 +19,15 @@ foreach($single_post as $blogpost) { ?>
 	<div class="wrapper">
 		<div class="container">
 			<form action="edit_post_form.php" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
 				<input type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
 				<textarea name="text" id="editor" rows="30">
 					<?= $blogpost['post']; ?>
 				</textarea> <br/>
-
-
-				<input type="file" name="uploaded_file" value="<?= $blogpost['image']; ?>">
+				<label for="uploaded_file"><?= $blogpost['image']?></label>
+				<input type="file" name="uploaded_file">
 				
 				<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
-
 
 				<select name="category" value="<?= $blogpost['category']; ?>">
 					<option value="category">Choose category...</option>
