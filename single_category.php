@@ -52,28 +52,8 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 				</div>
 
 				<div class="categorywrapper">
-					<?php 
 					
-					foreach($blog as $blogpost) { ?>
-					
-    <div class="wrapper">
-        <div class="categorymenu">
-           
-            <!--Categories-->
-            <form action="single_category.php" method="POST">
-                <input class="input_category" type="submit" name="news" value="News">
-                <input class="input_category" type="submit" name="style" value="Style">
-                <input class="input_category" type="submit" name="interior" value="Interior">
-                <input class="input_category" type="submit" name="featured" value="Featured">
-            </form>
-        </div>
-
-        <div class="categorywrapper">
-
-
-					<div class="categoryblogpost">
-
-            <?php foreach($blog as $blogpost) {
+            <?php foreach($blog as $blogpost){
     ?>
 
             <div class="categoryblogpost">
@@ -104,21 +84,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					</div>
-
-					<?php } ;?>
-
-				</div>
-			</div>
-                    </div>
-                    <div class="blogpost__text--bodytext">
-                        <p>
-                            <?= $blogpost['post'] ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <?php } ?>
+				<?php } ?>
 
         </div><!--categorywrapper close-->
     </div> <!--wrapper close-->
