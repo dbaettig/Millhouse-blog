@@ -20,7 +20,8 @@ foreach($single_post as $blogpost) { ?>
 				<textarea name="text" id="editor" rows="30">
 					<?= $blogpost['post']; ?>
 				</textarea> <br/>
-				<input type="file" name="uploaded_file" value="<?= $blogpost['image']?>">
+				<label for="uploaded_file"><?= $blogpost['image']?></label>
+				<input type="file" name="uploaded_file">
 				
 				<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
 				
