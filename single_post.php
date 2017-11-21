@@ -1,11 +1,11 @@
 <?php
 require 'session.php';
-require 'head.php';
-require 'navbar.php';
 require "database.php";
+require 'head.php';
 ?>
 
 	<body>
+	<?php require 'navbar.php';?>
 		<main>
 			<div class="wrapper">
 				<?php

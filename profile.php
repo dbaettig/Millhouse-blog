@@ -1,12 +1,12 @@
 <?php
 require 'session.php';
 require 'head.php';
-require 'navbar.php';
 require "profile_database.php"
 
 ?>
 
 	<body>
+	<?php require 'navbar.php';?>
 		<main>
 
 			<div class="profileWrapper">
