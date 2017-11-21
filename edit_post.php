@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'database.php';
-require 'header.php';
+require 'head.php';
 
 	$statement = $pdo->prepare( 
 		"SELECT * FROM posts WHERE postID = :postID");
