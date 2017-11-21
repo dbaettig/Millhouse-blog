@@ -33,6 +33,7 @@
 				console.error( error );
 			} );
 	</script>
+	<script src="js/myscript.js"></script>
 
 </body>
 </html>
