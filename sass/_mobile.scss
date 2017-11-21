@@ -128,20 +128,27 @@ p {
 /*CATEGORIES*/
 
 .categorymenu{
-margin-top:20px;
 display: flex;
-justify-content: space-around;
-  
+justify-content: center;
+margin:10px;
+
+    
+
 }
-.input_category{
+.categorymenu li{
+list-style-type: none;
+display: inline-block;
+margin:5px;
+
+}
+
+
+.categorymenu a{
 font-family: $bodyFont;
 font-size:1em;
 font-family: 'Fjalla One', sans-serif;
 border:none;
 color: $categoryFontColor;
-background-color:transparent;
-width:70px;
-border-radius:0px;
 text-decoration: underline;
 }
 
