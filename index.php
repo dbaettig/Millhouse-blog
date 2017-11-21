@@ -18,11 +18,11 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 				<div class="categorymenu">
 
 					 <ul>
-                        <li><a href="single_category.php?$_GET['news']">News</a></li>
+                        <li><a href="single_category.php?news">News</a></li>
                         
-                        <li><a href="single_category.php?category=interior">Interior</a>
+                        <li><a href="single_category.php?interior">Interior</a>
                         
-                        <li><a href="single_category.php?category=style">Style</a></li>
+                        <li><a href="single_category.php?style">Style</a></li>
                         
                         <li><a href="single_category.php?featured">Featured</a></li>
 				    </ul>

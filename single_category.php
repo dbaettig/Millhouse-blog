@@ -53,8 +53,6 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                         <li><a href="single_category.php?featured">Featured</a></li>
 				    </ul>
                 </div>
-        
-				
 
 				<div class="categorywrapper">
 					
