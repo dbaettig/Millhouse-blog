@@ -1,10 +1,10 @@
 <?php
 require 'session.php';
 require 'head.php';
-require 'navbar.php';
 ?>
 
 	<body id="about">
+	<?php require 'navbar.php'; ?>
 		<main>
 			<div class="wrapper">
 				<div class="about_image_wrapper">

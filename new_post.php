@@ -1,9 +1,10 @@
 <?php 
 require 'session.php';
 require 'head.php';
-require 'navbar.php'; ?>
+?>
 
 <body>
+<?php require 'navbar.php'; ?>
 	<main>
 
 		<div class="wrapper">
