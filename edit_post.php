@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'database.php';
-require 'header.php';
+require 'head.php';
 
 	$statement = $pdo->prepare( 
 		"SELECT * FROM posts WHERE postID = :postID");
@@ -12,6 +12,10 @@ require 'header.php';
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($single_post as $blogpost) { ?>
+	<body>
+	<?php require 'navbar.php' ?>
+	<main>
+		
 	<div class="wrapper">
 		<div class="container">
 			<form action="edit_post_form.php" method="POST" enctype="multipart/form-data">
