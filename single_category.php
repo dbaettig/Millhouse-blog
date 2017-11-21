@@ -1,7 +1,6 @@
 <?php
 require 'session.php';
 require 'head.php';
-require 'navbar.php';
 require 'database.php';
 
 
@@ -40,6 +39,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 	<body id="index">
+	<?php require 'navbar.php';?>
 		<main>
 			<div class="wrapper">
 				<div class="categorymenu">
@@ -90,8 +90,9 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
-					<?php } ?>
-           
+					<?php } ;?>
+                </div>
+            </div>
 
         </div><!--categorywrapper close-->
     </div> <!--wrapper close-->

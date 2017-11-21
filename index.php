@@ -2,7 +2,6 @@
 require 'session.php';
 require 'database.php';
 require 'head.php';
-require 'navbar.php';
 
 $statement = $pdo->prepare("SELECT * FROM posts
 INNER JOIN users ON posts.userID = users.id
@@ -12,6 +11,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 	<body id="index">
+	<?php require 'navbar.php'; ?>
 		<main>
 			<div class="wrapper">
 

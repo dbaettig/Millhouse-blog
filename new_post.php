@@ -1,9 +1,10 @@
 <?php 
 require 'session.php';
 require 'head.php';
-require 'navbar.php'; ?>
+?>
 
 <body>
+<?php require 'navbar.php'; ?>
 	<main>
 
 		<div class="wrapper">
@@ -17,6 +18,7 @@ require 'navbar.php'; ?>
 
 					<select name="category">
 				<option value="category">Choose category...</option>
+
 				<option value="news">News</option>
 				<option value="style">Style</option>
 				<option value="interior">Interior</option>

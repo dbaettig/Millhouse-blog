@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'database.php';
-require 'header.php';
+require 'head.php';
 
 	$statement = $pdo->prepare( 
 		"SELECT * FROM posts WHERE postID = :postID");
@@ -12,17 +12,22 @@ require 'header.php';
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($single_post as $blogpost) { ?>
+	<body>
+	<?php require 'navbar.php' ?>
+	<main>
+		
 	<div class="wrapper">
 		<div class="container">
 			<form action="edit_post_form.php" method="POST" enctype="multipart/form-data">
+				<input type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
 				<input type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
 				<textarea name="text" id="editor" rows="30">
 					<?= $blogpost['post']; ?>
 				</textarea> <br/>
-<!--
-
-				<input type="file" name="uploaded_file"><small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
--->
+				<label for="uploaded_file"><?= $blogpost['image']?></label>
+				<input type="file" name="uploaded_file">
+				
+				<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
 
 				<select name="category" value="<?= $blogpost['category']; ?>">
 					<option value="category">Choose category...</option>
