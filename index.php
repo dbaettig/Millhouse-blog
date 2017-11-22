@@ -32,8 +32,8 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 
 					<?php
-		foreach($blog as $blogpost) {
-	?>
+		      foreach($blog as $blogpost) {
+	                ?>
 						<div class="blogpost">
 							<div class="blogpost__image">
 								<img class="index_image" src="<?= $blogpost['image'] ?>">
@@ -58,9 +58,10 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 									<p>
 										<?= $blogpost['post'] ?>
 									</p>
+									<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
 								</div>
 							</div>
-							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
+							
 						</div>
 						<?php } ?>
 				</div>

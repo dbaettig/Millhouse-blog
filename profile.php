@@ -62,15 +62,10 @@ require "profile_database.php"
 				<!--stänger profileHeader-->
 
 
+
 				<div class="latestInfo">
 					<div class="latestPosts">
 						<h3>Latest posts</h3>
-						
-		</div> <!--stänger numberInfo-->
-	</div> <!--stänger profileInfo-->
-</div> <!--stänger profileHeader-->
-</div> <!--stänger headerWrapper-->
-
 
 						<?php
 	foreach($count2 as $c2) {
@@ -95,7 +90,6 @@ require "profile_database.php"
 	<a href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 
-								<a href="index.php">See all posts (<?= $c1 ?>) -></a>
 
 								<?php } ?>
 								<!--stänger loop-->
@@ -131,7 +125,7 @@ require "profile_database.php"
 	<a href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 
-								<a href="index.php">See all comments (<?= $c3 ?>) -></a>
+							
 
 								<?php } ?>
 								<!--stänger loop-->
