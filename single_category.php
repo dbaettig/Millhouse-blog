@@ -10,6 +10,7 @@ $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID
 WHERE category = 'news'");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
+
 }
 
 elseif (isset ($_GET["style"])){
@@ -18,6 +19,7 @@ $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID
 WHERE category = 'style'");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
+    
 }
 
 elseif (isset ($_GET["interior"])){
@@ -36,8 +38,8 @@ $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
 
-?>
 
+?>
 	<body id="index">
 	<?php require 'navbar.php';?>
 		<main role="main">
@@ -54,11 +56,11 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 				    </ul>
                 </nav>
 
-				<div class="categorywrapper">
-					
-            <?php foreach($blog as $blogpost){
-    ?>
+                <div class="categorywrapper">
 
+                    <?php foreach($blog as $blogpost){
+    ?>
+          
             <article class="categoryblogpost">
 
 
@@ -66,17 +68,19 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 							<img src="<?= $blogpost['image'] ?>">
 						</figure>
 
-						<div class="categoryblogpost__text">
-							<div class="blogpost__text--meta">
-								<a href="single_post.php?postID=<?= $blogpost['postID'] ?>">
-									<h2>
-										<?=$blogpost['title']?>
-									</h2>
-								</a>
-								<small>
+
+                        <div class="categoryblogpost__text">
+                            <div class="blogpost__text--meta">
+                                <a href="single_post.php?postID=<?= $blogpost['postID'] ?>">
+                                    <h2 class="left">
+                                        <?=$blogpost['title']?>
+                                    </h2>
+                                </a>
+                                <small class="left">
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>
+
 						</small>
 
 							</div>
@@ -89,11 +93,11 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 					</article>
 
 					<?php } ;?>
-                </div>
+               
+                 </div>
+                <!--categorywrapper close-->
             </div>
-
-        </div><!--categorywrapper close-->
-    </div> <!--wrapper close-->
-    <?php
+            <!--wrapper close-->
+            <?php
 require "footer.php";
 ?>
