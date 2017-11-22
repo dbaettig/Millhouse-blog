@@ -4,9 +4,9 @@ require "database.php";
 require 'head.php';
 ?>
 
-	<body>
+	<body id="single_post">
 		<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 			<div class="wrapper">
 				<?php
 	

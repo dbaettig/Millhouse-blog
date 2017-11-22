@@ -5,7 +5,7 @@ require 'head.php';
 
 	<body id="about">
 	<?php require 'navbar.php'; ?>
-		<main>
+		<main role="main">
 			<article class="wrapper">
 				<figure class="about_image_wrapper">
 					<img class="about_image" src="img/watch2.jpeg">

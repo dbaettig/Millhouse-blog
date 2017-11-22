@@ -5,7 +5,7 @@ require 'head.php';
 
 	<body id="login">
 	<?php require 'navbar.php'; ?>
-		<main>
+		<main role="main">
 			<div class="background__wrapper--login">
 				<div class="login">
 					<h3>Log in</h3>

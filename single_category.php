@@ -40,9 +40,9 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 	<body id="index">
 	<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 			<div class="wrapper">
-				<nav class="categorymenu">
+				<nav class="categorymenu" role="navigation">
                     <ul>
                         <li <?php if (isset ($_GET["news"])){echo "class='active'";}?></l><a href="single_category.php?news">News</a></li>
                         

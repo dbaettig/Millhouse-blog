@@ -7,7 +7,7 @@ require 'profile_database.php';
 
 	<body id="profile">
 		<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 
 			<div class="profileWrapper">
 				<div class="profileHeader">
