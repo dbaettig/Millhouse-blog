@@ -48,7 +48,7 @@ require 'head.php';
 
 						<?php if(!isset($_SESSION["user"])){ ?>
 						<!-- Comment form if not logged in -->
-						<form action="loggedout_comment_form.php" method="POST" class="comment_form">
+						<form action="comment_form.php" method="POST" class="comment_form">
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value="0">

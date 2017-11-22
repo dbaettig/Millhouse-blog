@@ -18,11 +18,5 @@ $new_comment->execute(array(
 
 $id = $_POST['postID'];
 
-var_dump($_POST['postID']);
-var_dump($_POST['userID']);
-var_dump($_POST['name']);
-var_dump($_POST['email']);
-var_dump($_POST['comment']);
-
 header("Location:single_post.php?postID=".$id);
 ?>
