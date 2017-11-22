@@ -2,9 +2,9 @@
 session_start();
 require 'database.php';
 
-var_dump($_FILES["uploaded_file"]);
+//var_dump($_FILES["uploaded_file"]);
 
-if(!empty($_FILES["uploaded_file"])){
+if( $_FILES["uploaded_file"]["name"] != 0){
 	
 	require 'resize_image.php';
 	
@@ -24,7 +24,6 @@ if(!empty($_FILES["uploaded_file"])){
 		":image" => "resized/" . $filename,
 		":category" => $_POST['category']
 	));
-	
 } else {
 		$update_post = $pdo->prepare(
 		"UPDATE posts SET 
@@ -42,5 +41,4 @@ if(!empty($_FILES["uploaded_file"])){
 	));
 }
 
-
-//header("Location:index.php");
+header("Location:index.php");
