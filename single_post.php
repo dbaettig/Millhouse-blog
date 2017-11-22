@@ -5,7 +5,7 @@ require 'head.php';
 ?>
 
 	<body>
-	<?php require 'navbar.php';?>
+		<?php require 'navbar.php';?>
 		<main>
 			<div class="wrapper">
 				<?php
@@ -21,14 +21,14 @@ require 'head.php';
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 	
 	foreach($single_post as $blogpost) { ?>
-					<div class="blogpost">
+					<article class="blogpost">
 
 						<h2 class="center">
 							<?=$blogpost['title']?>
 						</h2>
-						<div class="blogpost__image">
+						<figure class="blogpost__image">
 							<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
-						</div>
+						</figure>
 						<small class="center">
 					By <?=  $blogpost['username'] ?> in
 						<?= $blogpost['category'] ?> 
@@ -39,10 +39,10 @@ require 'head.php';
 						</p>
 						<br/><br/>
 						<?php include 'edit_buttons.php'?>
-					</div>
+					</article>
 					<?php } ?>
 					<br/>
-					<div class="comments_wrapper container">
+					<section class="comments_wrapper_container">
 
 						<h3 class="comments_header">Comments</h3>
 
@@ -71,7 +71,8 @@ require 'head.php';
 					</div>
 
 					<br/>
-					<?php
+					
+						<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
 	WHERE postID = :postID
 	ORDER BY commentID DESC");
@@ -83,16 +84,17 @@ $statement = $pdo->prepare("SELECT * FROM comments
 				   
 	foreach($comments as $comment) { 
  ?>
-						<div class="comment">
-							<p>
-								<?= $comment['comment'] ?>
-							</p>
-							<small><?=  $comment['name']; ?> </small>
-							<small><?= $comment['created']; ?> </small>
-							<br/>
-						</div>
+							<div class="comment">
+								<p>
+									<?= $comment['comment'] ?>
+								</p>
+								<small><?=  $comment['name']; ?> </small>
+								<small><?= $comment['created']; ?> </small>
+								<br/>
+							</div>
 
-						<?php } ?>
+							<?php } ?>
+					</section>
 			</div>
 			<?php
 require "footer.php";

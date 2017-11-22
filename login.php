@@ -3,7 +3,7 @@ require 'session.php';
 require 'head.php';
 ?>
 
-	<body>
+	<body id="login">
 	<?php require 'navbar.php'; ?>
 		<main>
 			<div class="background__wrapper--login">
