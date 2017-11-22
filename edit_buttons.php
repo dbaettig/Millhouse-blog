@@ -1,6 +1,7 @@
 <?php 
 if (isset($_SESSION['user'])) {
-	if (($_SESSION['user']['id']) == ($blogpost['userID'])) { ?>
+    
+} if (($_SESSION['user']['id']) == ($blogpost['userID']))  ?>
 
     <button class="button_edit">
 		<a href="edit_post.php?postID=<?= $blogpost['postID'] ?>">Edit Post</a>
@@ -9,6 +10,6 @@ if (isset($_SESSION['user'])) {
 		<a href="delete_post.php?postID=<?= $blogpost['postID'] ?>">Delete Post</a>
 	</button>
 
-<?php } ?>
+
 
 
