@@ -17,7 +17,7 @@ if( password_verify($password, $fetched_user["password"]) ){
   $_SESSION["loggedIn"] = true;
 
 
-header('Location: index.php?success=true');
+header('Location:http://localhost:8888/profile.php');
 
   
 } else {
