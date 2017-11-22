@@ -4,9 +4,9 @@ require "database.php";
 require 'head.php';
 ?>
 
-	<body>
-	<?php require 'navbar.php';?>
-		<main>
+	<body id="single_post">
+		<?php require 'navbar.php';?>
+		<main role="main">
 			<div class="wrapper">
 				<?php
 	
@@ -21,14 +21,14 @@ require 'head.php';
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
 	
 	foreach($single_post as $blogpost) { ?>
-					<div class="blogpost">
+					<article class="blogpost">
 
 						<h2 class="center">
 							<?=$blogpost['title']?>
 						</h2>
-						<div class="blogpost__image">
+						<figure class="blogpost__image">
 							<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
-						</div>
+						</figure>
 						<small class="center">
 					By <?=  $blogpost['username'] ?> in
 						<?= $blogpost['category'] ?> 
@@ -39,10 +39,10 @@ require 'head.php';
 						</p>
 						<br/><br/>
 						<?php include 'edit_buttons.php'?>
-					</div>
+					</article>
 					<?php } ?>
 					<br/>
-					<div class="comments_wrapper container">
+					<section class="comments_wrapper_container">
 
 						<h3 class="comments_header">Comments</h3>
 
@@ -50,30 +50,32 @@ require 'head.php';
 						<!-- Comment form if not logged in -->
 						<form action="comment_form.php" method="POST" class="comment_form">
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
+							<input type="hidden" name="userID" value="0">
 							<br /><input type="text" name="name" placeholder="Name">
 							<input type="text" name="email" placeholder="Email">
 							<br/>
-							<input type="hidden" name="postID" value="<?=$_GET['postID']?>">
-
 							<input class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
 						<?php } else { ?>
 						<!-- Comment form if logged in -->
 						<form action="comment_form.php" method="POST" class="comment_form">
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
-							<input type="hidden" name="postID" value=" <?=$_GET['postID']?> ">
-							<input type="hidden" name="userID" value=" <?=$_SESSION[" user "]["id "]?> ">
-							<input type="hidden" name="name" value=" <?=$_SESSION[" user "]["username "] ?>">
-							<input type="hidden" name="email" value=" <?=$_SESSION[" user "]["email "] ?>">
+							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
+							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
+							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
+							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
 							<input class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
 						<?php }	?>
 					</div>
 
 					<br/>
-					<?php
+					
+						<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
-	WHERE postID = :postID");
+	WHERE postID = :postID
+	ORDER BY commentID DESC");
 				   
 	$statement->execute(array(
 		":postID" => $_GET["postID"]
@@ -82,16 +84,17 @@ $statement = $pdo->prepare("SELECT * FROM comments
 				   
 	foreach($comments as $comment) { 
  ?>
-						<div class="comment">
-							<p>
-								<?= $comment['comment'] ?>
-							</p>
-							<small><?=  $comment['name']; ?> </small>
-							<small><?= $comment['created']; ?> </small>
-							<br/>
-						</div>
+							<div class="comment">
+								<p>
+									<?= $comment['comment'] ?>
+								</p>
+								<small><?=  $comment['name']; ?> </small>
+								<small><?= $comment['created']; ?> </small>
+								<br/>
+							</div>
 
-						<?php } ?>
+							<?php } ?>
+					</section>
 			</div>
 			<?php
 require "footer.php";

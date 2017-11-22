@@ -5,11 +5,11 @@ require 'head.php';
 
 	<body id="about">
 	<?php require 'navbar.php'; ?>
-		<main>
-			<div class="wrapper">
-				<div class="about_image_wrapper">
+		<main role="main">
+			<article class="wrapper">
+				<figure class="about_image_wrapper">
 					<img class="about_image" src="img/watch2.jpeg">
-				</div>
+				</figure>
 
 				<div class="about_text_wrapper">
 					<p> Millhouse is a wholesale company that sells clothes, accessories and smaller interior design items to hundreds of fashion and lifestyle stores.
@@ -21,7 +21,7 @@ require 'head.php';
 						<br/> In the fall of 2017 Millhouse started our own webshop, selling our products directly to the consumers for the first time.
 					</p>
 				</div>
-			</div>
+			</article>
 
 			<?php
 require 'footer.php';
