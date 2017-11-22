@@ -61,7 +61,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
                     <?php foreach($blog as $blogpost){
     ?>
-                    <div class="blogpost">
+           
                     <div class="categoryblogpost">
 
 
@@ -78,7 +78,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                                 </a>
                                 <small class="left">
 							By <?=  $blogpost['username'] ?> in
-								<?= $blogpost['category'] ?> <br>
+								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>
 						        </small>
 
@@ -90,7 +90,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                             </div>
                         </div>
                     </div>
- </div>
+
                     <?php } ;?>
 
                

@@ -7,7 +7,7 @@ require "profile_database.php"
 
 	<body>
 	<?php require 'navbar.php';?>
-		<main>
+		<main class="profile_main">
 
 			<div class="profileWrapper">
 				<div class="profileHeader">
@@ -18,7 +18,7 @@ require "profile_database.php"
 					<div class="profileInfo">
 						<div class="profileName">
 							<h1>
-								<?= $_SESSION["user"]["username"]; ?>
+								My username: <?= $_SESSION["user"]["username"]; ?>
 							</h1>
 						</div>
 
@@ -62,10 +62,10 @@ require "profile_database.php"
 				<!--stänger profileHeader-->
 
 
-
 				<div class="latestInfo">
 					<div class="latestPosts">
 						<h3>Latest posts</h3>
+						
 
 						<?php
 	foreach($count2 as $c2) {
@@ -87,9 +87,7 @@ require "profile_database.php"
 	?>
 
 	
-	<a href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-
-
+	<a class="seeall_link" href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 								<?php } ?>
 								<!--stänger loop-->
@@ -104,13 +102,10 @@ require "profile_database.php"
 	foreach($count4 as $c4) {
 	?>
 
-							<p>
-								<?= $c4['comment'] ?>
-							</p>
-							<p>On
-								<?= $c4['postID'] ?> By
-									<?= $c4['name'] ?>
-							</p>
+							<p>	<?= $c4['comment'] ?></p>
+							<p class="on_article">On
+								<?= $c4['postID'] ?></p>
+							<p class="comment_by"> By <?= $c4['name'] ?></p>
 
 							<?php } ?>
 							<!--stänger loop-->
@@ -122,10 +117,7 @@ require "profile_database.php"
 	?>
 
 	
-	<a href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-
-
-							
+	<a class="seeall_link" href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 								<?php } ?>
 								<!--stänger loop-->
@@ -135,8 +127,7 @@ require "profile_database.php"
 				</div>
 				<!--stänger latestInfo-->
 
-			</div>
-			<!--profileWrapper-->
+			</div> <!--stänger headerWrapper-->
 
 			<?php
 require 'footer.php';

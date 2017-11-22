@@ -19,7 +19,6 @@
 .blogpost {
 	p {
 		width:80%;
-		margin:auto;
 	}
 	.blogpost__text {
 	flex-direction: row;
@@ -39,6 +38,16 @@
 /*SINGLE POST*/
 .single_post_image {
 	margin-bottom: 1rem;
+}
+
+/*CREATE NEW POST*/
+
+.select {
+    width: 70%;
+}
+
+.input_title {
+    height: 40px;
 }
 
 /*CATEGORY POST*/
@@ -84,6 +93,7 @@ margin:20px;
 
 }
 .categoryblogpost__text{
+    width:80%;
     margin-left: auto;
     margin-right: auto;
     
@@ -102,40 +112,46 @@ small {
 		text-align:left;
 	}
 
-/* PROFILE */
+ /*PROFILE*/
+
+.profile_main {
+background-color:white;
+}
 
 .profileWrapper {
-    width: 70%;
-    min-height: 1200px;
-    margin: 0 auto;
+		width: 80%;
+		min-height: 1200px;
+		margin: 0 auto;
 		//padding-left: 50px;
-    padding-top: 100px; 
+        background-color: rgb(252, 249, 250);
+		padding-top: 10%; 
+        padding-left:10%;
    
 }
-.headerWrapper {
-    display:flex;
-    width: 100%;
-    padding-top:50px;
-    flex-direction: row;
-   
-	}
 
 .profileHeader {
     display:flex;
+    width: 100%;
     padding-top: 0px;
-    flex:1;
-    margin-left:80px;
-
-
+    flex-direction: row;
+    flex-wrap:wrap;
 	}
 
 .profileImage{
-    width: 100%;
-    max-width: 300px;
-    min-width: 250px;
     height: auto;
     flex:1;
+    width: 50%;
     
+}
+
+
+
+.profileInfo {
+    display: flex;
+    flex:1;
+    width: 50%;
+    margin-left:7%;
+    flex-direction: column;
 }
 
 .profileImage img {
@@ -145,24 +161,31 @@ small {
 
 	}
 
+.profileName {
+margin-top:2%;
+}
 
 .numberInfo{
     display:flex;
+    width: 85%;
+    height: auto;
     flex-direction: row;
 
 }
 
 .numberOfposts{
-padding-right:90px;
+flex:1;
 margin-top: -30px;
+margin-right:-50%;
     
 }
 .numberOfcomments{
+    flex:1;
 margin-top: -30px;
 }
 
 .numberOfposts h2,.numberOfcomments h2{
-  font-size:1.5em;
+  font-size:1.3em;
  
     
 }
@@ -174,9 +197,7 @@ font-size:3em;
 .latestInfo{
     display:flex;
     width: 100%;
-    padding-top:50px;
     flex-direction: row;
-
 }
 
 .latestComments{
@@ -195,8 +216,6 @@ font-size:3em;
 .latestComments a, .latestPosts a{
 color: $categoryFontColor;
 }
-
-
 
 /* LOGIN/REGISTER */
 .login,

@@ -179,9 +179,12 @@ color: $categoryFontColor;
     font-size:1.2em;
 
 }
+.categoryblogpost{
+    margin:0 auto 10%;
+}
  
 .categoryblogpost__text{
-    width: 80%;
+    width: 100%;
     padding-top: 1.1rem;
 }
 .categoryblogpost__image {
@@ -281,6 +284,54 @@ color: $categoryFontColor;
         font-size:1.2em;
     }
 }
+/*CREATE NEW POST*/
+
+.newpost_headline {
+	text-align:center;
+	margin-top:10px;
+}
+.form_newpost {
+	margin-top:50px;
+}
+
+.ck-editor__editable_inline{
+	height:300px;
+}
+
+.input_newpost, .ck-toolbar {
+	background-color:#a6c9c6
+}
+.input_newpost {
+	color:black;
+}
+
+.input_title {
+	background-color:white;
+	border: solid 2px rgba(0,0,0,0.5);
+}
+
+.input_title::placeholder {
+color:black;
+}
+
+.select {
+	border-radius:5px;
+	padding:10px;
+	border:solid 2px rgba(0,0,0,0.5);
+}
+
+.buttons {
+	display:flex;
+}
+
+.select_button {
+	flex:1;
+}
+
+.publish_button {
+	flex:1;
+}
+
 
 /*SINGLE POST*/
 
@@ -326,11 +377,11 @@ textarea, input {
 /*PROFILE */
 
 .profileWrapper {
-		width: 70%;
+		width: 85%;
 		min-height: 1200px;
 		margin: 0 auto;
 		//padding-left: 50px;
-		padding-top: 100px; 
+		padding-top: 30px; 
    
 	}
 
@@ -344,13 +395,24 @@ padding-top:20px;
 //margin-bottom:50px;
 //padding:30px;
 
-
-
 	}
 
+.profileName {
+	margin-top:30px;
+}
 
+.profileName h1 {
+	font-size:1.7em;
+}
+
+.profileImage {
+	width:100%;
+	margin:0 auto;
+}
 	.profileImage img {
         width: 100%;
+        border-radius:5%;
+        box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.58);
 		overflow: hidden;
 		//height: 300px;
 
@@ -365,6 +427,8 @@ padding-top:20px;
 .numberInfo{
 display:flex;
 flex-direction: row;
+margin-top:10px;
+height:50px;
 
 }
 
@@ -378,20 +442,24 @@ margin-top: -30px;
 }
 
 .numberOfposts h2,.numberOfcomments h2{
-  font-size:1.5em;
+  font-size:1.2em;
  
     
 }
 
 .numberOfposts p, .numberOfcomments p{
-font-size:3em;
+font-size:1.6em;
+min-height:40px;
+color:$categoryFontColor;
+font-weight:bold;
 
 }
 .latestInfo{
     display:flex;
     width: 100%;
-    padding-top:50px;
+    margin-top:60px;
     flex-direction: column;
+    flex-wrap: wrap;
 
 
 }
@@ -401,11 +469,27 @@ font-size:3em;
 }
 
 .latestComments h3, .latestPosts h3{
-    font-size: 1.8em;
+    font-size: 1.5em;
+    height: 18px;
 }
-.latestComments a, .lastestPosts a{
+
+.latestComments p, .latestPosts p{
+    font-size: 1em;
+    height: 18px;
+}
+
+.latestComments a, .latestPosts a {
 color: $categoryFontColor;
 }
+
+.seeall_link {
+	font-weight:bold;
+}
+
+.comment_by, .on_article {
+	font-size:0.8em;
+}
+
 
 
 /* FOOTER */
