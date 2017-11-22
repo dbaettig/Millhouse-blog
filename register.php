@@ -3,9 +3,9 @@ require 'session.php';
 require 'head.php';
 ?>
 
-	<body>
+	<body id="register">
 	<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 			<div class="background__wrapper--login">
 				<div class="register">
 					<h3>Sign Up</h3>

@@ -40,9 +40,9 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 	<body id="index">
 	<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 			<div class="wrapper">
-				<div class="categorymenu">
+				<nav class="categorymenu" role="navigation">
                     <ul>
                         <li <?php if (isset ($_GET["news"])){echo "class='active'";}?></l><a href="single_category.php?news">News</a></li>
                         
@@ -52,19 +52,19 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                         
                         <li <?php if (isset ($_GET["featured"])){echo "class='active'";}?>><a href="single_category.php?featured">Featured</a></li>
 				    </ul>
-                </div>
+                </nav>
 
 				<div class="categorywrapper">
 					
             <?php foreach($blog as $blogpost){
     ?>
 
-            <div class="categoryblogpost">
+            <article class="categoryblogpost">
 
 
-						<div class="categoryblogpost__image">
+						<figure class="categoryblogpost__image">
 							<img src="<?= $blogpost['image'] ?>">
-						</div>
+						</figure>
 
 						<div class="categoryblogpost__text">
 							<div class="blogpost__text--meta">
@@ -86,7 +86,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 								</p>
 							</div>
 						</div>
-					</div>
+					</article>
 
 					<?php } ;?>
                 </div>

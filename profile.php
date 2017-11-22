@@ -5,15 +5,15 @@ require 'profile_database.php';
 
 ?>
 
-	<body>
+	<body id="profile">
 		<?php require 'navbar.php';?>
-		<main>
+		<main role="main">
 
 			<div class="profileWrapper">
 				<div class="profileHeader">
-					<div class="profileImage">
+					<figure class="profileImage">
 						<img src="img/glasses1.jpeg" alt="">
-					</div>
+					</figure>
 
 					<div class="profileInfo">
 						<div class="profileName">
@@ -22,7 +22,7 @@ require 'profile_database.php';
 							</h1>
 						</div>
 
-						<div class="numberInfo">
+						<section class="numberInfo">
 
 							<?php
 							
@@ -54,7 +54,7 @@ require 'profile_database.php';
 									<?php } ?>
 									<!--stänger loop-->
 
-						</div>
+						</section>
 						<!--stänger numberInfo-->
 					</div>
 					<!--stänger profileInfo-->

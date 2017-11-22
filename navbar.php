@@ -1,4 +1,4 @@
-<header>
+<header role="banner">
 	<?php
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
@@ -26,7 +26,7 @@
 			</div>
 		</a>
 
-		<nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
+		<nav role="navigation" class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
 			<a class="navbar-brand mobile" href="#">Navbar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
