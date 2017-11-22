@@ -60,7 +60,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 									</p>
 								</div>
 							</div>
-							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
+							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
 						</div>
 						<?php } ?>
 				</div>

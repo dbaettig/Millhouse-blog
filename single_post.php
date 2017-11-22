@@ -73,7 +73,8 @@ require 'head.php';
 					<br/>
 					<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
-	WHERE postID = :postID");
+	WHERE postID = :postID
+	ORDER BY commentID DESC");
 				   
 	$statement->execute(array(
 		":postID" => $_GET["postID"]
