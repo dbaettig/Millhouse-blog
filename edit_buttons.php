@@ -1,4 +1,5 @@
 <?php 
+if (isset($_SESSION['user'])) {
 	if (($_SESSION['user']['id']) == ($blogpost['userID'])) { ?>
 
     <button class="button_edit">
@@ -9,3 +10,5 @@
 	</button>
 
 <?php } ?>
+
+

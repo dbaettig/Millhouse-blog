@@ -3,9 +3,9 @@ require 'session.php';
 require 'head.php';
 ?>
 
-<body>
+<body id="new_post">
 <?php require 'navbar.php'; ?>
-	<main>
+	<mai role="main"n>
 
 		<div class="wrapper">
 

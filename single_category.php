@@ -40,34 +40,34 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 
 ?>
-
-    <body id="index">
-        <?php require 'navbar.php';?>
-        <main>
-            <div class="wrapper">
-                <div class="categorymenu">
+	<body id="index">
+	<?php require 'navbar.php';?>
+		<main role="main">
+			<div class="wrapper">
+				<nav class="categorymenu" role="navigation">
                     <ul>
-                        <li <?php if (isset ($_GET[ "news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
-
-                        <li <?php if (isset ($_GET[ "interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a>
-
-                            <li <?php if (isset ($_GET[ "style"])){echo "class='active'";}?>><a href="single_category.php?style">Style</a></li>
-
-                            <li <?php if (isset ($_GET[ "featured"])){echo "class='active'";}?>><a href="single_category.php?featured">Featured</a></li>
-                    </ul>
-                </div>
+                        <li <?php if (isset ($_GET["news"])){echo "class='active'";}?></l><a href="single_category.php?news">News</a></li>
+                        
+                        <li <?php if (isset ($_GET["interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a>
+                        
+                        <li <?php if (isset ($_GET["style"])){echo "class='active'";}?>><a href="single_category.php?style">Style</a></li>
+                        
+                        <li <?php if (isset ($_GET["featured"])){echo "class='active'";}?>><a href="single_category.php?featured">Featured</a></li>
+				    </ul>
+                </nav>
 
                 <div class="categorywrapper">
 
                     <?php foreach($blog as $blogpost){
     ?>
-           
-                    <div class="categoryblogpost">
+          
+            <article class="categoryblogpost">
 
 
-                        <div class="categoryblogpost__image">
-                            <img src="<?= $blogpost['image'] ?>">
-                        </div>
+						<figure class="categoryblogpost__image">
+							<img src="<?= $blogpost['image'] ?>">
+						</figure>
+
 
                         <div class="categoryblogpost__text">
                             <div class="blogpost__text--meta">
@@ -80,19 +80,19 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 							By <?=  $blogpost['username'] ?> in
 								<?= $blogpost['category'] ?> 
 								<?= $blogpost['created'] ?>
-						        </small>
 
-                            </div>
-                            <div class="blogpost__text--bodytext">
-                                <p>
-                                    <?= $blogpost['post'] ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+						</small>
 
-                    <?php } ;?>
+							</div>
+							<div class="blogpost__text--bodytext">
+								<p>
+									<?= $blogpost['post'] ?>
+								</p>
+							</div>
+						</div>
+					</article>
 
+					<?php } ;?>
                
                  </div>
                 <!--categorywrapper close-->

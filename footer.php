@@ -1,6 +1,6 @@
 </main>
         
-<footer>
+<footer role="contentinfo">
 	<div class="footer-inner">
 		<ul>
 			<li class="footer-inner__info about">
