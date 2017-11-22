@@ -2,8 +2,6 @@
 session_start();
 require 'database.php';
 
-//var_dump($_FILES["uploaded_file"]);
-
 if( $_FILES["uploaded_file"]["name"] != 0){
 	
 	require 'resize_image.php';

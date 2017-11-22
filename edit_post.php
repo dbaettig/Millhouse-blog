@@ -24,8 +24,10 @@ foreach($single_post as $blogpost) { ?>
 				<textarea name="text" id="editor" rows="30">
 					<?= $blogpost['post']; ?>
 				</textarea> <br/>
+
 				<label for="uploaded_file"><?= $blogpost['image']?></label>
-				<input type="file" name="uploaded_file" value="<?= $blogpost['image']?>">
+				<input class="uploadFileInput" type="file" name="uploaded_file" value="<?= $blogpost['image']?>" style="display:none;">
+				<button class="uploadFileButton">Select File</button>
 				
 				<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br><br>
 
@@ -41,6 +43,11 @@ foreach($single_post as $blogpost) { ?>
 			</form>
 		</div>
 	</div>
+		<script>
+			$('.uploadFileButton').on('click', function(){
+				$('.uploadFileInput').trigger('click'); 
+			});
+		</script>
 <?php 
 }
 require 'footer.php'; ?>
