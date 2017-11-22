@@ -1,7 +1,7 @@
 <?php
 require 'session.php';
 require 'head.php';
-require "profile_database.php"
+require 'profile_database.php';
 
 ?>
 
@@ -108,11 +108,9 @@ require "profile_database.php"
 	?>
 							<p>
 								<?= $c4['comment'] ?>
-							</p>
-							<p>On
-								<?= $c4['postID'] ?> By
-									<?= $c4['name'] ?>
-							</p>
+							on
+								<a href="single_post.php?postID=<?= $c4['postID'] ?>"><?= $c4['title'] ?>
+								</a></p>
 
 							<?php } ?>
 							<!--stänger loop-->
