@@ -378,7 +378,7 @@ textarea, input {
 
 .profileWrapper {
 		width: 85%;
-		min-height: 1200px;
+		min-height:1200px;
 		margin: 0 auto;
 		//padding-left: 50px;
 		padding-top: 30px; 
@@ -427,7 +427,7 @@ padding-top:20px;
 .numberInfo{
 display:flex;
 flex-direction: row;
-margin-top:10px;
+margin-top:15%;
 height:50px;
 
 }
@@ -471,11 +471,22 @@ font-weight:bold;
 .latestComments h3, .latestPosts h3{
     font-size: 1.5em;
     height: 18px;
+    color:$categoryFontColor;
+    font-weight:bold;
 }
 
-.latestComments p, .latestPosts p{
+.latestComments p {
     font-size: 1em;
-    height: 18px;
+    height: 38px;
+    color:black;
+    text-transform: capitalize;
+}
+
+.latestPosts p {
+	font-size: 1em;
+    height: 38px;
+    color: black;
+    text-transform: capitalize;
 }
 
 .latestComments a, .latestPosts a {
