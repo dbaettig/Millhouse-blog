@@ -373,9 +373,10 @@ textarea, input {
 
 .comment_submit {
 	line-height:1;
-	width: 20%;
-	height: 60px;
-	padding-top: 23px;
+	width:23%;
+	max-width: 44%;
+	height:40px;
+	padding-top: 2.3%;
 	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
 	background-color: #a6c9c6;
 	color:black;
