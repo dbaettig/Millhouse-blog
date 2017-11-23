@@ -27,7 +27,7 @@ require 'head.php';
 							<?=$blogpost['title']?>
 						</h2>
 						<figure class="blogpost__image">
-							<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
+							<img src="<?= $blogpost['image'] ?>">
 						</figure>
 						<small class="center">
 					By <?=  $blogpost['username'] ?> in
