@@ -77,15 +77,11 @@ p {
 .navbar-brand.mobile {
 	display: none;
 }
-.new__post button{
-    color:$postRelatedColor;
-    box-shadow: 10px;
-    border:none;
-    background-color: transparent;
-}
+
 .new__post a{
     font-family:$categoryFont;
     font-size:1.2em;
+    color:$postRelatedColor;
 }
 
 

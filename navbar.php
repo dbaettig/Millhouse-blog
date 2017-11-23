@@ -2,11 +2,10 @@
 	<?php
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
-		<div class="new__post">
-			<a href="new_post.php">
-					<button>+ Create new post</button>
+		<p class="new__post">
+			<a href="new_post.php">+ Create new post
 				</a>
-				</div>
+				</p>
 			<p class="header__usernav--loggedin">
 				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
 				<a href="profile.php">Profile page</a>  <a href="logout.php">Sign out</a>
