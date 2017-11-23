@@ -17,12 +17,15 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 				<div class="categorymenu">
 
-					<form action="single_category.php" method="POST">
-						<input class="input_category" type="submit" name="news" value="News">
-						<input class="input_category" type="submit" name="style" value="Style">
-						<input class="input_category" type="submit" name="interior" value="Interior">
-						<input class="input_category" type="submit" name="featured" value="Featured">
-					</form>
+					 <ul>
+                        <li><a href="single_category.php?news">News</a></li>
+                        
+                        <li><a href="single_category.php?interior">Interior</a>
+                        
+                        <li><a href="single_category.php?style">Style</a></li>
+                        
+                        <li><a href="single_category.php?featured">Featured</a></li>
+				    </ul>
 				</div>
 
 				<div class="posts">
@@ -57,7 +60,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 									</p>
 								</div>
 							</div>
-							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Kommentera</a></p>
+							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
 						</div>
 						<?php } ?>
 				</div>

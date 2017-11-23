@@ -50,21 +50,21 @@ require 'head.php';
 						<!-- Comment form if not logged in -->
 						<form action="comment_form.php" method="POST" class="comment_form">
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
+							<input type="hidden" name="userID" value="0">
 							<br /><input type="text" name="name" placeholder="Name">
 							<input type="text" name="email" placeholder="Email">
 							<br/>
-							<input type="hidden" name="postID" value="<?=$_GET['postID']?>">
-
 							<input class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
 						<?php } else { ?>
 						<!-- Comment form if logged in -->
 						<form action="comment_form.php" method="POST" class="comment_form">
 							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
-							<input type="hidden" name="postID" value=" <?=$_GET['postID']?> ">
-							<input type="hidden" name="userID" value=" <?=$_SESSION[" user "]["id "]?> ">
-							<input type="hidden" name="name" value=" <?=$_SESSION[" user "]["username "] ?>">
-							<input type="hidden" name="email" value=" <?=$_SESSION[" user "]["email "] ?>">
+							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
+							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
+							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
+							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
 							<input class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
 						<?php }	?>
@@ -73,7 +73,8 @@ require 'head.php';
 					<br/>
 					<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
-	WHERE postID = :postID");
+	WHERE postID = :postID
+	ORDER BY commentID DESC");
 				   
 	$statement->execute(array(
 		":postID" => $_GET["postID"]
