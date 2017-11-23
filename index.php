@@ -58,9 +58,11 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 								</div>
 								<div class="blogpost__text--bodytext">
 									<p>
-										<?= $blogpost['post'] ?>
+										<?= substr($blogpost['post'],0,200) . "..."; ?>
                   </p>
                   <p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
+                  
+                  <p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Läs mer</a></p>
                 </div>
 						</div>
 							
