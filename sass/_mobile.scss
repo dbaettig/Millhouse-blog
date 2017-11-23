@@ -51,6 +51,7 @@ p {
 	padding:1.5rem 1.5rem 0;
 	display:flex;
 	justify-content: space-between;
+    
 	.header__usernav--loggedin, .header__usernav--loggedout {
 		text-align: right;
         display: flex;
@@ -60,30 +61,28 @@ p {
 	}
 }
 
-.header__usernav--loggedin a,.header__usernav--loggedout a{
-    font-family:$categoryFont;
-    color:$linksFontColor;
-    font-size:1.2em;
-}
 .header__inner {
 	display: flex;
-	height: 33vh;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+.header__inner img {
+    height: 50%;
+    margin: 10px;
+}
+.login_signup--tablet{
+    display:none;
 }
 
 .logo {
-	margin: 20px auto;
+	margin:0px;
 }
+
 
 .navbar-brand.mobile {
 	display: none;
 }
-
-.new__post a{
-    font-family:$categoryFont;
-    font-size:1.2em;
-    color:$postRelatedColor;
-}
-
 
 /* LOGIN/REGISTER */
 .background__wrapper--login {
@@ -149,7 +148,6 @@ color:white;
 .button_signup {
 	width: 50%;
 }
-
 /*CATEGORIES*/
 
 .categorymenu{
