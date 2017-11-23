@@ -22,4 +22,13 @@ $new_post->execute(array(
 	":category" => $_POST['category']
 ));
 
-header("Location:index.php");
+$get_newID = $pdo->prepare(
+	"SELECT postID FROM posts 
+	WHERE title = :title"
+);
+
+$get_newID->execute(array(
+":title" => $_POST['title']));
+$newID = $get_newID ->fetchALL(PDO::FETCH_ASSOC);
+
+header("Location:single_post.php?postID=" . $newID[0]['postID']);
