@@ -57,3 +57,4 @@ $resized_image = resize_image("img/" . $filename, $new_width, $new_height);
 
 //Save the image to disk
 imagejpeg($resized_image, "resized/" . $filename, 100);
+	
