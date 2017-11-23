@@ -5,7 +5,7 @@ require 'head.php';
 
 <body id="new_post">
 <?php require 'navbar.php'; ?>
-	<main role="main">
+<main role="main">
 
 		<div class="wrapper">
 			<div class="container">
