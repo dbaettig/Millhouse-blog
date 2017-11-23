@@ -22,7 +22,7 @@ require 'head.php';
 	
 	foreach($single_post as $blogpost) { ?>
 					<article class="blogpost">
-
+						<h1 class="category_center"><?= $blogpost['category'] ?></h1>
 						<h2 class="center">
 							<?=$blogpost['title']?>
 						</h2>
@@ -30,10 +30,10 @@ require 'head.php';
 							<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
 						</figure>
 						<small class="center">
-					By <?=  $blogpost['username'] ?> in
-						<?= $blogpost['category'] ?> 
-						<?= $blogpost['created'] ?>
+					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
+						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i> 3 comments
 				</small>
+				
 						<p>
 							<?= $blogpost['post'] ?>
 						</p>
@@ -48,30 +48,32 @@ require 'head.php';
 
 						<?php if(!isset($_SESSION["user"])){ ?>
 						<!-- Comment form if not logged in -->
-						<form action="comment_form.php" method="POST" class="comment_form">
-							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
-							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
-							<input type="hidden" name="userID" value="0">
-							<br /><input type="text" name="name" placeholder="Name">
-							<input type="text" name="email" placeholder="Email">
+						<form class="input_comment" action="comment_form.php" method="POST" class="comment_form">
+							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
+							<input class="input_comment" type="hidden" name="userID" value="0">
+							<br /><input class="input_commentName" type="text" name="name" placeholder="Name">
+							<input class="input_commentEmail" type="text" name="email" placeholder="Email">
 							<br/>
-							<input class="comment_submit" type="submit" name="submit" value="Post comment">
+							<input class="comment_submit" type="submit" name="submit" value="Post">
 						</form>
 						<?php } else { ?>
 						<!-- Comment form if logged in -->
-						<form action="comment_form.php" method="POST" class="comment_form">
-							<textarea name="comment" placeholder="Write your comment..." rows="6"></textarea>
+						<form class="input_comment" action="comment_form.php" method="POST" class="comment_form">
+							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
 							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
-							<input class="comment_submit" type="submit" name="submit" value="Post comment">
+							<input class="comment_submit" class="comment_submit" type="submit" name="submit" value="Post comment">
 						</form>
 						<?php }	?>
-					</div>
 
-					<br/>
-					
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+
 						<?php
 $statement = $pdo->prepare("SELECT * FROM comments  
 	WHERE postID = :postID
@@ -88,12 +90,16 @@ $statement = $pdo->prepare("SELECT * FROM comments
 								<p>
 									<?= $comment['comment'] ?>
 								</p>
-								<small><?=  $comment['name']; ?> </small>
-								<small><?= $comment['created']; ?> </small>
+								<small class="comment_info"><?=  $comment['name']; ?> <i class="fa fa-circle" aria-hidden="true"></i> <?= $comment['created']; ?> </small>
+								
 								<br/>
 							</div>
 
 							<?php } ?>
+
+					</div>
+
+		
 					</section>
 			</div>
 			<?php
