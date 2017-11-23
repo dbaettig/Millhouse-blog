@@ -2,7 +2,7 @@
 session_start();
 require 'database.php';
 
-if( $_FILES["uploaded_file"]["name"] != 0){
+if( !empty($_FILES["uploaded_file"]["name"]) ){
 	
 	require 'resize_image.php';
 	
@@ -39,4 +39,4 @@ if( $_FILES["uploaded_file"]["name"] != 0){
 	));
 }
 
-header("Location:index.php");
+header("Location:single_post.php?postID=" . $_POST['postID']);
