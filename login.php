@@ -14,7 +14,7 @@ require 'head.php';
 						<input class="input_login" type="password" name="password" placeholder="password">
 						<div class="input__login--button"><input class="button_login" type="submit" name="submit" value="Login"></div>
 						<div class="sign__up--paragraph">
-							<p>Don't have an account yet?</p><a href="register.php" class="account__signup--click" name="signup">Sign up</a></div>
+							<p>Don't have an account yet?</p><a href="register.php" class="account__signup--click" name="signup">Sign up here!</a></div>
 
 					</form>
 

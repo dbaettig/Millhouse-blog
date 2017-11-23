@@ -105,7 +105,11 @@ p {
 
 .sign__up--paragraph p {
 	color: white;
-	font-size: 1rem;
+	font-size: 1.2rem;
+}
+.sign__up--paragraph a{
+    font-size: 1.3rem;	
+    	color: white;
 }
 
 .login,
@@ -127,7 +131,7 @@ p {
 .input_login,
 .input_register {
 	background-color: rgba(255, 255, 255, 0.1);
-	height: 40px;
+	height: 50px;
 	width: 90%;
 	color: #fff;
 	border-radius: 5px;
@@ -136,6 +140,7 @@ p {
 	font-size: 1.1rem;
 	padding:3%;
 }
+
 .input_login::placeholder{
 color:white;
 }

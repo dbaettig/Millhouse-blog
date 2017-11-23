@@ -1,5 +1,6 @@
 <header role="banner">
-	<?php
+   <div class="login_signup--tablet">
+    <?php
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
 		<p class="new__post">
@@ -19,13 +20,14 @@
 			</p>
 		</div>
 		<?php } ?>
-
+    </div>
 
 		<a href="index.php">
 			<div class="header__inner">
 				<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
 			</div>
 		</a>
+	
 
 		<nav role="navigation" class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
 			<a class="navbar-brand mobile" href="#">Navbar</a>
@@ -43,6 +45,42 @@
 					<li class="nav-item">
 						<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 					</li>
+					<div class="login_signup">
+					<?php
+		if(isset($_SESSION["user"])){ ?>
+
+		
+		<li class="nav-item">
+		    <p class="new__post">
+			    <a class="nav-link" href="new_post.php"
+			    target="_blank"> + Create new post </a>
+            </p>
+        </li>
+        
+				<li class="nav-item">
+			<p class="header__usernav--loggedin">
+				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
+				<a class= "nav-link" href="profile.php"
+				target="_blank">Profile page <br/>  <a class="nav-link" href="logout.php">Sign out</a>
+			</p>
+			</li>
+	
+		<?php } else { ?>
+		
+			<div></div>
+			<li class="nav-item">
+			<p class="header__usernav--loggedout">
+				<a class ="nav-link" href="login.php"
+				target="_blank" >Log in </a> <br/> <a class="nav-link"
+				href="register.php">Sign up</a>
+			</p>
+				</li>
+		
+		<?php } ?>
+
+
+				
+				</div>
 				</ul>
 			</div>
 		</nav>
