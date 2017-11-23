@@ -54,6 +54,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 							<?= $blogpost['category'] ?> 
 							<?= $blogpost['created'] ?>
 					</small>
+<<<<<<< HEAD
                                     <?php include 'edit_buttons.php'?>
                                 </div>
                                 <div class="blogpost__text--bodytext">
@@ -66,6 +67,17 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
                         </article>
                         <?php } ?>
+=======
+									<?php include 'edit_buttons.php'?>
+								</div>
+								<div class="blogpost__text--bodytext">
+									<p>
+										<?= substr($blogpost['post'],0,200) . "..."; ?>
+                  </p>
+                  <p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
+                  
+                  <p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Läs mer</a></p>
+>>>>>>> 5da55410b201ebd38ca6eed68681883113a0ee72
                 </div>
                 <!-- close .posts -->
             </div>
