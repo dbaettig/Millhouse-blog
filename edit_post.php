@@ -45,7 +45,7 @@ foreach($single_post as $blogpost) { ?>
 
             <div class="publish_button">
               <input class="input_newpost" type="submit" name="submit" value="Update">
-            </div> <!-- .publish_button
+            </div> <!-- .publish_button -->
 
           </div> <!-- .buttons -->
 

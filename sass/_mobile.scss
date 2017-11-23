@@ -175,14 +175,19 @@ color: $categoryFontColor;
     font-size:1.2em;
 
 }
-.categoryblogpost{
-    margin:0 auto 10%;
-}
+	small {
+		display: block;
+		margin:0 auto 2rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+	}
  
 .categoryblogpost__text{
     width: 100%;
     padding-top: 1.1rem;
 }
+
 .categoryblogpost__image {
     text-align: center;
     margin-top:1.1rem;
