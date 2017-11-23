@@ -5,15 +5,15 @@ require 'profile_database.php';
 
 ?>
 
-	<body>
+	<body id="profile">
 		<?php require 'navbar.php';?>
-		<main>
+		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
 				<div class="profileHeader">
-					<div class="profileImage">
+					<figure class="profileImage">
 						<img src="img/glasses1.jpeg" alt="">
-					</div>
+					</figure>
 
 					<div class="profileInfo">
 						<div class="profileName">
@@ -62,18 +62,10 @@ require 'profile_database.php';
 				<!--stänger profileHeader-->
 
 
+
 				<div class="latestInfo">
 					<div class="latestPosts">
 						<h3>Latest posts</h3>
-
-					</div>
-					<!--stänger numberInfo-->
-				</div>
-				<!--stänger profileInfo-->
-			</div>
-			<!--stänger profileHeader-->
-			</div>
-			<!--stänger headerWrapper-->
 
 
 			<?php
@@ -91,9 +83,10 @@ require 'profile_database.php';
 
 				</br>
 
+
 				<?php
 	foreach($count1 as $c1) {	?>
-					<a href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					<a class="seeall_link" href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					<?php } ?>
 					<!--stänger loop-->
 
@@ -107,10 +100,10 @@ require 'profile_database.php';
 	foreach($count4 as $c4) {
 	?>
 							<p>
-								<?= $c4['comment'] ?>
-							on
-								<a href="single_post.php?postID=<?= $c4['postID'] ?>"><?= $c4['title'] ?>
-								</a></p>
+								"<?= $c4['comment'] ?>"</p>
+							
+							<p>On <a href="single_post.php?postID=<?= $c4['postID'] ?>"><?= $c4['title'] ?>
+								</a> by <?= $c4['name'] ?></p>
 
 							<?php } ?>
 							<!--stänger loop-->
@@ -121,8 +114,7 @@ require 'profile_database.php';
 	foreach($count3 as $c3) {
 	?>
 
-
-								<a href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<a class="seeall_link" href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 								<?php } ?>
 								<!--stänger loop-->

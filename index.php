@@ -15,7 +15,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 		<main>
 			<div class="wrapper">
 
-				<div class="categorymenu">
+				<nav class="categorymenu">
 
 					 <ul>
                         <li><a href="single_category.php?news">News</a></li>
@@ -26,18 +26,20 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                         
                         <li><a href="single_category.php?featured">Featured</a></li>
 				    </ul>
-				</div>
+				</nav>
 
 				<div class="posts">
 
 
 					<?php
+
 		foreach($blog as $blogpost) {
 	?>
-						<div class="blogpost">
-							<div class="blogpost__image">
+						<article class="blogpost">
+							<figure class="blogpost__image">
+
 								<img class="index_image" src="<?= $blogpost['image'] ?>">
-							</div>
+							</figure>
 
 							<div class="blogpost__text">
 								<div class="blogpost__text--meta">
@@ -57,11 +59,12 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 								<div class="blogpost__text--bodytext">
 									<p>
 										<?= $blogpost['post'] ?>
-									</p>
-								</div>
-							</div>
-							<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
+                  </p>
+                  <p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
+                </div>
 						</div>
+							
+						</article>
 						<?php } ?>
 				</div>
 				<!-- close .posts -->
