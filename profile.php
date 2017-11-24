@@ -49,6 +49,7 @@ require 'profile_database.php';
 											<?= $c3 ?>
 										</p>
 										<h2>comments</h2>
+									</br>
 									</div>
 
 									<?php } ?>

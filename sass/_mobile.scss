@@ -51,6 +51,7 @@ p {
 	padding:1.5rem 1.5rem 0;
 	display:flex;
 	justify-content: space-between;
+    
 	.header__usernav--loggedin, .header__usernav--loggedout {
 		text-align: right;
         display: flex;
@@ -60,30 +61,28 @@ p {
 	}
 }
 
-.header__usernav--loggedin a,.header__usernav--loggedout a{
-    font-family:$categoryFont;
-    color:$linksFontColor;
-    font-size:1.2em;
-}
 .header__inner {
 	display: flex;
-	height: 33vh;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+.header__inner img {
+    height: 50%;
+    margin: 10px;
+}
+.login_signup--tablet{
+    display:none;
 }
 
 .logo {
-	margin: 20px auto;
+	margin:0px;
 }
+
 
 .navbar-brand.mobile {
 	display: none;
 }
-
-.new__post a{
-    font-family:$categoryFont;
-    font-size:1.2em;
-    color:$postRelatedColor;
-}
-
 
 /* LOGIN/REGISTER */
 .background__wrapper--login {
@@ -105,7 +104,11 @@ p {
 
 .sign__up--paragraph p {
 	color: white;
-	font-size: 1rem;
+	font-size: 1.2rem;
+}
+.sign__up--paragraph a{
+    font-size: 1.3rem;	
+    	color: white;
 }
 
 .login,
@@ -127,7 +130,7 @@ p {
 .input_login,
 .input_register {
 	background-color: rgba(255, 255, 255, 0.1);
-	height: 40px;
+	height: 50px;
 	width: 90%;
 	color: #fff;
 	border-radius: 5px;
@@ -136,6 +139,7 @@ p {
 	font-size: 1.1rem;
 	padding:3%;
 }
+
 .input_login::placeholder{
 color:white;
 }
@@ -144,7 +148,6 @@ color:white;
 .button_signup {
 	width: 50%;
 }
-
 /*CATEGORIES*/
 
 .categorymenu{
@@ -241,12 +244,12 @@ color: $categoryFontColor;
 		height:0;
 		padding-top: $responsiveHeight;
 		overflow:hidden;
-		position:relative;
+		//position:relative;
 		margin-bottom:1.5%;
 		img {
 			//place image in crop box
 			width:100%;
-			position:relative;
+			//position:relative;
 			margin-top:-$responsiveHeight;
 		}
 	}
@@ -342,6 +345,14 @@ color:black;
 
 /*SINGLE POST*/
 
+.category_center {
+	text-align: center;
+	margin-bottom:30px;
+	font-size:1.4em;
+	color: $categoryFontColor;
+	text-transform:capitalize;
+	 text-decoration: underline;
+}
 .comments_header {
 	text-align: center;
 }
@@ -361,9 +372,49 @@ textarea, input {
 }
 
 .comment_submit {
-	width: 65%;
+	line-height:1;
+	width:23%;
+	max-width: 44%;
+	height:40px;
+	padding-top: 2.3%;
+	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
+	background-color: #a6c9c6;
+	color:black;
 }
 
+.input_comment {
+	line-height: 1;
+	background-color:white;
+}
+
+.input_commentName {
+	line-height:1;
+	height:40px;
+	width:48%;
+	background-color:white;
+}
+
+.input_commentEmail {
+	line-height:1;
+	height:40px;
+	width:48%;
+	float:right;
+	background-color:white;
+}
+
+.textarea_comment {
+	background-color:white;
+}
+
+.fa-circle:before {
+	font-size:0.3em;
+	margin:6px;
+}
+
+.comment_info {
+	font-weight:bold;
+	font-size:0.8em;
+}
 
 /*ABOUT*/
 

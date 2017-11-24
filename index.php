@@ -14,6 +14,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
         <?php require 'navbar.php'; ?>
         <main>
             <div class="wrapper">
+            	
 
                 <nav class="categorymenu">
 
