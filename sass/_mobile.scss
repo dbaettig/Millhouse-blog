@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
 //BASIC STYLING
 * {padding:0;}
 html { 
 	-webkit-font-smoothing: antialiased; 
 	-moz-osx-font-smoothing: grayscale; 
+}
+
+body#index a#nav-index,
+body#about a#nav-about
+{
+color: white;
 }
 
 .wrapper {
@@ -20,6 +28,7 @@ img {
 /* TYPOGRAPHY */
 body {
 	font-family: $bodyFont;
+	font-weight:400;
 }
 
 h1,
@@ -39,11 +48,62 @@ h3 {
 
 p {
 	font-family: $bodyFont;
-	margin-bottom: 0em;
-    font-family:$bodyFont;
-    
-	//margin-bottom:.8em!important;
+	margin-bottom:.8em!important;
 }
+
+a {
+	color:$categoryFontColor;
+}
+a:hover {
+	color:$categoryFontColor;
+}
+
+/* BUTTONS */
+
+button {
+	cursor:pointer;
+	padding: 5px 16px;
+	border-radius:5px;
+	border:none;
+	a {
+	color:#fff;
+	}
+}
+
+button a:hover {
+		text-decoration:none;
+		color:#fff;
+}
+
+.button_small {
+	border:none;
+	border-radius:5px;
+	font-size:.9em;
+}
+
+.button_large {
+	font-size:1.2em;	
+}
+
+.button_grey, 
+.button_turquoise {
+	color:#fff;
+}
+
+.button_turquoise {
+	background:$linksFontColor;
+}
+.button_turquoise:hover {
+	background:$categoryFontColor;
+}
+
+.button_grey {
+	background:$footerFontColor;
+}
+.button_grey:hover {
+	background:$brandColor2;
+}
+
 
 /* HEADER */
 
@@ -56,8 +116,6 @@ p {
 		text-align: right;
         display: flex;
         flex-direction: column;
-        
-     
 	}
 }
 
@@ -257,28 +315,14 @@ color: $categoryFontColor;
 		margin-top: 0.5rem;
 		justify-content: space-between;
 
-		.blogpot__text--meta {
-			flex-basis:25%;
+		.blogpost__text--meta {
+			flex-basis:40%;
 			flex-grow: 1;
 		 
          }
-        .button_edit, .button_delete{
-        background-color: transparent;
-        border:none;
-        }
-        .button_edit a, .button_delete a{
-             color:$postRelatedColor;
-             font-family:$categoryFont;
-             font-size:1.2em;
-             padding-right:10px;          
-
- }       
-        
-
 		.blogpost__text--bodytext {
-            margin-top:1em;
-			flex-basis:75%;
-			flex-grow: 2;
+			flex-basis:60%;
+			flex-grow: 1;
 		}
 	}
 	
@@ -434,11 +478,8 @@ textarea, input {
 
 .profileWrapper {
 		width: 85%;
-		min-height:1200px;
 		margin: 0 auto;
-		//padding-left: 50px;
 		padding-top: 30px; 
-   
 	}
 
 .profileHeader {
@@ -467,8 +508,8 @@ padding-top:20px;
 }
 	.profileImage img {
         width: 100%;
-        border-radius:5%;
-        box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.58);
+        border-radius:5px;
+        box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.1);
 		overflow: hidden;
 		//height: 300px;
 
@@ -504,49 +545,42 @@ margin-top: -30px;
 }
 
 .numberOfposts p, .numberOfcomments p{
-font-size:1.6em;
 min-height:40px;
-color:$categoryFontColor;
-font-weight:bold;
-
 }
 .latestInfo{
     display:flex;
     width: 100%;
-    margin-top:60px;
+    margin-top:4em;
     flex-direction: column;
     flex-wrap: wrap;
-
-
-}
-
-.latestComments{
-    padding-top:50px;
-}
-
-.latestComments h3, .latestPosts h3{
-    font-size: 1.5em;
-    height: 18px;
-    color:$categoryFontColor;
-    font-weight:bold;
+	div {
+		padding:1.5em 2em;
+		background:$brandColor1;
+		border-radius:15px;
+		flex:1;
+	}
+	.latestPosts{
+		margin-right:0;
+		margin-bottom:2em;
+	}
+	p, a, h3 {
+		color:$footerFontColor;
+	}
+	h3 {
+		font-size:1.4em;
+	}
+	p {
+		font-size:.9em;
+	}
 }
 
 .latestComments p {
-    font-size: 1em;
-    height: 38px;
-    color:black;
     text-transform: capitalize;
 }
 
 .latestPosts p {
 	font-size: 1em;
-    height: 38px;
-    color: black;
     text-transform: capitalize;
-}
-
-.latestComments a, .latestPosts a {
-color: $categoryFontColor;
 }
 
 .seeall_link {

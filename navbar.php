@@ -4,9 +4,8 @@
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
 		<p class="new__post">
-			<a href="new_post.php">+ Create new post
-				</a>
-				</p>
+			<button class="button_large button_turquoise"><a href="new_post.php">+ Create new post</a></button>
+		</p>
 			<p class="header__usernav--loggedin">
 				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
 				<a href="profile.php">Profile page</a>  <a href="logout.php">Sign out</a>
@@ -16,7 +15,7 @@
 		<div class="header__usernav">
 			<div></div>
 			<p class="header__usernav--loggedout">
-				<a href="login.php">Log in </a>  <a href="register.php">Sign up</a>
+				<a href="login.php">Log in </a>  <button class="button_small button_turquoise"><a href="register.php">Sign up</a></button>
 			</p>
 		</div>
 		<?php } ?>

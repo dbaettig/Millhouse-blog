@@ -1,19 +1,23 @@
 //TYPOGRAPHY
-$headerFont: 'Helvetica Neue',
+$headerFont: 'Montserrat',
+'Helvetica Neue',
 'Helvetica',
 sans-serif;
-$bodyFont: 'Helvetica Neue',
+$bodyFont: 'Montserrat', 
+'Helvetica Neue',
 'Helvetica',
 sans-serif;
-$categoryFont: 'Fjalla One', sans-serif;
+$categoryFont: 'Montserrat', sans-serif;
 
 //COLORS
 $brandColor1: #1c3045; //dark blue
-$bodyFontColor: #212121; //dark grey
+$brandColor2: #6e6e6e; //dark grey
+$bodyFontColor: #212121; //darker grey
 $footerFontColor: #d3d0d1; //light gray
 $categoryFontColor: #5d7e93; // medium blue
 $postRelatedColor: #c1b3ad; //warm gray
 $linksFontColor: #a6c9c6; //turqoise
+
 
 //LAYOUT
 $contentWidth: 980px;
