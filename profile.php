@@ -3,6 +3,11 @@ require 'session.php';
 require 'head.php';
 require 'profile_database.php';
 
+$userInfo = $pdo->prepare("SELECT * FROM users
+WHERE id = :userID");
+$userInfo->execute(array(
+":userID" => $_SESSION['user']['id']));
+$info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 	<body id="profile">
@@ -12,8 +17,14 @@ require 'profile_database.php';
 			<div class="profileWrapper">
 				<div class="profileHeader">
 					<figure class="profileImage">
-						<img src="img/glasses1.jpeg" alt="">
+						<img src="<?= $info[0]['profilepic'] ?>" alt="">
 					</figure>
+					
+					<h4>Edit profile picture</h4>
+					<form action="profilepic_form.php" method="post" enctype="multipart/form-data">
+						<input class="input_newpost" type="file" name="uploaded_file">
+						<input type="submit" name="submit" value="Publish">
+					</form>
 
 					<div class="profileInfo">
 						<div class="profileName">
