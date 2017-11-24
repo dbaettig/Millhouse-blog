@@ -7,8 +7,8 @@ require 'head.php';
 	<?php require 'navbar.php'; ?>
 		<main role="main">
 			<article class="wrapper">
-				<figure class="about_image_wrapper">
-					<img class="about_image" src="img/watch2.jpeg">
+				<figure class="blogpost__image">
+					<img class="index_image" src="img/glassesfuture.jpg">
 				</figure>
 
 				<div class="about_text_wrapper">
