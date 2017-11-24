@@ -19,7 +19,15 @@ require 'head.php';
 		":postID" => $_GET["postID"]
 	));
 	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
-	
+
+
+	$statementcomments = $pdo->prepare("SELECT COUNT(*) FROM comments where postID = :postID");
+       $statementcomments->execute(array(
+       ":postID" => $_GET["postID"]
+   ));
+       $comments_toPosts = $statementcomments->fetch(PDO::FETCH_ASSOC);
+
+
 	foreach($single_post as $blogpost) { ?>
 					<article class="blogpost">
 						<h1 class="category_center"><?= $blogpost['category'] ?></h1>
@@ -31,7 +39,7 @@ require 'head.php';
 						</figure>
 						<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
-						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i> 3 comments
+						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i><?php foreach($comments_toPosts as $comment) { ?> <?= $comment ?> <?php } ?> comments
 				</small>
 						<div class="blogpost__bodytext">
 						<p>
@@ -66,7 +74,7 @@ require 'head.php';
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
 							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
-							<input class="comment_submit" class="comment_submit" type="submit" name="submit" value="Post comment">
+							<input class="comment_submit" class="comment_submit" type="submit" name="submit" value="Post">
 						</form>
 						<?php }	?>
 
