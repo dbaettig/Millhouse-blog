@@ -46,9 +46,9 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 			<div class="wrapper">
 				<nav class="categorymenu" role="navigation">
                     <ul>
-                        <li <?php if (isset ($_GET["news"])){echo "class='active'";}?></l><a href="single_category.php?news">News</a></li>
+                        <li <?php if (isset ($_GET["news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
                         
-                        <li <?php if (isset ($_GET["interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a>
+                        <li <?php if (isset ($_GET["interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a></li>
                         
                         <li <?php if (isset ($_GET["style"])){echo "class='active'";}?>><a href="single_category.php?style">Style</a></li>
                         
