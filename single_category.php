@@ -59,16 +59,13 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
                 <div class="categorywrapper">
 
-                    <?php foreach($blog as $blogpost){
-    ?>
-
+                    <?php foreach($blog as $blogpost){ ?>
+                    
                     <article class="categoryblogpost">
-
 
                         <figure class="categoryblogpost__image">
                             <img src="<?= $blogpost['image'] ?>">
                         </figure>
-
 
                         <div class="categoryblogpost__text">
                             <div class="blogpost__text--meta">
@@ -91,23 +88,14 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                                 </p>
                             </div>
                         </div>
-
                     </article>
-
-                    <?php } ;?>
-
-                    <div class="no_post">
-                        <?php
-                   
+                <?php }
                     if(empty($blogpost)){
-                        echo "Sorry, there are  no posts in this category yet!";
-                    }
-                       ?>
-                    </div>
-                </div>
-                <!--categorywrapper close-->
-            </div>
-            <!--wrapper close-->
+                    	echo '<div class="no_post">Sorry, there are  no posts in this category yet!</div>';
+                    } 
+				?>
+                </div><!--categorywrapper close-->
+            </div><!--wrapper close-->
             <?php
 require "footer.php";
 ?>

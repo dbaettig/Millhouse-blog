@@ -1,3 +1,13 @@
+/* BLOGPOST */
+.blogpost {
+	small {
+		margin:3em auto 2.2em;
+	}
+}
+.blogpost__text {
+	margin-top: 1.5em;
+}
+
 .latestInfo{
     display:flex;
     width: 100%;
@@ -6,8 +16,6 @@
     flex-wrap: wrap;
 	div {
 		padding:2em 3em;
-		background:$brandColor1;
-		border-radius:15px;
 	}
 	p, a, h3 {
 		color:$footerFontColor;

@@ -17,11 +17,14 @@ $footerFontColor: #d3d0d1; //light gray
 $categoryFontColor: #5d7e93; // medium blue
 $postRelatedColor: #c1b3ad; //warm gray
 $linksFontColor: #a6c9c6; //turqoise
-
-$bgAccentColor: #d3d0d170;
+$bgAccentColor: #d3d0d170; //light light grey
 
 //LAYOUT
 $contentWidth: 980px;
 
 //RESPONSIVE IMAGE HEIGHT
 $responsiveHeight: 56.25%; //6:9 aspect ratio
+
+//BORDER RADIUSES
+$borderRadiusSmall: 5px;
+$borderRadiusLarge:15px;
