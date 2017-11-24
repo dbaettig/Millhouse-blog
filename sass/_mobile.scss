@@ -267,6 +267,14 @@ color: $categoryFontColor;
 
 /*BLOG POST*/
 
+.no_post {
+	text-align: center;
+	margin:auto;
+	background:$bgAccentColor;
+	padding:3em 7em;
+	border-radius:15px;
+}
+
 .blogpost {
 	margin:0 auto 10%;
 	
