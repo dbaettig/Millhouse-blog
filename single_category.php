@@ -33,7 +33,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 elseif (isset ($_GET["featured"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
-WHERE category = 'featured'");
+WHERE category = 'featured' ORDER BY postID DESC");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }

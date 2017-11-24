@@ -42,9 +42,12 @@
 
 /* BLOG POST*/
 .blogpost {
-	p {
-		width:80%;
-	}
+
+    .blogpost__bodytext {
+    margin: 0 auto;
+    width:80%;
+    }
+    
 	.blogpost__text {
 	flex-direction: row;
 		.blogpost__text--bodytext {

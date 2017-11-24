@@ -27,16 +27,17 @@ require 'head.php';
 							<?=$blogpost['title']?>
 						</h2>
 						<figure class="blogpost__image">
-							<img class="blogpost__image" src="<?= $blogpost['image'] ?>">
+							<img src="<?= $blogpost['image'] ?>">
 						</figure>
 						<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
 						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i> 3 comments
 				</small>
-				
+						<div class="blogpost__bodytext">
 						<p>
 							<?= $blogpost['post'] ?>
 						</p>
+						</div>
 						<br/><br/>
 						<?php include 'edit_buttons.php'?>
 					</article>
