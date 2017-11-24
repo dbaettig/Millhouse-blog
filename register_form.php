@@ -6,13 +6,14 @@
     $email = $_POST["email"];
 
     $statement = $pdo->prepare("
-      INSERT INTO users (username, password, email)
-      VALUES (:username, :password, :email)");
+      INSERT INTO users (username, password, email, profilepic)
+      VALUES (:username, :password, :email, :profilepic)");
 
     $statement->execute(array(
       ":username" => $username,
       ":password" => $password,
-      ":email" => $email
+      ":email" => $email,
+		":profilepic" => 'img/glasses1.jpeg'
     )); 
 
     header("Location: register.php");
