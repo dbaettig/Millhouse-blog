@@ -13,7 +13,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 }
 
-elseif (isset ($_GET["style"])){
+if (isset ($_GET["style"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
 WHERE category = 'style'");
@@ -22,7 +22,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
     
 }
 
-elseif (isset ($_GET["interior"])){
+if (isset ($_GET["interior"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
 WHERE category = 'interior'");
@@ -30,7 +30,7 @@ $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
 
-elseif (isset ($_GET["featured"])){
+if (isset ($_GET["featured"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
 WHERE category = 'featured' ORDER BY postID DESC");
@@ -40,33 +40,34 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 
 ?>
-	<body id="index">
-	<?php require 'navbar.php';?>
-		<main role="main">
-			<div class="wrapper">
-				<nav class="categorymenu" role="navigation">
+
+    <body id="index">
+        <?php require 'navbar.php';?>
+        <main role="main">
+            <div class="wrapper">
+                <nav class="categorymenu" role="navigation">
                     <ul>
-                        <li <?php if (isset ($_GET["news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
-                        
-                        <li <?php if (isset ($_GET["interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a></li>
-                        
-                        <li <?php if (isset ($_GET["style"])){echo "class='active'";}?>><a href="single_category.php?style">Style</a></li>
-                        
-                        <li <?php if (isset ($_GET["featured"])){echo "class='active'";}?>><a href="single_category.php?featured">Featured</a></li>
-				    </ul>
+                        <li <?php if (isset ($_GET[ "news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
+
+                        <li <?php if (isset ($_GET[ "interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a></li>
+
+                        <li <?php if (isset ($_GET[ "style"])){echo "class='active'";}?>><a href="single_category.php?style">Style</a></li>
+
+                        <li <?php if (isset ($_GET[ "featured"])){echo "class='active'";}?>><a href="single_category.php?featured">Featured</a></li>
+                    </ul>
                 </nav>
 
                 <div class="categorywrapper">
 
                     <?php foreach($blog as $blogpost){
     ?>
-          
-            <article class="categoryblogpost">
+
+                    <article class="categoryblogpost">
 
 
-						<figure class="categoryblogpost__image">
-							<img src="<?= $blogpost['image'] ?>">
-						</figure>
+                        <figure class="categoryblogpost__image">
+                            <img src="<?= $blogpost['image'] ?>">
+                        </figure>
 
 
                         <div class="categoryblogpost__text">
@@ -83,18 +84,27 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 						</small>
 
-							</div>
-							<div class="blogpost__text--bodytext">
-								<p>
-									<?= $blogpost['post'] ?>
-								</p>
-							</div>
-						</div>
-					</article>
+                            </div>
+                            <div class="blogpost__text--bodytext">
+                                <p>
+                                    <?= $blogpost['post'] ?>
+                                </p>
+                            </div>
+                        </div>
 
-					<?php } ;?>
-               
-                 </div>
+                    </article>
+
+                    <?php } ;?>
+
+                    <div class="no_post">
+                        <?php
+                   
+                    if(empty($blogpost)){
+                        echo "Sorry, there are  no posts in this category yet!";
+                    }
+                       ?>
+                    </div>
+                </div>
                 <!--categorywrapper close-->
             </div>
             <!--wrapper close-->
