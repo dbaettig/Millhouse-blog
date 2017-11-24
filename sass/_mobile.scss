@@ -244,12 +244,12 @@ color: $categoryFontColor;
 		height:0;
 		padding-top: $responsiveHeight;
 		overflow:hidden;
-		position:relative;
+		//position:relative;
 		margin-bottom:1.5%;
 		img {
 			//place image in crop box
 			width:100%;
-			position:relative;
+			//position:relative;
 			margin-top:-$responsiveHeight;
 		}
 	}
@@ -345,6 +345,14 @@ color:black;
 
 /*SINGLE POST*/
 
+.category_center {
+	text-align: center;
+	margin-bottom:30px;
+	font-size:1.4em;
+	color: $categoryFontColor;
+	text-transform:capitalize;
+	 text-decoration: underline;
+}
 .comments_header {
 	text-align: center;
 }
@@ -364,9 +372,49 @@ textarea, input {
 }
 
 .comment_submit {
-	width: 65%;
+	line-height:1;
+	width:23%;
+	max-width: 44%;
+	height:40px;
+	padding-top: 2.3%;
+	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
+	background-color: #a6c9c6;
+	color:black;
 }
 
+.input_comment {
+	line-height: 1;
+	background-color:white;
+}
+
+.input_commentName {
+	line-height:1;
+	height:40px;
+	width:48%;
+	background-color:white;
+}
+
+.input_commentEmail {
+	line-height:1;
+	height:40px;
+	width:48%;
+	float:right;
+	background-color:white;
+}
+
+.textarea_comment {
+	background-color:white;
+}
+
+.fa-circle:before {
+	font-size:0.3em;
+	margin:6px;
+}
+
+.comment_info {
+	font-weight:bold;
+	font-size:0.8em;
+}
 
 /*ABOUT*/
 

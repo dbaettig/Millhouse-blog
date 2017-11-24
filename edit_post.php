@@ -34,7 +34,7 @@ foreach($single_post as $blogpost) { ?>
           
           <div class="buttons">
              <div class="select_button">
-              <select name="category" value="<?= $blogpost['category']; ?>">
+              <select class="select" name="category" value="<?= $blogpost['category']; ?>">
                 <option value="category" <?php if($blogpost['category'] == 'category' ) { echo "selected='selected'"; }?> >Choose category...</option>
                 <option value="news" <?php if($blogpost['category'] == 'news' ) { echo "selected='selected'"; }?> >News</option>
                 <option value="style" <?php if($blogpost['category'] == 'style' ) { echo "selected='selected'"; }?> >Style</option>
