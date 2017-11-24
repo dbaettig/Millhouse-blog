@@ -24,11 +24,8 @@ require 'profile_database.php';
 
 						<div class="numberInfo">
 
-							<?php
-							
-			foreach($count1 as $c1) {
-			?>
-
+							<?php				
+			foreach($count1 as $c1) { ?>
 								<div class="numberOfposts">
 									<p class="number">
 										<?= $c1 ?>
@@ -37,23 +34,20 @@ require 'profile_database.php';
 								</div>
 
 								<?php } ?>
-								<!--stänger loop-->
 
 
 								<?php
-		foreach($count3 as $c3) {
-		?>
+		foreach($count3 as $c3) { ?>
 
 									<div class="numberOfcomments">
 										<p class="number">
 											<?= $c3 ?>
 										</p>
 										<h2>comments</h2>
-									</br>
+										</br>
 									</div>
 
 									<?php } ?>
-									<!--stänger loop-->
 
 						</div>
 						<!--stänger numberInfo-->
@@ -68,28 +62,28 @@ require 'profile_database.php';
 					<div class="latestPosts">
 						<h3>Latest posts</h3>
 
+						<!--Skriver ut de fem senaste inläggen-->
+						
+						<ul>
+						<?php
+	foreach($count2 as $c2) { ?>
 
-			<?php
-	foreach($count2 as $c2) {
-	?>
+							<li>
+								<a href="single_post.php?postID=<?= $c2['postID'] ?>">
+									<?= $c2['title'] ?>
+							</a>
+							</li>
 
-				<a href="single_post.php?postID=<?= $c2['postID'] ?>">
-					<p>
-						<?= $c2['title'] ?>
-					</p>
-				</a>
+							<?php } ?>
+							</ul>
 
-				<?php } ?>
-				<!--stänger loop-->
-
-				</br>
+							</br>
 
 
-				<?php
+							<?php
 	foreach($count1 as $c1) {	?>
-					<a class="seeall_link" href="index.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-					<?php } ?>
-					<!--stänger loop-->
+								<a class="seeall_link" href="all_my_posts.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<?php } ?>
 
 					</div>
 					<!--stänger latestPosts-->
@@ -97,37 +91,39 @@ require 'profile_database.php';
 					<div class="latestComments">
 						<h3>Latest comments</h3>
 
-						<?php
-	foreach($count4 as $c4) {
-	?>
-							<p>
-								"<?= $c4['comment'] ?>"</p>
-							
-							<p>On <a href="single_post.php?postID=<?= $c4['postID'] ?>"><?= $c4['title'] ?>
-								</a> by <?= $c4['name'] ?></p>
-
+		<!--Skriver ut de fem senaste kommentarerna-->
+					<ul>
+						<?php	foreach($count4 as $c4) { ?>
+							<li><p>"
+								<?= $c4['comment'] ?>"
+							<br/>on
+								<a href="single_post.php?postID=<?= $c4['postID'] ?>">
+									<?= $c4['title'] ?>
+								</a> by
+								<?= $c4['name'] ?>
+							</p>
+							<br/>
+							</li>
 							<?php } ?>
-							<!--stänger loop-->
+						</ul>
 
 							</br>
 
 							<?php
-	foreach($count3 as $c3) {
-	?>
+	foreach($count3 as $c3) { ?>
 
-								<a class="seeall_link" href="index.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<a class="seeall_link" href="all_my_comments.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 								<?php } ?>
-								<!--stänger loop-->
 
 					</div>
 					<!--stänger latestComments-->
-					</div>
-					<!--stänger latestInfo-->
+				</div>
+				<!--stänger latestInfo-->
 
-					</div>
-					<!--profileWrapper-->
+			</div>
+			<!--profileWrapper-->
 
-					<?php
+			<?php
 require 'footer.php';
 ?>
