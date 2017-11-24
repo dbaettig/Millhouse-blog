@@ -17,5 +17,4 @@ $profilepic->execute(array(
 	":profilepic" => "img/" . $filename,
 	"userID" => $_SESSION['user']['id']
 ));
-
-var_dump($_FILES);
+ header("Location:profile.php");
