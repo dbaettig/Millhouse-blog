@@ -15,7 +15,7 @@ require 'partials/head.php';
 
 	foreach($single_post as $blogpost) { ?>
 					<article class="blogpost single">
-						<h1 class="category_center"><?= $blogpost['category'] ?></h1>
+						<h1 class="category center"><?= $blogpost['category'] ?></h1>
 						<h2 class="center">
 							<?=$blogpost['title']?>
 						</h2>

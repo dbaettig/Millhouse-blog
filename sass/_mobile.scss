@@ -337,6 +337,9 @@ color: $categoryFontColor;
 }
 
 .blogpost.single {
+	h2 {
+		margin-bottom:2rem;
+	}
 	.edit_buttons {
 		margin:auto;
 		text-align:center;
@@ -398,13 +401,12 @@ color:black;
 
 /*SINGLE POST*/
 
-.category_center {
-	text-align: center;
+.category {
 	margin-bottom:30px;
-	font-size:1.4em;
+	font-size:.9em;
+	text-transform:uppercase;
 	color: $categoryFontColor;
-	text-transform:capitalize;
-	 text-decoration: underline;
+	//text-decoration: underline;
 }
 
 /* COMMENTS */
