@@ -15,7 +15,7 @@
 		<div class="header__usernav">
 			<div></div>
 			<p class="header__usernav--loggedout">
-				<a href="../login.php">Log in </a>  <button class="button_small button_turquoise"><a href="../register.php">Sign up</a></button>
+				<a href="../login.php">Log in</a><a class="button_small button_turquoise" href="../register.php">Sign up</a>
 			</p>
 		</div>
 		<?php } ?>
@@ -51,7 +51,7 @@
 		
 		<li class="nav-item">
 		    <p class="new__post">
-			    <a class="nav-link" href="new_post.php"
+			    <a class="button button_turquoise nav-link" href="new_post.php"
 			    target="_blank"> + Create new post </a>
             </p>
         </li>

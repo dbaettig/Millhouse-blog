@@ -49,7 +49,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 					<?php include 'partials/edit_buttons.php'?>
 				</div>
 				<div class="blogpost__text--bodytext">
-					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Läs mer</a></p>
+					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Read more</a></p>
 					<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
 				</div>
 			</div>

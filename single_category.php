@@ -39,17 +39,17 @@ require 'logic/single_category_db.php';
                                         <?=$blogpost['title']?>
                                     </h2>
                                 </a>
-                                <small class="left">
-							By <?=  $blogpost['username'] ?> in
-								<?= $blogpost['category'] ?> 
-								<?= $blogpost['created'] ?>
-
-						</small>
+                            <small class="left">
+								By <?=  $blogpost['username'] ?> in
+									<?= $blogpost['category'] ?> 
+									<?= $blogpost['created'] ?>
+							</small>
 
                             </div>
                             <div class="blogpost__text--bodytext">
                                 <p>
-                                    <?= $blogpost['post'] ?>
+                                	<?= substr($blogpost['post'],0,200) . "... "; ?>
+                                	<a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Read more</a>
                                 </p>
                             </div>
                         </div>
