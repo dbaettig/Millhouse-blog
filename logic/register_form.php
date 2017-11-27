@@ -15,7 +15,7 @@
       ":username" => $username,
       ":password" => $password,
       ":email" => $email,
-		":profilepic" => 'img/glasses1.jpeg'
+	  ":profilepic" => '../profilepics/profilepig.jpg'
     )); 
 
     header("Location: ../login.php");
