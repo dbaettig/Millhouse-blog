@@ -489,6 +489,10 @@ textarea, input {
 	width: 100%;
 	max-width:$contentWidth;
 	margin: auto;
+	
+	p {
+		margin-bottom:.8em;
+	}
 }
 
 
