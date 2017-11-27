@@ -82,19 +82,17 @@ small {
 
 /* BUTTONS */
 
-button {
+.button {
 	cursor:pointer;
 	padding: 5px 16px;
 	border-radius:$borderRadiusSmall;
 	border:none;
-	a {
 	color:#fff;
-	}
 }
 
-button a:hover {
-		text-decoration:none;
-		color:#fff;
+.button:hover {
+	text-decoration:none;
+	color:#fff;
 }
 
 .button_small {
