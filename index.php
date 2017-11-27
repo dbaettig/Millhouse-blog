@@ -2,6 +2,7 @@
 require 'partials/session.php';
 require 'partials/database.php';
 require 'partials/head.php';
+require 'logic/comments_to_posts_db.php';
 
 $statement = $pdo->prepare("SELECT * FROM posts
 INNER JOIN users ON posts.userID = users.id
@@ -26,6 +27,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
         <div class="posts">
 
+
 <?php foreach($blog as $blogpost) { ?>
 		<article class="blogpost index">
 			<figure class="blogpost__image">
@@ -44,6 +46,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 						By <?=  $blogpost['username'] ?> in
 							<?= $blogpost['category'] ?> 
 							<?= $blogpost['created'] ?>
+							<?php foreach($comments_toPosts as $comment) { ?> <?= $comment ?> <?php } ?> comments
 					</small>
 
 					<?php include 'partials/edit_buttons.php'?>
