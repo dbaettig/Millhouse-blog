@@ -36,7 +36,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
 		foreach($blog as $blogpost) {
 	?>
-                        <article class="blogpost">
+                        <article class="blogpost index">
                             <figure class="blogpost__image">
 
                                 <img class="index_image" src="<?= $blogpost['image'] ?>">

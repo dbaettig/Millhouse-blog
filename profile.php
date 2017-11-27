@@ -16,15 +16,15 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 
 			<div class="profileWrapper">
 				<div class="profileHeader">
-					<figure class="profileImage">
-						<img src="<?= $info[0]['profilepic'] ?>" alt="">
-					</figure>
 					
-					<h4>Edit profile picture</h4>
-					<form action="profilepic_form.php" method="post" enctype="multipart/form-data">
-						<input class="input_newpost" type="file" name="uploaded_file">
-						<input type="submit" name="submit" value="Publish">
-					</form>
+						<figure class="profileImage">
+							<img src="<?= $info[0]['profilepic'] ?>" alt="">
+						</figure>
+						<h4>Edit profile picture</h4>
+						<form action="profilepic_form.php" method="post" enctype="multipart/form-data">
+							<input class="input_newpost" type="file" name="uploaded_file">
+							<input type="submit" name="submit" value="Publish">
+						</form>
 
 					<div class="profileInfo">
 						<div class="profileName">
@@ -32,7 +32,6 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 								<?= $_SESSION["user"]["username"]; ?>
 							</h1>
 						</div>
-
 						<div class="numberInfo">
 
 							<?php				
@@ -66,8 +65,6 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 					<!--stänger profileInfo-->
 				</div>
 				<!--stänger profileHeader-->
-
-
 
 				<div class="latestInfo">
 					<div class="latestPosts">

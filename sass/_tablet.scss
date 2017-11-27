@@ -70,6 +70,13 @@
     color:black;
 }
 
+/* COMMENTS */
+.comments_wrapper_container {
+	width:80%;
+	max-width:980px;
+}
+
+
 /*CREATE NEW POST*/
 
 .select {
@@ -140,13 +147,6 @@ padding-bottom: 10%;
 	}
 
  /*PROFILE*/
-
-.profileWrapper {
-	width: 80%;
-	margin: 0 auto;
-   // background-color: rgb(252, 249, 250);
-	padding: 10% 7%;
-}
 
 .profileHeader {
     display:flex;
