@@ -29,7 +29,7 @@ function resize_image($file, $new_width, $new_height) {
 $path = $_FILES["uploaded_file"]["tmp_name"];
 $filename = $_FILES["uploaded_file"]["name"];
 
-move_uploaded_file($path, "img/" . $filename);
+move_uploaded_file($path, "../img/" . $filename);
 
 
 /***************************
@@ -40,7 +40,7 @@ move_uploaded_file($path, "img/" . $filename);
 //first argument is file to convert
 //second is width
 //third is height
-$file = "img/" . $filename;
+$file = "../img/" . $filename;
 
 $info = getimagesize($file);
 $width = $info[0]; //first value in $info array is width
@@ -53,8 +53,8 @@ $ratio = $height / $width;
 $new_width = 1000;
 $new_height = $new_width * $ratio;
 
-$resized_image = resize_image("img/" . $filename, $new_width, $new_height);
+$resized_image = resize_image("../img/" . $filename, $new_width, $new_height);
 
 //Save the image to disk
-imagejpeg($resized_image, "resized/" . $filename, 100);
+imagejpeg($resized_image, "../resized/" . $filename, 100);
 	
