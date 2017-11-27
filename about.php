@@ -11,7 +11,7 @@ require 'partials/head.php';
 					<img class="index_image" src="img/glassesfuture.jpg">
 				</figure>
 
-				<div class="about_text_wrapper">
+				<div class="about__bodytext">
 					<p> Millhouse is a wholesale company that sells clothes, accessories and smaller interior design items to hundreds of fashion and lifestyle stores.
 						<br/>
 						<br/> The company was founded 60 years ago by Millhouse Simpson. His idea was that men and women everywhere should have the possibility to be welldresses at a reasonable price.

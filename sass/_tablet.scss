@@ -131,8 +131,8 @@ margin:20px;
 }
 
 .left {
-		text-align:left;
-	}
+	text-align:left;
+}
 
  /*PROFILE*/
 
@@ -142,7 +142,7 @@ margin:20px;
     padding-top: 0px;
     flex-direction: row;
     flex-wrap:wrap;
-	}
+}
 
 .profileImage{
     height: auto;
@@ -206,7 +206,6 @@ margin:20px;
 	max-width:400px;
 }
 
-
 /*ABOUT*/
 
 .about_image_wrapper{
@@ -217,6 +216,7 @@ margin:20px;
 .footer-inner {
 	max-width: $contentWidth;
 	margin:0 auto;
+	padding-bottom:12em;
 	ul {
 		flex-direction:row;
 	}
@@ -225,6 +225,3 @@ margin:20px;
 		justify-content: space-between;
 	}
 }
-
-
-

@@ -49,7 +49,7 @@ h3 {
 p {
 	font-family: $bodyFont;
 	margin-bottom:.8em;
-	font-size:1em;
+	font-size:.95em;
 	line-height:180%;
 }
 
@@ -262,18 +262,17 @@ color: $categoryFontColor;
 
 .categoryblogpost__image {
     text-align: center;
-    	height:0;
-		padding-top: $responsiveHeight;
-		overflow:hidden;
-		position:relative;
-		margin-bottom:1.5%;
-  
+	height:0;
+	padding-top: $responsiveHeight;
+	overflow:hidden;
+	position:relative;
+	margin-bottom:1.5%;
 }
+
 .categoryblogpost__image img {
     text-align: center;
     width:100%;
-    margin-top:-$responsiveHeight;
-  
+    margin-top:-$responsiveHeight; 
 }
 
 /*BLOG POST*/
@@ -293,19 +292,20 @@ color: $categoryFontColor;
 		margin-top: 3.5rem;
 		margin-bottom: 1rem;
 	}
-	
-	.blogpost__image {
-		//set dimensions of crop box
-		height:0;
-		padding-top: $responsiveHeight;
-		overflow:hidden;
-		margin-bottom:1.5%;
-		img {
-			//place image in crop box
-			width:100%;
-			margin-top:-$responsiveHeight;
-		}
+}
+
+.blogpost__image {
+	//set dimensions of crop box
+	height:0;
+	padding-top: $responsiveHeight;
+	overflow:hidden;
+	margin:5% auto;
+	img {
+		//place image in crop box
+		width:100%;
+		margin-top:-$responsiveHeight;
 	}
+}
 
 .blogpost__text {
 	display: flex;
@@ -316,18 +316,22 @@ color: $categoryFontColor;
 	.blogpost__text--meta {
 		flex-basis:40%;
 		flex-grow: 1;
-
 	 }
+	
 	.blogpost__text--bodytext {
 		flex-basis:60%;
 		flex-grow: 1;
+		//remove automatically generated empty p-tag
+		> p:nth-child(1) {
+			display:none;
+		}
 	}
 }
-    .comment_link a{
-        color:$linksFontColor;
-        font-family:$categoryFont;
-        font-size:1.2em;
-    }
+
+.comment_link a{
+	color:$linksFontColor;
+	font-family:$categoryFont;
+	font-size:1.2em;
 }
 
 .blogpost.index {
@@ -345,11 +349,8 @@ color: $categoryFontColor;
 		text-align:center;
 	}
 }
-//.blogpost.single {
-//	small {
-//		
-//	}
-//}
+
+
 /*CREATE NEW POST*/
 
 .newpost_headline {
@@ -401,9 +402,9 @@ color:black;
 
 /*SINGLE POST*/
 
-.category {
+.category, .categorymenu ul li {
 	margin-bottom:30px;
-	font-size:.9em;
+	font-size:.8rem;
 	text-transform:uppercase;
 	color: $categoryFontColor;
 	//text-decoration: underline;
@@ -484,17 +485,10 @@ textarea, input {
 
 /*ABOUT*/
 
-.about_image_wrapper{
-	margin: 1rem 0;
-	margin-bottom: 2rem;
-}
-.about_image {
+.about__bodytext {
 	width: 100%;
-}
-
-.about_text_wrapper {
-	width: 80%;
-	margin: 0px auto;
+	max-width:$contentWidth;
+	margin: auto;
 }
 
 
