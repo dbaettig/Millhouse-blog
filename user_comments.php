@@ -1,7 +1,7 @@
 <?php
-require 'session.php';
-require 'head.php';
-require 'database.php';
+require 'partials/session.php';
+require 'partials/head.php';
+require 'partials/database.php';
 
 $allComments = $pdo->prepare("SELECT * 
 	   FROM comments
@@ -17,7 +17,7 @@ $allComments = $pdo->prepare("SELECT *
 
 
 <body id="profile">
-		<?php require 'navbar.php';?>
+		<?php require 'partials/header.php';?>
 		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
@@ -46,5 +46,5 @@ $allComments = $pdo->prepare("SELECT *
 							</ul>
 			</div>	
 <?php
-require 'footer.php';
+require 'partials/footer.php';
 ?>

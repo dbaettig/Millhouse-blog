@@ -1,7 +1,7 @@
 <?php
-require "database.php";
+require "partials/database.php";
 
-/*Här hämtas antal inlägg */
+/*Fetch all posts*/
 
        $statement1 = $pdo->prepare("SELECT COUNT(*) FROM posts where userID = :userID");
        $statement1->execute(array(
@@ -10,7 +10,7 @@ require "database.php";
        $count1 = $statement1->fetch(PDO::FETCH_ASSOC);
     
 
-       /*Här hämtas senaste inläggen*/
+       /*Fetch five latest posts*/
        $statement2 = $pdo->prepare("SELECT title, post, created 
 	   FROM posts
 	   INNER JOIN users ON posts.userID = users.id
@@ -22,7 +22,7 @@ require "database.php";
    ));  
        $count2 = $statement2 ->fetchAll(PDO::FETCH_ASSOC);
 
-       /*Här hämtas antal kommentarer */
+       /*Fetch all comments */
 
        $statement3 = $pdo->prepare("SELECT COUNT(*) FROM comments where userID = :userID");
        $statement3->execute(array(
@@ -30,7 +30,7 @@ require "database.php";
    ));
        $count3 = $statement3->fetch(PDO::FETCH_ASSOC);
        
-       /*Här hämtas de fem senaste kommentarerna*/
+       /*Fetch five latest comments*/
        $statement4 = $pdo->prepare("SELECT * 
 	   FROM comments
 	   JOIN posts ON comments.postID = posts.postID
@@ -41,3 +41,10 @@ require "database.php";
        ":userID" => $_SESSION["user"]["id"]
    )); 
          $count4 = $statement4->fetchAll(PDO::FETCH_ASSOC);
+
+/*Fetch profile pic*/
+$userInfo = $pdo->prepare("SELECT * FROM users
+WHERE id = :userID");
+$userInfo->execute(array(
+":userID" => $_SESSION['user']['id']));
+$info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);

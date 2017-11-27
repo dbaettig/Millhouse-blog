@@ -1,17 +1,13 @@
 <?php
-require 'session.php';
-require 'head.php';
-require 'profile_database.php';
+require 'partials/session.php';
+require 'partials/head.php';
+require 'logic/profile_db.php';
 
-$userInfo = $pdo->prepare("SELECT * FROM users
-WHERE id = :userID");
-$userInfo->execute(array(
-":userID" => $_SESSION['user']['id']));
-$info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
+
 ?>
 
 	<body id="profile">
-		<?php require 'navbar.php';?>
+		<?php require 'partials/header.php';?>
 		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
@@ -21,7 +17,7 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 							<img src="<?= $info[0]['profilepic'] ?>" alt="">
 						</figure>
 						<h4>Edit profile picture</h4>
-						<form action="profilepic_form.php" method="post" enctype="multipart/form-data">
+						<form action="logic/profilepic_form.php" method="post" enctype="multipart/form-data">
 							<input class="input_newpost" type="file" name="uploaded_file">
 							<input type="submit" name="submit" value="Publish">
 						</form>
@@ -90,7 +86,7 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 
 							<?php
 	foreach($count1 as $c1) {	?>
-								<a class="seeall_link" href="all_my_posts.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<a class="seeall_link" href="user_posts.php">See all posts (<?= $c1 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 								<?php } ?>
 
 					</div>
@@ -120,7 +116,7 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 							<?php
 	foreach($count3 as $c3) { ?>
 
-								<a class="seeall_link" href="all_my_comments.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+								<a class="seeall_link" href="user_comments.php">See all comments (<?= $c3 ?>) <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
 								<?php } ?>
 
@@ -133,5 +129,5 @@ $info = $userInfo ->fetchALL(PDO::FETCH_ASSOC);
 			<!--profileWrapper-->
 
 			<?php
-require 'footer.php';
+require 'partials/footer.php';
 ?>

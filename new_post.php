@@ -1,10 +1,10 @@
 <?php 
-require 'session.php';
-require 'head.php';
+require 'partials/session.php';
+require 'partials/head.php';
 ?>
 
 <body id="new_post">
-<?php require 'navbar.php'; ?>
+<?php require 'partials/header.php'; ?>
 <main role="main">
 
 		<div class="wrapper">
@@ -12,7 +12,7 @@ require 'head.php';
        
 				<h1 class="newpost_headline">Create post</h1>
         
-          <form class="form_newpost" action="post_form.php" method="POST" enctype="multipart/form-data">
+          <form class="form_newpost" action="logic/post_form.php" method="POST" enctype="multipart/form-data">
 
             <input class="input_title" type="text" name="title" placeholder="title"> <br/>
             <textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
@@ -38,4 +38,4 @@ require 'head.php';
 			</div> <!-- .container -->
 		</div> <!-- .wrapper -->
 
-<?php require 'footer.php'; ?>
+<?php require 'partials/footer.php'; ?>

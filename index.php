@@ -1,7 +1,7 @@
 <?php
-require 'session.php';
-require 'database.php';
-require 'head.php';
+require 'partials/session.php';
+require 'partials/database.php';
+require 'partials/head.php';
 
 $statement = $pdo->prepare("SELECT * FROM posts
 INNER JOIN users ON posts.userID = users.id
@@ -11,7 +11,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
    <body id="index">
-     <?php require 'navbar.php'; ?>
+     <?php require 'partials/header.php'; ?>
         <main>
             <div class="wrapper">
                
@@ -46,7 +46,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 							<?= $blogpost['created'] ?>
 					</small>
 
-					<?php include 'edit_buttons.php'?>
+					<?php include 'partials/edit_buttons.php'?>
 				</div>
 				<div class="blogpost__text--bodytext">
 					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Läs mer</a></p>
@@ -59,5 +59,5 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 </div><!--wrapper-->
 
 <?php
-	require 'footer.php';
+	require 'partials/footer.php';
 ?>

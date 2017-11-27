@@ -1,6 +1,8 @@
 <?php
-require 'session.php';
-require 'database.php';
+require '../partials/session.php';
+require '../partials/database.php';
+
+/*Form to make a commet*/
 
 $new_comment = $pdo->prepare(
 	"INSERT INTO comments (postID, userID, name, email, comment, created)
@@ -18,5 +20,5 @@ $new_comment->execute(array(
 
 $id = $_POST['postID'];
 
-header("Location:single_post.php?postID=".$id);
+header("Location:../single_post.php?postID=".$id);
 ?>

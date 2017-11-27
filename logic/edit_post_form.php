@@ -1,6 +1,8 @@
 <?php
-session_start();
-require 'database.php';
+require '../partials/session.php';
+require '../partials/database.php';
+
+/*Edit whole post */
 
 if( !empty($_FILES["uploaded_file"]["name"]) ){
 	
@@ -39,4 +41,4 @@ if( !empty($_FILES["uploaded_file"]["name"]) ){
 	));
 }
 
-header("Location:single_post.php?postID=" . $_POST['postID']);
+header("Location:../single_post.php?postID=" . $_POST['postID']);

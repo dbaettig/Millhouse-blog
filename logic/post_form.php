@@ -1,11 +1,13 @@
 <?php 
-session_start();
+require '../partials/session.php';
 $message = urlencode("You need to write something in every field");
 
+/*Create a post*/
+
 if(empty($_POST["title"] || $_POST["text"])){    
-    header("Location: new_post.php?message=".$message);
+    header("Location: ../new_post.php?message=".$message);
 } else {
-require("database.php");
+require("../partials/database.php");
 }
 require 'resize_image.php';
 
@@ -31,4 +33,4 @@ $get_newID->execute(array(
 ":title" => $_POST['title']));
 $newID = $get_newID ->fetchALL(PDO::FETCH_ASSOC);
 
-header("Location:single_post.php?postID=" . $newID[0]['postID']);
+header("Location:../single_post.php?postID=" . $newID[0]['postID']);

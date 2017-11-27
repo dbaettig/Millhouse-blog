@@ -1,10 +1,10 @@
 <?php
-require 'session.php';
-require 'head.php';
+require 'partials/session.php';
+require 'partials/head.php';
 ?>
 
 	<body id="about">
-	<?php require 'navbar.php'; ?>
+	<?php require 'partials/header.php'; ?>
 		<main role="main">
 			<article class="wrapper">
 				<figure class="blogpost__image">
@@ -24,5 +24,5 @@ require 'head.php';
 			</article>
 
 			<?php
-require 'footer.php';
+require 'partials/footer.php';
 ?>

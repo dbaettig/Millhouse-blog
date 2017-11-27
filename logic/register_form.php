@@ -1,5 +1,7 @@
 <?php
-    require 'database.php';
+    require '../partials/database.php';
+
+    /*Form to register*/
 
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $username = $_POST["username"];
@@ -16,4 +18,4 @@
 		":profilepic" => 'img/glasses1.jpeg'
     )); 
 
-    header("Location: register.php");
+    header("Location: ../login.php");

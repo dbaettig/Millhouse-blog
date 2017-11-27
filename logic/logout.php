@@ -1,9 +1,9 @@
 <?php
-require 'session.php';
+require '../partials/session.php';
 
 session_destroy();
 unset($_SESSION["loggedIn"]);
 unset($_SESSION["user"]);
 
-header("Location: index.php");
+header("Location: ../index.php");
 exit;

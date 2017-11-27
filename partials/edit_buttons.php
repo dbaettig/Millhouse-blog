@@ -1,4 +1,6 @@
 <?php 
+
+/*Edit buttons */
 if (isset($_SESSION['user'])) {
     if (($_SESSION['user']['id']) == ($blogpost['userID'])) {  ?>
 	<div class="edit_buttons">

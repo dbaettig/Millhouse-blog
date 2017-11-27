@@ -1,5 +1,5 @@
 <?php
-require 'database.php';
+require '../partials/database.php';
 
 //Create image resize function
 function resize_image($file, $new_width, $new_height) {

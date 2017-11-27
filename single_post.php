@@ -1,31 +1,16 @@
 <?php
-require 'session.php';
-require "database.php";
-require 'head.php';
+require 'partials/session.php';
+require "partials/database.php";
+require 'partials/head.php';
 ?>
 
 	<body id="single_post">
-		<?php require 'navbar.php';?>
+		<?php require 'partials/header.php';?>
 		<main role="main">
 			<div class="wrapper">
 				<?php
 	
-	$statement = $pdo->prepare("SELECT * 
-	FROM posts 
-	JOIN users ON posts.userID = users.id 
-	WHERE posts.postID = :postID 
-	");
-	$statement->execute(array(
-		":postID" => $_GET["postID"]
-	));
-	$single_post = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-
-	$statementcomments = $pdo->prepare("SELECT COUNT(*) FROM comments where postID = :postID");
-       $statementcomments->execute(array(
-       ":postID" => $_GET["postID"]
-   ));
-       $comments_toPosts = $statementcomments->fetch(PDO::FETCH_ASSOC);
+	require 'logic/single_post_db.php';
 
 
 	foreach($single_post as $blogpost) { ?>
@@ -47,7 +32,7 @@ require 'head.php';
 						</p>
 						</div>
 						<br/><br/>
-						<?php include 'edit_buttons.php'?>
+						<?php include 'partials/edit_buttons.php'?>
 					</article>
 					<?php } ?>
 					<br/>
@@ -57,7 +42,7 @@ require 'head.php';
 
 						<?php if(!isset($_SESSION["user"])){ ?>
 						<!-- Comment form if not logged in -->
-						<form class="input_comment" action="comment_form.php" method="POST" class="comment_form">
+						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input class="input_comment" type="hidden" name="userID" value="0">
@@ -68,7 +53,7 @@ require 'head.php';
 						</form>
 						<?php } else { ?>
 						<!-- Comment form if logged in -->
-						<form class="input_comment" action="comment_form.php" method="POST" class="comment_form">
+						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
@@ -84,15 +69,7 @@ require 'head.php';
 						<br/>
 
 						<?php
-$statement = $pdo->prepare("SELECT * FROM comments  
-	WHERE postID = :postID
-	ORDER BY commentID DESC");
-				   
-	$statement->execute(array(
-		":postID" => $_GET["postID"]
-	));
-	$comments = $statement->fetchAll(PDO::FETCH_ASSOC);
-				   
+
 	foreach($comments as $comment) { 
  ?>
 							<div class="comment">
@@ -112,5 +89,5 @@ $statement = $pdo->prepare("SELECT * FROM comments
 					</section>
 			</div>
 			<?php
-require "footer.php";
+require "partials/footer.php";
 ?>

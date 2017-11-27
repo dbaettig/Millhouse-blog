@@ -1,23 +1,14 @@
 <?php
-require 'session.php';
-require 'head.php';
-require 'database.php';
-
-$allposts = $pdo->prepare("SELECT title, post, created 
-	   FROM posts
-	   INNER JOIN users ON posts.userID = users.id
-	   WHERE userID = :userID 
-	   ORDER BY postID DESC");
-       $allposts->execute(array(
-       ":userID" => $_SESSION["user"]["id"]
-   ));  
-       $allMyPosts = $allposts ->fetchAll(PDO::FETCH_ASSOC);
+require 'partials/session.php';
+require 'partials/head.php';
+require 'partials/database.php';
+require 'logic/user_posts_db.php';
 
 ?>
 
 
 <body id="profile">
-		<?php require 'navbar.php';?>
+		<?php require 'partials/header.php';?>
 		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
@@ -41,5 +32,5 @@ $allposts = $pdo->prepare("SELECT title, post, created
 							</ul>
 			</div>	
 <?php
-require 'footer.php';
+require 'partials/footer.php';
 ?>

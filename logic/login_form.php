@@ -1,6 +1,8 @@
 <?php
-require 'session.php';
-require 'database.php';
+require '../partials/session.php';
+require '../partials/database.php';
+
+/*Form to login*/
 
 $password = $_POST["password"];
 $username = $_POST["username"];
@@ -17,11 +19,11 @@ if( password_verify($password, $fetched_user["password"]) ){
   $_SESSION["loggedIn"] = true;
 
 
-header('Location:profile.php');
+header('Location:../profile.php');
 
   
 } else {
 
-  header("Location: login.php?error=Wrong username&success=false");
+  header("Location:../login.php?error=Wrong username&success=false");
   
 }

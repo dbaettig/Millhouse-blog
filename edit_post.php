@@ -1,7 +1,7 @@
 <?php
-session_start();
-require 'database.php';
-require 'head.php';
+require 'partials/session.php';
+require 'partials/database.php';
+require 'partials/head.php';
 
 	$statement = $pdo->prepare( 
 		"SELECT * FROM posts WHERE postID = :postID");
@@ -13,12 +13,12 @@ require 'head.php';
 
 foreach($single_post as $blogpost) { ?>
 	<body>
-	<?php require 'navbar.php' ?>
+	<?php require 'partials/header.php' ?>
 	<main>
 		
 	<div class="wrapper">
 		<div class="container">
-        <form class="form_newpost" action="edit_post_form.php" method="POST" enctype="multipart/form-data">
+        <form class="form_newpost" action="logic/edit_post_form.php" method="POST" enctype="multipart/form-data">
           <input class="input_title" type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
           <input class="input_title" type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
           
@@ -60,4 +60,4 @@ foreach($single_post as $blogpost) { ?>
 		</script>-->
 <?php 
 }
-require 'footer.php'; ?>
+require 'partials/footer.php'; ?>

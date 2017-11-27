@@ -4,26 +4,26 @@
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
 		<p class="new__post">
-			<button class="button_large button_turquoise"><a href="new_post.php">+ Create new post</a></button>
+			<button class="button_large button_turquoise"><a href="../new_post.php">+ Create new post</a></button>
 		</p>
 			<p class="header__usernav--loggedin">
 				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
-				<a href="profile.php">Profile page</a>  <a href="logout.php">Sign out</a>
+				<a href="../profile.php">Profile page</a>  <a href="../logic/logout.php">Sign out</a>
 			</p>
 		</div>
 		<?php } else { ?>
 		<div class="header__usernav">
 			<div></div>
 			<p class="header__usernav--loggedout">
-				<a href="login.php">Log in </a>  <button class="button_small button_turquoise"><a href="register.php">Sign up</a></button>
+				<a href="../login.php">Log in </a>  <button class="button_small button_turquoise"><a href="../register.php">Sign up</a></button>
 			</p>
 		</div>
 		<?php } ?>
     </div>
 
-		<a href="index.php">
+		<a href="../index.php">
 			<div class="header__inner">
-				<img src="img/millhouse-logo.svg" alt="millhouse logo" class="logo">
+				<img src="../img/millhouse-logo.svg" alt="millhouse logo" class="logo">
 			</div>
 		</a>
 	
@@ -36,10 +36,10 @@
 			<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="index.php" id="nav-index">Blog</a>
+						<a class="nav-link" href="../index.php" id="nav-index">Blog</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.php" id="nav-about">About</a>
+						<a class="nav-link" href="../about.php" id="nav-about">About</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
@@ -60,7 +60,7 @@
 			<p class="header__usernav--loggedin">
 				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
 				<a class= "nav-link" href="profile.php"
-				target="_blank">Profile page <br/>  <a class="nav-link" href="logout.php">Sign out</a>
+				target="_blank">Profile page <br/>  <a class="nav-link" href="../logic/logout.php">Sign out</a>
 			</p>
 			</li>
 	
@@ -69,9 +69,9 @@
 			<div></div>
 			<li class="nav-item">
 			<p class="header__usernav--loggedout">
-				<a class ="nav-link" href="login.php"
+				<a class ="nav-link" href="../login.php"
 				target="_blank" >Log in </a> <br/> <a class="nav-link"
-				href="register.php">Sign up</a>
+				href="../register.php">Sign up</a>
 			</p>
 				</li>
 		
