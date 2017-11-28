@@ -61,9 +61,9 @@ require 'partials/head.php';
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
-							<label for="name">Your name</label>
+							
 							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
-							<label for="email">Your email</label>
+							
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
 							<input class="comment_submit" class="comment_submit" type="submit" name="submit" value="Post">
 						</form>
