@@ -23,8 +23,9 @@ require 'logic/single_category_db.php';
                 </nav>
 
                 <div class="categorywrapper">
-
-                    <?php foreach($blog as $blogpost){ ?>
+                    <?php 
+                    
+                    foreach($blog as $blogpost){ ?>
                     
                     <article class="categoryblogpost">
 
@@ -43,6 +44,12 @@ require 'logic/single_category_db.php';
 								By <?=  $blogpost['username'] ?> in
 									<?= $blogpost['category'] ?> 
 									<?= $blogpost['created'] ?>
+                                </br>
+                                    <?php foreach($comments_toPosts as $comment) { 
+                                if($comment['postID'] == $blogpost['postID']) {
+                                        echo $comment['number_of_comments'] . " " . "comments";
+                                }
+                             } ?> 
 							</small>
 
                             </div>

@@ -2,12 +2,8 @@
 require 'partials/session.php';
 require 'partials/database.php';
 require 'partials/head.php';
+require 'logic/index_db.php';
 
-$statement = $pdo->prepare("SELECT * FROM posts
-INNER JOIN users ON posts.userID = users.id
-ORDER BY postID DESC");
-$statement->execute();
-$blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
    <body id="index">
@@ -25,6 +21,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
                 </nav>
 
         <div class="posts">
+
 
 <?php foreach($blog as $blogpost) { ?>
 		<article class="blogpost index">
@@ -44,6 +41,14 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 						By <?=  $blogpost['username'] ?> in
 							<?= $blogpost['category'] ?> 
 							<?= $blogpost['created'] ?>
+
+						</br>
+
+							<?php foreach($comments_toPosts as $comment) { 
+								if($comment['postID'] == $blogpost['postID']) {
+										echo $comment['number_of_comments'] . " " . "comments";
+								}
+							 } ?> 
 					</small>
 
 					<?php include 'partials/edit_buttons.php'?>
