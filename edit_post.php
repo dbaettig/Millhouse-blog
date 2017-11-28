@@ -32,7 +32,7 @@ foreach($single_post as $blogpost) { ?>
           <input class="uploadFileInput input_newpost" type="file" name="uploaded_file" value="<?= $blogpost['image']?>">
             
           <!--<button class="uploadFileButton">Select File</button> -->
-          <small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
+          <small class="left">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
           
           <div class="buttons">
              <div class="select_button">
@@ -46,7 +46,7 @@ foreach($single_post as $blogpost) { ?>
             </div> <!-- .select_button -->
 
             <div class="publish_button">
-              <input class="input_newpost" type="submit" name="submit" value="Update">
+              <input class="button button_large button_turquoise" type="submit" name="submit" value="Update">
             </div> <!-- .publish_button -->
 
           </div> <!-- .buttons -->
