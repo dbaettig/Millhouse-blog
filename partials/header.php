@@ -15,7 +15,7 @@
 		<div class="header__usernav">
 			<div></div>
 			<p class="header__usernav--loggedout">
-				<a href="../login.php">Log in</a> <a class="button_small button_turquoise" href="../register.php">Sign up</a>
+				<a href="../login.php">Log in</a><a class="button_small button_turquoise button" href="../register.php">Sign up</a>
 			</p>
 		</div>
 		<?php } ?>
