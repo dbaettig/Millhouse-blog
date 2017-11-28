@@ -504,7 +504,7 @@ textarea, input {
 	width: 100%;
 	max-width:980px;
 	margin: 0 auto;
-   	background-color: rgb(252, 249, 250);
+   //	background-color: rgb(252, 249, 250);
 	padding: 10% 7%;
 }
 //.profileWrapper {
@@ -581,8 +581,6 @@ h5 {
 .numberInfo{
 	display:flex;
 	flex-direction: row;
-	//margin-top:15%;
-	height:50px;
 }
 
 .numberOfposts{
