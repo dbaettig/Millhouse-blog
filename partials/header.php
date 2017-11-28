@@ -4,18 +4,18 @@
 		if(isset($_SESSION["user"])){ ?>
 		<div class="header__usernav">
 		<p class="new__post">
-			<button class="button_large button_turquoise"><a href="../new_post.php">+ Create new post</a></button>
+			<a href="../new_post.php" class="button_large button_turquoise">+ Create new post</a>
 		</p>
 			<p class="header__usernav--loggedin">
-				<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
-				<a href="../profile.php">Profile page</a>  <a href="../logic/logout.php">Sign out</a>
+				<!-- You are now logged in <?/*= $_SESSION["user"]["username"];*/ ?>-->
+				<a href="../profile.php">Profile page</a> <a href="../logic/logout.php" class="small">Sign out</a>
 			</p>
 		</div>
 		<?php } else { ?>
 		<div class="header__usernav">
 			<div></div>
 			<p class="header__usernav--loggedout">
-				<a href="../login.php">Log in</a><a class="button_small button_turquoise" href="../register.php">Sign up</a>
+				<a href="../login.php">Log in</a> <a class="button_small button_turquoise" href="../register.php">Sign up</a>
 			</p>
 		</div>
 		<?php } ?>
@@ -51,7 +51,7 @@
 		
 		<li class="nav-item">
 		    <p class="new__post">
-			    <a class="button button_turquoise nav-link" href="new_post.php"
+			    <a class="button button_large button_turquoise" href="new_post.php"
 			    target="_blank"> + Create new post </a>
             </p>
         </li>
@@ -63,17 +63,15 @@
 				target="_blank">Profile page <br/>  <a class="nav-link" href="../logic/logout.php">Sign out</a>
 			</p>
 			</li>
-	
 		<?php } else { ?>
-		
-			<div></div>
+		<div><!-- empty div for positioning --></div>
 			<li class="nav-item">
-			<p class="header__usernav--loggedout">
-				<a class ="nav-link" href="../login.php"
-				target="_blank" >Log in </a> <br/> <a class="nav-link"
-				href="../register.php">Sign up</a>
-			</p>
-				</li>
+				<p class="header__usernav--loggedout">
+					<a class="nav-link" href="../login.php"
+					target="_blank" >Log in</a>
+					<a class="button_small button_turquoise button" href="../register.php">Sign up</a>
+				</p>
+			</li>
 		
 		<?php } ?>
 

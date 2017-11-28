@@ -20,10 +20,10 @@ foreach($single_post as $blogpost) { ?>
 		<div class="container">
         <form class="form_newpost" action="logic/edit_post_form.php" method="POST" enctype="multipart/form-data">
           <input class="input_title" type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
-          <label for="title">Title</label>
+          <label for="title" class="doNotShow">Title</label>
           <input class="input_title" type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
           
-          <label for="text">Edit your post here</label>
+          <label for="text" class="doNotShow">Edit your post here</label>
           <textarea class="textarea" name="text" id="editor" rows="30">
             <?= $blogpost['post']; ?>
           </textarea> <br/>

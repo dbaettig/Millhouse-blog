@@ -85,6 +85,11 @@ small, h5 {
 	text-align: center;
 }
 
+//hide labels but keep visible for screen readers
+.doNotShow {
+	position:absolute;
+	left:-9999px;
+}
 /* BUTTONS */
 
 .button {
@@ -115,7 +120,9 @@ small, h5 {
 }
 
 .button_grey, 
-.button_turquoise {
+.button_turquoise,
+.button_grey:hover, 
+.button_turquoise:hover {
 	color:#fff;
 }
 
@@ -228,13 +235,15 @@ small, h5 {
 	padding:3%;
 }
 
-//.input__login::placeholder{
-//color:color:white;
-//}
-
 .button_login,
 .button_signup {
 	width: 50%;
+}
+
+#login label, 
+#signup label {
+	color:#fff;
+	font-weight:600;
 }
 
 /*CATEGORIES*/
@@ -611,6 +620,7 @@ h5 {
     margin-top:4em;
     flex-direction: column;
     flex-wrap: wrap;
+//	text-transform: capitalize;
 	div {
 		padding:1.5em 2em;
 		background:$brandColor1;
@@ -618,25 +628,39 @@ h5 {
 		flex:1;
 	}
 	.latestPosts{
-		margin-right:0;
-		margin-bottom:2em;
+		//margin-bottom:2em;
+		line-height:210%;
 	}
+	.latestComments{
+		small {
+			color:$footerFontColor;
+		}
+	}
+	
 	p, a, h3 {
 		color:$footerFontColor;
 	}
+	
+	li, p {
+		font-size:.8rem;
+	}
+	
 	h3 {
-		font-size:1.4em;
+		font-size:1.4rem;
+	}
+	a:hover {
+		text-decoration:underline;
 	}
 }
 
-.latestComments p {
-    text-transform: capitalize;
-}
-
-.latestPosts p {
-	font-size: 1em;
-    text-transform: capitalize;
-}
+//.latestComments p {
+//    text-transform: capitalize;
+//}
+//
+//.latestPosts p {
+//	font-size: 1em;
+//    text-transform: capitalize;
+//}
 
 .seeall_link {
 	font-weight:bold;
