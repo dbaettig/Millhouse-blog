@@ -14,8 +14,8 @@ require 'partials/head.php';
         
           <form class="form_newpost" action="logic/post_form.php" method="POST" enctype="multipart/form-data">
 
-            <input class="input_title" type="text" name="title" placeholder="title"> <br/>
-            <textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
+            <label for="text">Title</label><input class="input_title" type="text" name="title" placeholder="title"> <br/>
+            <label for="text">Write your post here</label><textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
             <input class="input_newpost" type="file" name="uploaded_file"><small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
 
             <div class="buttons">

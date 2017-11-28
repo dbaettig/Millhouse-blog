@@ -10,8 +10,8 @@ require 'partials/head.php';
 			<div class="login">
 				<h3>Log in</h3>
 				<form action="logic/login_form.php" method="POST">
-					<input class="input__login" type="text" name="username" placeholder="username">
-					<input class="input__login" type="password" name="password" placeholder="password">
+					<label for="text">Username</label><input class="input__login" type="text" name="username" placeholder="username">
+					<label for="password">Password</label><input class="input__login" type="password" name="password" placeholder="password">
 					<div class="input__login--button">
 						<input class="button button_login" type="submit" name="submit" value="Login">
 					</div>
