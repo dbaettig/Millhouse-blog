@@ -12,23 +12,26 @@ require 'logic/profile_db.php';
 
 			<div class="profileWrapper">
 				<div class="profileheader">
-					<div
-						<figure class="profileImage">
-							<img src="<?= $info[0]['profilepic'] ?>" alt="">
-						</figure>
-						<h4>Edit profile picture</h4>
-						<form action="logic/profilepic_form.php" method="post" enctype="multipart/form-data">
-							<input class="input_newpost" type="file" name="uploaded_file">
-							<input type="submit" name="submit" value="Publish">
-						</form>
+					<div class="profileheader__image center">
+						<div class="profileheader__image--center">
+							<figure class="profileheader__image--frame">
+								<img src="<?= $info[0]['profilepic'] ?>" alt="">
+							</figure>
+							<h5>Edit profile picture</h5>
+							<form class="profileheader__image--form" action="logic/profilepic_form.php" method="post" enctype="multipart/form-data">
+								<input class="input_upload" type="file" name="uploaded_file">
+								<input class="button button_turquoise" type="submit" name="submit" value="Upload">
+							</form>
+						</div> <!-- .profileheader__image--center -->
+					</div> <!-- .profileheader__image -->
 
-					<div class="profileInfo">
-						<div class="profileName">
+					<div class="profileheader__info">
+						<div class="profileheader__info--name">
 							<h1>
 								<?= $_SESSION["user"]["username"]; ?>
 							</h1>
 						</div>
-						<div class="numberInfo">
+						<div class="numberInfo center">
 
 							<?php				
 			foreach($count1 as $c1) { ?>
@@ -58,7 +61,7 @@ require 'logic/profile_db.php';
 						</div>
 						<!--stänger numberInfo-->
 					</div>
-					<!--stänger profileInfo-->
+					<!-- .profileheader__info -->
 				</div>
 				<!--stänger profileHeader-->
 
