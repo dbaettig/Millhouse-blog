@@ -164,7 +164,8 @@ small {
 
 /* LOGIN/REGISTER */
 .background__wrapper--login {
-	background-image: url("../img/style3.jpeg");
+	background-image: url("../img/millhouse-accessories.jpg");
+	background-position:center center;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -205,12 +206,12 @@ small {
 
 .button_login,
 .button_signup,
-.input_login,
-.input_register {
-	background-color: rgba(255, 255, 255, 0.1);
+.input__login,
+.input__register {
+	background-color: rgba(255, 255, 255, 0.7);
 	height: 50px;
 	width: 90%;
-	color: #fff;
+	color: #000;
 	border-radius: $borderRadiusSmall;
 	margin-bottom: 25px;
 	border: solid 2px rgba(255, 255, 255, 0.5);
@@ -218,9 +219,9 @@ small {
 	padding:3%;
 }
 
-.input_login::placeholder{
-color:white;
-}
+//.input__login::placeholder{
+//color:color:white;
+//}
 
 .button_login,
 .button_signup {
@@ -434,7 +435,6 @@ textarea, input {
 	margin-bottom: 15px;
 	border: solid 2px rgba(0, 0, 0, 0.5);
 	border-radius: $borderRadiusSmall;
-	transition: all 250ms ease;
 	padding:3% 2%;	
 }
 
@@ -617,7 +617,6 @@ padding-right:90px;
 .comment_by, .on_article {
 	font-size:0.8em;
 }
-
 
 
 /* FOOTER */

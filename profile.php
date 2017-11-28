@@ -11,8 +11,8 @@ require 'logic/profile_db.php';
 		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
-				<div class="profileHeader">
-					
+				<div class="profileheader">
+					<div
 						<figure class="profileImage">
 							<img src="<?= $info[0]['profilepic'] ?>" alt="">
 						</figure>
