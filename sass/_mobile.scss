@@ -533,6 +533,7 @@ h5 {
 
 .profileheader__info--name h1 {
 	font-size:3em;
+	text-align:center;
 }
 
 .profileheader__image {
@@ -581,6 +582,7 @@ h5 {
 .numberInfo{
 	display:flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
 .numberOfposts{

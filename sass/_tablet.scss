@@ -156,21 +156,18 @@ margin:20px;
     flex-direction: column;
 }
 
-//.profileheader__image img {
-//    width:100%;
-//    overflow: hidden;
-//	}
+.profileheader__info--name h1 {
+	text-align:left;
+}
 
 .profileName {
 	margin-top:2%;
 }
 
-//.numberInfo{
-//    display:flex;
-//    width: 85%;
-//    height: auto;
-//    flex-direction: row;
-//}
+.numberInfo{
+	justify-content: flex-start;
+	
+}
 
 //.numberOfposts{
 //	flex:1;
