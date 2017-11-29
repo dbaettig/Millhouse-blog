@@ -355,12 +355,21 @@ color: $categoryFontColor;
 	}
 }
 
-.comment_link a{
-	color:$linksFontColor;
-	font-family:$categoryFont;
-	font-size:1.2em;
+.readmore {
+	font-weight:600;	
 }
 
+.comment_link {
+	a {
+	color:$linksFontColor;
+	font-family:$categoryFont;
+	font-weight: 700;
+//	font-size:1.2em;
+	}
+	.fa {
+		color:$linksFontColor;
+	}
+}
 .blogpost.index {
 	small {
 		margin:2em auto 1.5em;

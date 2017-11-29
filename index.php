@@ -54,8 +54,8 @@ require 'logic/index_db.php';
 					<?php include 'partials/edit_buttons.php'?>
 				</div>
 				<div class="blogpost__text--bodytext">
-					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Read more</a></p>
-					<p class="comment_link"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment</a></p>
+					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</span></a></p>
+					<p class="comment_link right"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment </a><i class="fa fa-arrow-right" aria-hidden="true"></i></p>
 				</div>
 			</div>
 		</article>
