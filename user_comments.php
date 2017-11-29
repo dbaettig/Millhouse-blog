@@ -11,29 +11,28 @@ require 'logic/user_comments_db.php';
 
 			<div class="profileWrapper">
 			<h1>All my comments</h1>
-			<p><a href="profile.php">Back to profile page.</a></p>
-			<br/>
+			<p><a href="profile.php">Back to profile page.</a></p><br/>
 			
-			<ul>
-	<?php
-	foreach($allMyComments as $oneOfMyComments) { ?>
-
-							<li>
-								<p>"
-								<?= $oneOfMyComments['comment'] ?>"
-							<br/>on
-								<a href="single_post.php?postID=<?= $oneOfMyComments['postID'] ?>">
-									<?= $oneOfMyComments['title'] ?>
-								</a> by
-								<?= $oneOfMyComments['name'] ?>
-							</p>
-							<br/>
-								<small><?= $oneOfMyComments['created'] ?></small>
-							</li>
-
-							<?php } ?>
-							</ul>
-			</div>	
+<!--			<ul>-->
+				<?php
+					foreach($allMyComments as $oneOfMyComments) { ?>
+<!--					<li>-->
+					<div class="comment">
+						<p>
+						 	"<?= $oneOfMyComments['comment'] ?>"<br/>
+						 </p>
+						 <small>
+							 on <a href="single_post.php?postID=<?= $oneOfMyComments['postID'] ?>">
+								<?= $oneOfMyComments['title'] ?>
+								</a> 
+<!--							 by <?= $oneOfMyComments['name'] ?>-->
+							 <?= $oneOfMyComments['created'] ?>
+						</small><br/>
+<!--					</li>-->
+					</div>
+				<?php } ?>
+<!--			</ul>-->
+	</div>	
 <?php
 require 'partials/footer.php';
 ?>
