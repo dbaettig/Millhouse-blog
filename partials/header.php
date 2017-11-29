@@ -2,6 +2,7 @@
 	<div class="login_signup--tablet">
 		<?php
 		if(isset($_SESSION["user"])){ ?>
+
 			<div class="header__usernav">
 				<p class="new__post">
 					<button class="button_large button_turquoise"><a href="../new_post.php">+ Create new post</a></button>
@@ -23,6 +24,7 @@
 	<a href="../index.php">
 		<div class="header__inner">
 			<img src="../img/millhouse-logo.svg" alt="Millhouse logo" class="logo">
+
 		</div>
 	</a>
 
@@ -49,7 +51,6 @@
 					<?php
 		if(isset($_SESSION["user"])){ ?>
 
-
 						<li class="nav-item">
 							<p class="new__post">
 								<a class="button button_turquoise nav-link" href="new_post.php" target="_blank"> + Create new post </a>
@@ -72,8 +73,6 @@
 						</li>
 
 						<?php } ?>
-
-
 
 			</div>
 			</ul>

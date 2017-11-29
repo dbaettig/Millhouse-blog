@@ -1,99 +1,97 @@
 <?php
 require 'partials/session.php';
-require "partials/database.php";
+require 'partials/database.php';
 require 'partials/head.php';
 ?>
 
-	<body id="single_post">
-		<?php require 'partials/header.php';?>
-		<main role="main">
-			<div class="wrapper">
-				<?php
-	
-	require 'logic/single_post_db.php';
+<body id="single_post">
+	<?php require 'partials/header.php';?>
+	<main role="main">
+		<div class="wrapper">
+			<?php 
+			require 'logic/single_post_db.php';
 
-
-	foreach($single_post as $blogpost) { ?>
-					<article class="blogpost single">
-						<h1 class="category center"><?= $blogpost['category'] ?></h1>
-						<h2 class="center">
-							<?=$blogpost['title']?>
-						</h2>
-						<figure class="blogpost__image">
-							<img src="<?= $blogpost['image'] ?>">
-						</figure>
-						<small class="center">
+			foreach($single_post as $blogpost) { ?>
+				<article class="blogpost single">
+					<h1 class="category center"><?= $blogpost['category'] ?></h1>
+					<h2 class="center">
+						<?=$blogpost['title']?>
+					</h2>
+					<figure class="blogpost__image">
+						<img src="<?= $blogpost['image'] ?>">
+					</figure>
+					<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
-						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i><?php foreach($comments_toPosts as $comment) { ?> <?= $comment ?> <?php } ?> comments
-				</small>
-						<div class="blogpost__bodytext">
+						<?= $blogpost['category'] ?>  <i class="fa fa-circle" aria-hidden="true"></i>
+						<?php foreach($comments_toPosts as $comment) { ?> <?= $comment ?> <?php } ?> comments
+					</small>
+					<div class="blogpost__bodytext">
 						<p>
 							<?= $blogpost['post'] ?>
 						</p>
-						</div>
-						<br/><br/>
-						<?php include 'partials/edit_buttons.php'?>
-					</article>
-					<?php } ?>
-					<br/>
-					<section class="comments_wrapper_container">
+					</div><br/><br/>
+					
+					<?php include 'partials/edit_buttons.php'?>
+					
+				</article>
+			<?php } ?>
+			<br/>
+				<section class="comments_wrapper_container">
 
-						<h3 class="comments_header">Comments</h3>
-
-						<?php if(!isset($_SESSION["user"])){ ?>
-						<!-- Comment form if not logged in -->
+					<h3 class="comments_header">Comments</h3>
+					
+					<?php if(!isset($_SESSION["user"])){ ?>
+					<!-- Comment form if not logged in -->
 						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
-							<label for="comment">Write a comment</label>
-								<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+						
+							<label for="comment" class="doNotShow">Write a comment</label>
+							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							
 							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
-							<input class="input_comment" type="hidden" name="userID" value="0">
-							<br />
-							<label for="text">Your name</label><input class="input_commentName" type="text" name="name" placeholder="Name">
-							<label for="email">Your email</label>
-							<input class="input_commentEmail" type="text" name="email" placeholder="Email">
-							<br/>
-							<input class="comment_submit" type="submit" name="submit" value="Post">
+							
+							<input class="input_comment" type="hidden" name="userID" value="0"><br/>
+							
+							<label for="text" class="doNotShow">Your name</label>
+							<input class="input_commentName" type="text" name="name" placeholder="Name">
+							
+							<label for="email" class="doNotShow">Your email</label>
+							<input class="input_commentEmail" type="text" name="email" placeholder="Email"><br/>
+							
+							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Post">
+							
 						</form>
-						<?php } else { ?>
+						
+					<?php } else { ?>
 						<!-- Comment form if logged in -->
 						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
+
 							<label for="comment">Write a comment</label>
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
-							<label for="name">Your name</label>
+
 							<input type="hidden" name="name" value=" <?=$_SESSION['user']['username']?>">
-							<label for="email">Your email</label>
+							
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
-							<input class="comment_submit" class="comment_submit" type="submit" name="submit" value="Post">
+
+							<input class="button_large button_turquoise button" class="comment_submit" type="submit" name="submit" value="Post">
+
 						</form>
-						<?php }	?>
+					<?php }	?>
 
-						<br/>
-						<br/>
-						<br/>
-						<br/>
+		 <br/><br/><br/>
 
-						<?php
-
-	foreach($comments as $comment) { 
- ?>
-							<div class="comment">
-								<p>
-									<?= $comment['comment'] ?>
-								</p>
-								<small class="comment_info"><?=  $comment['name']; ?> <i class="fa fa-circle" aria-hidden="true"></i> <?= $comment['created']; ?> </small>
-								
-								<br/>
-							</div>
-
-							<?php } ?>
-
-					</div>
-
-		
-					</section>
+		 <?php foreach($comments as $comment) {?>
+			<div class="comment">
+				<p>
+					<?= $comment['comment'] ?>
+				</p>
+				<small class="comment_info"><?=  $comment['name']; ?> <i class="fa fa-circle" aria-hidden="true"></i> <?= $comment['created']; ?> </small>
+				<br/>
 			</div>
-			<?php
-require "partials/footer.php";
-?>
+		<?php } ?> <!-- foreach comments -->
+		</div>
+	</section>
+</div>
+<?php require "partials/footer.php"; ?>

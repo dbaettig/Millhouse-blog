@@ -3,12 +3,10 @@ require 'partials/session.php';
 require 'partials/head.php';
 require 'partials/database.php';
 require 'user_comments_db.php';
-
 ?>
 
-
 <body id="profile">
-		<?php require 'partials/header.php';?>
+	<?php require 'partials/header.php';?>
 		<main class="profile_main" role="main">
 
 			<div class="profileWrapper">
