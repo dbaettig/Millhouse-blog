@@ -5,7 +5,7 @@
 
 			<div class="header__usernav">
 				<p class="new__post">
-					<button class="button_large button_turquoise"><a href="../new_post.php">+ Create new post</a></button>
+					<a class="button_large button_turquoise button" href="../new_post.php">+ Create new post</a>
 				</p>
 				<p class="header__usernav--loggedin">
 					<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
