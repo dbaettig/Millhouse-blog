@@ -33,17 +33,21 @@ require 'logic/profile_db.php';
 
 						<?php foreach($count1 as $c1) { ?>
 							<div class="numberOfposts">
-								<p class="number"><?= $c1 ?></p>
-								<h2>posts</h2>
+								<a href="user_posts.php">
+									<p class="number"><?= $c1 ?></p>
+									<h2>posts</h2>
+								</a>
 							</div>
 						<?php } ?>
 
 						<?php foreach($count3 as $c3) { ?>
 							<div class="numberOfcomments">
-								<p class="number">
-									<?= $c3 ?>
-								</p>
-								<h2>comments</h2><br/>
+								<a href="user_comments.php">
+									<p class="number">
+										<?= $c3 ?>
+									</p>
+									<h2>comments</h2><br/>
+								</a>
 							</div>
 						<?php } ?>
 

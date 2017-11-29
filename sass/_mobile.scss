@@ -624,6 +624,10 @@ h5 {
 .numberOfposts h2,.numberOfcomments h2{
 	font-size:1.2em;
 }
+.numberOfposts a:hover,
+.numberOfcomments a:hover {
+	text-decoration:none;
+}
 .number {
 	height:100px;
 	width:100px;
