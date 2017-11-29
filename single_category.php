@@ -56,7 +56,7 @@ require 'logic/single_category_db.php';
                             <div class="blogpost__text--bodytext">
                                 <p>
                                 	<?= substr($blogpost['post'],0,200) . "... "; ?>
-                                	<a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Read more</a>
+                                	<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</a></span>
                                 </p>
                             </div>
                         </div>
