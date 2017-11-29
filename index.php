@@ -26,7 +26,7 @@ require 'logic/index_db.php';
 <?php foreach($blog as $blogpost) { ?>
 		<article class="blogpost index">
 			<figure class="blogpost__image">
-				<img class="index_image" src="<?= $blogpost['image'] ?>">
+				<img class="index_image" src="<?= $blogpost['image'] ?>" alt="Blogpost image">
 			</figure>
 
 			<div class="blogpost__text">
@@ -42,7 +42,7 @@ require 'logic/index_db.php';
 							<?= $blogpost['category'] ?> 
 							<?= $blogpost['created'] ?>
 
-						</br>
+						<br/>
 
 							<?php foreach($comments_toPosts as $comment) { 
 								if($comment['postID'] == $blogpost['postID']) {
