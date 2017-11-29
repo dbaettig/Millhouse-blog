@@ -65,7 +65,7 @@ require 'partials/head.php';
 						<!-- Comment form if logged in -->
 						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
 
-							<label for="comment">Write a comment</label>
+							<label for="comment" class="doNotShow">Write a comment</label>
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
@@ -75,7 +75,7 @@ require 'partials/head.php';
 							
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
 
-							<input class="button_large button_turquoise button" class="comment_submit" type="submit" name="submit" value="Post">
+							<input class="comment_submit button_large button_turquoise button" class="comment_submit" type="submit" name="submit" value="Post">
 
 						</form>
 					<?php }	?>

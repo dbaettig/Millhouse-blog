@@ -450,7 +450,7 @@ color:black;
 }
 
 /* COMMENTS */
-.comment {
+.comment, .post {
 	margin-bottom:.8em;
 	p {
 		margin-bottom:.2em;
@@ -478,13 +478,14 @@ textarea, input {
 
 .comment_submit {
 	line-height:1;
-	width:23%;
-	max-width: 44%;
-	height:40px;
-	padding-top: 2.3%;
-	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
-	background-color: #a6c9c6;
-	color:black;
+	width:70%;
+	max-width: 250px;
+	padding:10px 20px;
+//	height:40px;
+//	padding-top: 2.3%;
+//	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
+//	background-color: #a6c9c6;
+//	color:black;
 }
 
 .input_comment {
