@@ -7,8 +7,9 @@ require 'partials/head.php';
 	<?php require 'partials/header.php'; ?>
 		<main role="main">
 			<article class="wrapper">
+			<h1>Our story</h1>
 				<figure class="blogpost__image">
-					<img class="index_image" src="img/glassesfuture.jpg">
+					<img class="index_image" src="img/glassesfuture.jpg" alt="Millhouse Simpson looking cool.">
 				</figure>
 
 				<div class="about__bodytext">
