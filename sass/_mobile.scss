@@ -157,6 +157,10 @@ small, h5 {
 		text-align: right;
 //     	display: flex;
 //     	flex-direction: column;
+		a:nth-child(1) {
+			font-weight:700;
+		}
+		
 		.button {
 			margin-left: .7em;
 		}

@@ -13,11 +13,10 @@ require 'logic/user_comments_db.php';
 			<h1>All my comments</h1>
 			<p><a href="profile.php">Back to profile page.</a></p><br/>
 			
-<!--			<ul>-->
+			<ul>
 				<?php
 					foreach($allMyComments as $oneOfMyComments) { ?>
-<!--					<li>-->
-					<div class="comment">
+					<li class="comment">
 						<p>
 						 	"<?= $oneOfMyComments['comment'] ?>"<br/>
 						 </p>
@@ -28,10 +27,9 @@ require 'logic/user_comments_db.php';
 <!--							 by <?= $oneOfMyComments['name'] ?>-->
 							 <?= $oneOfMyComments['created'] ?>
 						</small><br/>
-<!--					</li>-->
-					</div>
+					</li>
 				<?php } ?>
-<!--			</ul>-->
+			</ul>
 	</div>	
 <?php
 require 'partials/footer.php';

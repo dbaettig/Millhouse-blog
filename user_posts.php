@@ -15,19 +15,17 @@ require 'logic/user_posts_db.php';
 				<a href="profile.php">Back to profile page.</a>
 			</p><br/>
 			
-<!--			<ul>-->
+			<ul>
 			<?php
 				foreach($allMyPosts as $oneOfMyPosts) { ?>
-<!--				<li>-->
-					<div class="post">
+					<li class="post">
 						<a href="single_post.php?postID=<?= $oneOfMyPosts['postID'] ?>">
 							<?= $oneOfMyPosts['title'] ?>
 						</a>
 						<small><?= $oneOfMyPosts['created'] ?></small><br/>
-<!--							</li>-->
-					</div>
+					</li>
 				<?php } ?>
-<!--			</ul>-->
+			</ul>
 		</div>	
 <?php
 require 'partials/footer.php';

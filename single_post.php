@@ -81,16 +81,17 @@ require 'partials/head.php';
 					<?php }	?>
 
 		 <br/><br/><br/>
-
+		<ul>
 		 <?php foreach($comments as $comment) {?>
-			<div class="comment">
+			<li class="comment">
 				<p>
 					<?= $comment['comment'] ?>
 				</p>
 				<small class="comment_info"><?=  $comment['name']; ?> <i class="fa fa-circle" aria-hidden="true"></i> <?= $comment['created']; ?> </small>
 				<br/>
-			</div>
+			</li>
 		<?php } ?> <!-- foreach comments -->
+		</ul>
 		</div>
 	</section>
 </div>

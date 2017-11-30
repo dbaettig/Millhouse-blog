@@ -9,8 +9,7 @@
 		<meta name="description" content="A blog by Millhouse">
 
 		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="https://example.com/favicon.ico">
-		<link rel="icon" type="image/png" href="https://example.com/favicon.png">
+		<link rel="icon" type="image/png" href="../img/millhouse-favicon.png">
 
 		<title>Millhouse Blog</title>
 
