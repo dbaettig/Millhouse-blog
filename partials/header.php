@@ -9,8 +9,7 @@
 				</p>
 				<p class="header__usernav--loggedin">
 <!--					Du är nu inloggad <?= $_SESSION["user"]["username"]; ?>-->
-<!--					<a href="../profile.php">Profile page</a> <a href="../logic/logout.php">Sign out</a>-->
-					<a href="../profile.php"><?= $_SESSION["user"]["username"]; ?>'s profile</a> <a href="../logic/logout.php">Sign out</a>
+					<a href="../profile.php">My profile</a> <a href="../logic/logout.php">Sign out</a>
 				</p>
 			</div>
 			<?php } else { ?>
@@ -73,8 +72,7 @@
 								<a class="nav-link" href="../login.php" target="_blank">Log in </a> <br/> <a class="nav-link" href="../register.php">Sign up</a>
 							</p>
 						</li>
-
-						<?php } ?>
+					<?php } ?>
 
 			</div>
 			</ul>
