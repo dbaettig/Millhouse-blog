@@ -42,7 +42,7 @@ require 'partials/head.php';
 					
 					<?php if(!isset($_SESSION["user"])){ ?>
 					<!-- Comment form if not logged in -->
-						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
+						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 						
 							<label for="comment" class="doNotShow">Write a comment</label>
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
@@ -66,7 +66,7 @@ require 'partials/head.php';
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 
 							<label for="comment" class="doNotShow">Write a comment</label>
-							<textarea class="textarea_comment" id ="comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<textarea class="textarea_comment" id="comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
 
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
