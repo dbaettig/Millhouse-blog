@@ -21,22 +21,22 @@ foreach($single_post as $blogpost) { ?>
         <form class="form_newpost" action="logic/edit_post_form.php" method="POST" enctype="multipart/form-data">
           <input class="input_title" type="hidden" name="postID" value="<?= $blogpost['postID']; ?>">
           <label for="title" class="doNotShow">Title</label>
-          <input class="input_title" type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
+          <input class="input_title" id="title" type="text" name="title" value="<?= $blogpost['title']; ?>"><br/>
           
-          <label for="text" class="doNotShow">Edit your post here</label>
+          <label for="editor" class="doNotShow">Edit your post here</label>
           <textarea class="textarea" name="text" id="editor" rows="30">
             <?= $blogpost['post']; ?>
           </textarea> <br/>
 
           <label for="uploaded_file"><?= $blogpost['image']?></label>
-          <input class="uploadFileInput input_newpost" type="file" name="uploaded_file" value="<?= $blogpost['image']?>">
+          <input class="uploadFileInput input_newpost" id="uploaded_file" type="file" name="uploaded_file">
             
           <!--<button class="uploadFileButton">Select File</button> -->
           <small class="left">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
           
           <div class="buttons">
              <div class="select_button">
-              <select class="select" name="category" value="<?= $blogpost['category']; ?>">
+              <select class="select" name="category">
                 <option value="category" <?php if($blogpost['category'] == 'category' ) { echo "selected='selected'"; }?> >Choose category...</option>
                 <option value="news" <?php if($blogpost['category'] == 'news' ) { echo "selected='selected'"; }?> >News</option>
                 <option value="style" <?php if($blogpost['category'] == 'style' ) { echo "selected='selected'"; }?> >Style</option>
