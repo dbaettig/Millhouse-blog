@@ -20,7 +20,7 @@ require 'logic/profile_db.php';
 							<input class="input_upload" type="file" name="uploaded_file">
 							<input class="button button_turquoise" type="submit" name="submit" value="Upload">
 						</form>
-					</div> <!-- .profileheader__image--center -->
+					</div>
 				</div> <!-- .profileheader__image -->
 
 				<div class="profileheader__info">
