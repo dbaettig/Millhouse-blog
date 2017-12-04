@@ -4,7 +4,7 @@ require 'partials/database.php';
 require 'partials/head.php';
 ?>
 
-<body id="single_post">
+<body id="blog">
 	<?php require 'partials/header.php';?>
 	<main role="main">
 		<div class="wrapper">
@@ -13,10 +13,10 @@ require 'partials/head.php';
 
 			foreach($single_post as $blogpost) { ?>
 				<article class="blogpost single">
-					<h1 class="category center"><?= $blogpost['category'] ?></h1>
-					<h2 class="center">
+					<h2 class="category center"><a href="single_category.php?<?= $blogpost['category']?>"><?= $blogpost['category'] ?></a></h2>
+					<h1 class="center">
 						<?=$blogpost['title']?>
-					</h2>
+					</h1>
 					<figure class="blogpost__image">
 						<img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
 					</figure>

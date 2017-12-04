@@ -5,17 +5,18 @@ html {
 	-moz-osx-font-smoothing: grayscale; 
 }
 
-body#index a#nav-index,
+body#blog a#nav-blog,
 body#about a#nav-about
 {
 color: white;
+font-weight: 800;
+font-size: 1.1em;
 }
 
 .wrapper {
 	max-width: $contentWidth;
 	margin: 0 auto;
-	padding:5%;
-	padding-bottom: 10%;
+	padding:3% 5% 10% 5%;
 }
 
 img {
@@ -281,10 +282,10 @@ border:none;
 color: $categoryFontColor;
 
 }
-.active{
+li.active a{
     //text-decoration: underline;
     font-size:1.2em;
-	font-weight:700;
+	font-weight:800;
 }
  
 .categoryblogpost__text{
@@ -381,9 +382,10 @@ color: $categoryFontColor;
 }
 
 .blogpost.single {
-	h2 {
+	h1 {
 		margin-bottom:2rem;
 	}
+
 	.edit_buttons {
 		margin:auto;
 		text-align:center;

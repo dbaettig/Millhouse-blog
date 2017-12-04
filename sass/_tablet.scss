@@ -91,7 +91,7 @@
     height: 40px;
 }
 
-/*CATEGORY POST*/
+/*CATEGORies*/
 .categorymenu{
     display: flex;
     justify-content: center;
@@ -110,6 +110,11 @@ padding:0 20px;
     sans-serif;
     border:none;
     color: $categoryFontColor;
+}
+
+li.active a{
+    //text-decoration: underline;
+    font-size:1.3em;
 }
 
 .categorywrapper{
