@@ -30,7 +30,7 @@ require 'logic/single_category_db.php';
                     <article class="categoryblogpost">
 
                         <figure class="categoryblogpost__image">
-                            <img src="<?= $blogpost['image'] ?>">
+                            <img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
                         </figure>
 
                         <div class="categoryblogpost__text">
@@ -44,7 +44,7 @@ require 'logic/single_category_db.php';
 								By <?=  $blogpost['username'] ?> in
 									<?= $blogpost['category'] ?> 
 									<?= $blogpost['created'] ?>
-                                </br>
+                                <br/>
                                     <?php foreach($comments_toPosts as $comment) { 
                                 if($comment['postID'] == $blogpost['postID']) {
                                         echo $comment['number_of_comments'] . " " . "comments";
@@ -56,7 +56,7 @@ require 'logic/single_category_db.php';
                             <div class="blogpost__text--bodytext">
                                 <p>
                                 	<?= substr($blogpost['post'],0,200) . "... "; ?>
-                                	<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</a></span>
+                                	<a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</span></a>
                                 </p>
                             </div>
                         </div>
