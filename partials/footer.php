@@ -1,4 +1,6 @@
+
 </main>
+<a class="top" href="#top">Back to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
         
 <footer role="contentinfo">
 	<div class="footer-inner">
