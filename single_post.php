@@ -18,7 +18,7 @@ require 'partials/head.php';
 						<?=$blogpost['title']?>
 					</h2>
 					<figure class="blogpost__image">
-						<img src="<?= $blogpost['image'] ?>">
+						<img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
 					</figure>
 					<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
@@ -63,7 +63,7 @@ require 'partials/head.php';
 						
 					<?php } else { ?>
 						<!-- Comment form if logged in -->
-						<form class="input_comment" action="logic/comment_form.php" method="POST" class="comment_form">
+						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 
 							<label for="comment" class="doNotShow">Write a comment</label>
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
@@ -90,9 +90,8 @@ require 'partials/head.php';
 				<small class="comment_info"><?=  $comment['name']; ?> <i class="fa fa-circle" aria-hidden="true"></i> <?= $comment['created']; ?> </small>
 				<br/>
 			</li>
-		<?php } ?> <!-- foreach comments -->
+		<?php } ?>
 		</ul>
-		</div>
 	</section>
 </div>
 <?php require "partials/footer.php"; ?>
