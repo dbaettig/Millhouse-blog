@@ -1,4 +1,7 @@
 <header role="banner">
+<!-- back to top anchor -->
+	<a name="top"></a>
+	
 	<div class="login_signup--tablet">
 		<?php
 		if(isset($_SESSION["user"])){ ?>
@@ -77,5 +80,7 @@
 			</div>
 			</ul>
 		</div>
+	
 	</nav>
+	
 </header>

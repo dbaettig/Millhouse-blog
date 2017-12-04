@@ -698,6 +698,12 @@ h5 {
 
 
 /* FOOTER */
+
+.top{
+display:block;
+text-align: center;
+margin-bottom:20px;
+}
 footer {
 	background-color: $brandColor1;
 	display:flex;
