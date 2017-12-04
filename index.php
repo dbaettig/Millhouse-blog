@@ -6,7 +6,7 @@ require 'logic/index_db.php';
 
 ?>
 
-   <body id="index">
+   <body id="blog">
      <?php require 'partials/header.php'; ?>
         <main>
             <div class="wrapper">
