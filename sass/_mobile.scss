@@ -400,11 +400,14 @@ li.active a{
 	margin-top:10px;
 }
 .form_newpost {
-	margin-top:50px;
+	margin-top:10px;
+	h4 {
+		font-size: 1.2em;
+	}
 }
 
 .ck-editor__editable_inline{
-	height:300px;
+	height:250px;
 }
 
 .input_newpost, .ck-toolbar {
@@ -427,10 +430,12 @@ color:black;
 	border-radius:$borderRadiusSmall;
 	padding:10px;
 	border:solid 2px rgba(0,0,0,0.5);
+	width: 100%;
 }
 
 .buttons {
 	display:flex;
+	flex-direction: column;
 }
 
 .select_button {
@@ -439,6 +444,9 @@ color:black;
 
 .publish_button {
 	flex:1;
+	.input_newpost {
+		margin-top: 30px;
+	}
 }
 
 
@@ -476,7 +484,7 @@ color:black;
 textarea, input {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.1);
-	margin-bottom: 15px;
+	margin: 15px 0px;
 	//border: solid 2px rgba(0, 0, 0, 0.5);
 	border-radius: $borderRadiusSmall;
 	padding:3% 2%;	
@@ -704,7 +712,7 @@ h5 {
 .top{
 display:block;
 text-align: center;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 footer {
 	background-color: $brandColor1;

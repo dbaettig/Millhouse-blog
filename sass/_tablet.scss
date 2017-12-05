@@ -17,7 +17,7 @@
 }
 .header__inner img {
     height: 65%;
-    margin: 10px;
+    margin: 20px;
 }
 
 .header__usernav--loggedin a,.header__usernav--loggedout a {
@@ -83,12 +83,38 @@
 
 /*CREATE NEW POST*/
 
+.newpost_headline {
+	margin-top: 25px;
+}
+
+.form_newpost {
+	margin-top:30px;
+	h4 {
+		margin-top: .5rem;
+	}
+}
+
+.ck-editor__editable_inline{
+	height:300px;
+}
+
 .select {
     width: 70%;
 }
 
 .input_title {
     height: 40px;
+}
+
+.buttons {
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.publish_button {
+	.input_newpost {
+		margin-top: 0px;
+	}
 }
 
 /*CATEGORies*/
