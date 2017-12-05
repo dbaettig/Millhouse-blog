@@ -5,6 +5,15 @@
 }
 
 /* HEADER */
+
+.logo {
+display: block;
+}
+
+.icon {
+	display: none;
+}
+
 .navbar-nav {
     width: 40%;
     margin: 0 auto;
@@ -18,6 +27,10 @@
 .header__inner img {
     height: 65%;
     margin: 20px;
+}
+
+.header__inner a{
+	margin: 0px auto;
 }
 
 .header__usernav--loggedin a,.header__usernav--loggedout a {
@@ -37,6 +50,10 @@
 }
 .login_signup--tablet{
     display:block;
+}
+
+li.nav-item.dropdown {
+	display: none;
 }
 
 /* BLOG POST*/
@@ -121,19 +138,19 @@
 .categorymenu{
     display: flex;
     justify-content: center;
-}
-
-.categorymenu li{
-list-style-type: none;
-display: inline-block;
-padding:0 20px;
+	margin:10px;
+	li{
+		list-style-type: none;
+		display: inline-block;
+		padding:0 20px;
+		margin:5px;
+	}
 }
 
 .categorymenu a{
     font-family: $bodyFont;
     font-size:1.2em;
-    font-family: $categoryFont,
-    sans-serif;
+    font-family: $categoryFont, sans-serif;
     border:none;
     color: $categoryFontColor;
 }
