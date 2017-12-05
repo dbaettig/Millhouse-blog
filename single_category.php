@@ -2,7 +2,7 @@
 require 'partials/session.php';
 require "partials/database.php";
 require 'partials/head.php';
-require 'logic/single_category_db.php';
+require 'logic/single_category_db.php'; 
 
 ?>
 
@@ -12,7 +12,7 @@ require 'logic/single_category_db.php';
             <div class="wrapper">
                 <nav class="categorymenu" role="navigation">
                     <ul>
-                        <li <?php if (isset ($_GET[ "news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
+                        <li <?php if (isset ($_GET["news"])){echo "class='active'";}?>><a href="single_category.php?news">News</a></li>
 
                         <li <?php if (isset ($_GET[ "interior"])){echo "class='active'";}?>><a href="single_category.php?interior">Interior</a></li>
 
