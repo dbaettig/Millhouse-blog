@@ -4,7 +4,7 @@
 if (isset ($_GET["news"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
-WHERE category = 'news'");
+WHERE category = 'news' ORDER BY postID DESC");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 
@@ -13,7 +13,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 if (isset ($_GET["style"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
-WHERE category = 'style'");
+WHERE category = 'style' ORDER BY postID DESC");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
     
@@ -22,7 +22,7 @@ $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 if (isset ($_GET["interior"])){
     
 $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
-WHERE category = 'interior'");
+WHERE category = 'interior' ORDER BY postID DESC");
 $statement->execute();
 $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
 }
