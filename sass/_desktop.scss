@@ -3,6 +3,11 @@
 	padding:1.5% 3% 9% 3%;
 }
 
+/* HEADER */
+.header__inner img {
+	margin: 10px;
+}
+
 /* BLOGPOST */
 .blogpost {
 	small {
@@ -19,6 +24,19 @@
 		padding:2.5em 3em 3em;
 	}
 }
+
+/*CREATE NEW POST*/
+.newpost_headline {
+	margin-top: 40px;
+}
+
+.form_newpost {
+	margin-top:35px;
+	h4 {
+		margin-top: 1rem;
+	}
+}
+
 
 /* ABOUT */ 
 .about__bodytext {
