@@ -33,17 +33,12 @@
 			<img src="../img/millhouse-favicon.png" alt="Millhouse icon." class="icon">
 			</a>
 		<div class="create_post_button">
-			<ul>
 				<?php
 		if(isset($_SESSION["user"])){ ?>
-
-					<li class="nav-item">
-						<p class="new__post">
+						<p class="nav-item new__post">
 							<a class="button button_turquoise nav-link" href="new_post.php"> + Create new post </a>
 						</p>
-					</li>
 					<?php } ?>
-			</ul>
 		</div>
 	</div>
 
@@ -83,7 +78,7 @@
 		if(isset($_SESSION["user"])){ ?>
 
 							<li class="nav-item">
-								<a class="nav-link header__usernav--loggedin" href="profile.php">Profile page
+								<a class="nav-link header__usernav--loggedin" href="profile.php">Profile page</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link header__usernav--loggedin" href="../logic/logout.php">Sign out</a>
