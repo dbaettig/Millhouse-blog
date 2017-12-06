@@ -55,6 +55,7 @@ require 'partials/head.php';
 							<input class="input_commentName" id ="text" type="text" name="name" placeholder="Name" required>
 							
 							<label for="email" class="doNotShow">Your email</label>
+							
 							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email" required><br/>
 							
 							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Post">

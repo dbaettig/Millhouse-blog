@@ -2,10 +2,10 @@
 require '../partials/session.php';
 require '../partials/database.php';
 
-/*Form to make a commet*/
+/*Form to make a comment*/
 
 
-
+if(isset($_POST['name'], $_POST['comment'], $_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 $new_comment = $pdo->prepare(
 	"INSERT INTO comments (postID, userID, name, email, comment, created)
 	VALUES (:postID, :userID, :name, :email, :comment, NOW())"
@@ -23,7 +23,11 @@ $new_comment->execute(array(
 $id = $_POST['postID'];
 header("Location:../single_post.php?postID=".$id);
 
+}
 
+else {
+      header("Location: ../single_post.php?postID=".$_POST['postID']."email=notvalid");
+    }
 ?>
 
 
