@@ -6,22 +6,21 @@
 		<?php
 		if(isset($_SESSION["user"])){ ?>
 
+			<!-- BUTTONS FOR SCREENS BIGGER THAN MOBILE -->
 			<div class="header__usernav">
 				<p class="new__post">
 					<a class="button_large button_turquoise button" href="../new_post.php">+ Create new post</a>
 				</p>
+
 				<p class="header__usernav--loggedin">
-					<!--					Du är nu inloggad <?= $_SESSION["user"]["username"]; ?>-->
-					<a href="../profile.php">My profile</a> <a href="../logic/logout.php">Sign out</a>
+					<a href="../profile.php">My profile</a>
+					<a href="../logic/logout.php">Sign out</a>
 				</p>
-			</div>
-			<?php } else { ?>
-			<div class="header__usernav">
-				<div>
-					<!--empty div for flex positioning-->
-				</div>
+				<?php } 
+		else { ?>
 				<p class="header__usernav--loggedout">
-					<a href="../login.php">Log in </a><a class="button_large button_turquoise button" href="../register.php">Sign up</a>
+					<a href="../login.php">Log in </a>
+					<a class="button_large button_turquoise button" href="../register.php">Sign up</a>
 				</p>
 			</div>
 			<?php } ?>
@@ -32,17 +31,20 @@
 			<img src="../img/millhouse-logo.svg" alt="Millhouse logo" class="logo">
 			<img src="../img/millhouse-favicon.png" alt="Millhouse icon." class="icon">
 			</a>
-		<div class="create_post_button">
-				<?php
-		if(isset($_SESSION["user"])){ ?>
-						<p class="nav-item new__post">
-							<a class="button button_turquoise nav-link" href="new_post.php"> + Create new post </a>
-						</p>
-					<?php } ?>
-		</div>
 	</div>
 
 
+	<!-- MOBILE CREATE NEW POST BUTTON -->
+	<div class="mobile_post_button">
+		<?php
+		if(isset($_SESSION["user"])){ ?>
+			<p class="nav-item new__post">
+				<a class="button button_turquoise nav-link" href="new_post.php"> + Create new post </a>
+			</p>
+			<?php } ?>
+	</div>
+
+	<!-- NAVBAR -->
 
 	<nav role="navigation" class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
 		<a class="navbar-brand mobile" href="#">Navbar</a>
@@ -87,9 +89,9 @@
 							<?php } else { ?>
 
 							<li class="nav-item">
-									<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
+								<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
 							</li>
-								<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
+							<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
 							</li>
 							<?php } ?>
 					</ul>
