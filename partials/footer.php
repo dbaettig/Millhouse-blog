@@ -21,8 +21,10 @@
 
 			</li>
 
-			<li class="footer-inner__info shop">
-				<H4>Shop</H4>
+			<li class="footer-inner__info archive">
+				<H4>Archive</H4>
+				<a href="archive.php">November 2017</a>
+				<!-- Här ska jag loopa ut alla månader som finns i posts-tabellen i databasen -->
 			</li>
 	   </ul>
 	</div>
