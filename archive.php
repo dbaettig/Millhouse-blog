@@ -9,8 +9,10 @@ require 'partials/database.php';
 	<main class="profile_main" role="main">
 		<div class="profileWrapper">
 			
-			<h1>November 2017</h1>
-			
+			<h1>
+				<?= $_GET['month'] ?>
+			</h1>
+			<br/>
 			<ul>
 			<?php
 				

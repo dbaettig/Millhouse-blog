@@ -4,7 +4,7 @@ foreach ($archive_monthlist as $month) {
 		$month_year = date_format($date, 'F' . ' ' . 'Y');
 		?>
 		<p>
-			<a href="archive.php?<?= urlencode($month_year)?>">
+			<a href="archive.php?month=<?= urlencode($month_year)?>">
 				<?= $month_year ?>
 			</a>
 		</p>
