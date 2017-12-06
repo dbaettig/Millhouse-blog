@@ -3,6 +3,7 @@ require 'partials/session.php';
 require 'partials/database.php';
 require 'partials/head.php';
 require 'logic/index_db.php';
+require 'logic/functions.php';
 
 ?>
 

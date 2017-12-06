@@ -1,3 +1,4 @@
+
 <?php
 require 'partials/session.php';
 require 'partials/database.php';
@@ -44,7 +45,7 @@ require 'partials/head.php';
 					<!-- Comment form if not logged in -->
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 						
-							<label for="comment" class="doNotShow" required>Write a comment</label>
+							<label for="comment" class="doNotShow">Write a comment</label>
 							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6" required></textarea>
 							
 							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
@@ -65,7 +66,7 @@ require 'partials/head.php';
 						<!-- Comment form if logged in -->
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 
-							<label for="comment" class="doNotShow" required>Write a comment</label>
+							<label for="comment" class="doNotShow">Write a comment</label>
 							<textarea class="textarea_comment" id="comment" name="comment" 
 							placeholder="Write your comment..." rows="6" requried></textarea>
 

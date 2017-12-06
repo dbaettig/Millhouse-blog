@@ -22,26 +22,3 @@ $statementcomments = $pdo->prepare("SELECT COUNT(comments.commentID) as number_o
 
        $comments_toPosts = $statementcomments->fetchAll(PDO::FETCH_ASSOC);
 
- /*FUNCTIONS*/      
-
-       function count_posts() {
-	require 'database.php';
-	$statement = $pdo->prepare("SELECT COUNT(*) FROM posts");
-	$statement->execute(array(
-	":userID" => $_SESSION["user"]["id"]
-	));
-	$count = $statement->fetch(PDO::FETCH_ASSOC);
-	foreach($count as $c) { 
-		return $c;
-		}
-	}
-
-	function postamount() {
-	require 'partials/database.php';
-	$statement = $pdo->prepare("SELECT COUNT(*) FROM posts");
-	$statement->execute();
-	$count = $statement->fetch(PDO::FETCH_ASSOC);
-	foreach($count as $c) {
-		return $c;
-	}
-}
