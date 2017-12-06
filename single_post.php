@@ -1,4 +1,3 @@
-
 <?php
 require 'partials/session.php';
 require 'partials/database.php';
