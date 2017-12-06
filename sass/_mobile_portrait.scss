@@ -251,6 +251,7 @@ div.dropdown-menu.show {
 .sign__up--paragraph a {
 	font-size: 1.3rem;
 	color: white;
+	text-decoration: underline;
 }
 
 .login,
@@ -509,11 +510,7 @@ input {
 	line-height: 1;
 	width: 70%;
 	max-width: 250px;
-	padding: 10px 20px; //	height:40px;
-	//	padding-top: 2.3%;
-	//	box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.58);
-	//	background-color: #a6c9c6;
-	//	color:black;
+	padding: 10px 20px; 
 }
 
 .input_comment {
@@ -551,7 +548,9 @@ input {
 }
 
 /*ABOUT*/
-
+#about h1 {
+	text-align: center;
+}
 .about__bodytext {
 	width: 100%;
 	max-width: $contentWidth;
@@ -722,7 +721,7 @@ h5 {
 	margin-bottom: 25px;
 }
 
-#login, #register .top {
+#login .top, #register .top {
 	display:none;
 }
 
