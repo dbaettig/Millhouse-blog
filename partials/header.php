@@ -1,7 +1,7 @@
 <header role="banner">
-<!-- back to top anchor -->
+	<!-- back to top anchor -->
 	<a name="top"></a>
-	
+
 	<div class="login_signup--tablet">
 		<?php
 		if(isset($_SESSION["user"])){ ?>
@@ -11,13 +11,15 @@
 					<a class="button_large button_turquoise button" href="../new_post.php">+ Create new post</a>
 				</p>
 				<p class="header__usernav--loggedin">
-<!--					Du är nu inloggad <?= $_SESSION["user"]["username"]; ?>-->
+					<!--					Du är nu inloggad <?= $_SESSION["user"]["username"]; ?>-->
 					<a href="../profile.php">My profile</a> <a href="../logic/logout.php">Sign out</a>
 				</p>
 			</div>
 			<?php } else { ?>
 			<div class="header__usernav">
-				<div><!--empty div for flex positioning--></div>
+				<div>
+					<!--empty div for flex positioning-->
+				</div>
 				<p class="header__usernav--loggedout">
 					<a href="../login.php">Log in </a><a class="button_large button_turquoise button" href="../register.php">Sign up</a>
 				</p>
@@ -25,12 +27,26 @@
 			<?php } ?>
 	</div>
 
-	<a href="../index.php">
-		<div class="header__inner">
+	<div class="header__inner">
+		<a href="../index.php">
 			<img src="../img/millhouse-logo.svg" alt="Millhouse logo" class="logo">
+			<img src="../img/millhouse-favicon.png" alt="Millhouse icon." class="icon">
+			</a>
+		<div class="create_post_button">
+			<ul>
+				<?php
+		if(isset($_SESSION["user"])){ ?>
 
+					<li class="nav-item">
+						<p class="new__post">
+							<a class="button button_turquoise nav-link" href="new_post.php"> + Create new post </a>
+						</p>
+					</li>
+					<?php } ?>
+			</ul>
 		</div>
-	</a>
+	</div>
+
 
 
 	<nav role="navigation" class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
@@ -43,44 +59,51 @@
 				<li class="nav-item">
 					<a class="nav-link" href="../index.php" id="nav-blog">Blog</a>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					Kategorier
+					</a>
+					<div class="dropdown-menu" aria-labelledby="Preview">
+						<a class="dropdown-item" href="single_category.php?news">News</a>
+						<a class="dropdown-item" href="single_category.php?interior">Interior</a>
+						<a class="dropdown-item" href="single_category.php?style">Style</a>
+						<a class="dropdown-item" href="single_category.php?featured">Featured</a>
+					</div>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="../about.php" id="nav-about">About</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 				</li>
-			</ul>
-			<div class="login_signup">
-				<ul>
-					<?php
+				<div class="login_signup">
+					<ul>
+						<div class="dropdown-divider"></div>
+						<?php
 		if(isset($_SESSION["user"])){ ?>
 
-						<li class="nav-item">
-							<p class="new__post">
-								<a class="button button_turquoise nav-link" href="new_post.php" target="_blank"> + Create new post </a>
-							</p>
-						</li>
+							<li class="nav-item">
+								<a class="nav-link header__usernav--loggedin" href="profile.php">Profile page
+							</li>
+							<li class="nav-item">
+								<a class="nav-link header__usernav--loggedin" href="../logic/logout.php">Sign out</a>
+							</li>
 
-						<li class="nav-item">
-							<p class="header__usernav--loggedin">
-								<!--Du är nu inloggad <?/*= $_SESSION["user"]["username"];*/ ?>-->
-								<a class="nav-link" href="profile.php" target="_blank">Profile page <br/>  <a class="nav-link" href="../logic/logout.php">Sign out</a>
-							</p>
-						</li>
+							<?php } else { ?>
 
-						<?php } else { ?>
-
-						<li class="nav-item">
-							<p class="header__usernav--loggedout">
-								<a class="nav-link" href="../login.php" target="_blank">Log in </a> <br/> <a class="nav-link" href="../register.php">Sign up</a>
-							</p>
-						</li>
-					<?php } ?>
-
-			</div>
+							<li class="nav-item">
+									<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
+							</li>
+								<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
+							</li>
+							<?php } ?>
+					</ul>
+				</div>
 			</ul>
+
+
 		</div>
-	
+
 	</nav>
-	
+
 </header>

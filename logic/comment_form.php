@@ -4,6 +4,8 @@ require '../partials/database.php';
 
 /*Form to make a commet*/
 
+
+
 $new_comment = $pdo->prepare(
 	"INSERT INTO comments (postID, userID, name, email, comment, created)
 	VALUES (:postID, :userID, :name, :email, :comment, NOW())"
@@ -19,6 +21,9 @@ $new_comment->execute(array(
 ));
 
 $id = $_POST['postID'];
-
 header("Location:../single_post.php?postID=".$id);
+
+
 ?>
+
+
