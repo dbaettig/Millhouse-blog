@@ -6,7 +6,7 @@ require 'partials/head.php';
 <body id="register">
 <?php require 'partials/header.php';?>
 	<main role="main">
-		<div class="background__wrapper--login">
+		<div class="background__wrapper--register">
 			<div class="register">
 				<h3>Sign Up</h3>
 				<form action="logic/register_form.php" method="POST">
