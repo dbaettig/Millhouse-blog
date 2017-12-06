@@ -3,17 +3,13 @@ require 'partials/database.php';
 ?>
 
 <?php
-	//Här ska jag loopa ut alla månader som finns i posts-tabellen i databasen 
-
+	//Get all months where there are posts in the database
 	$statement = $pdo->prepare("
 	SELECT created
 	FROM posts
-	GROUP BY MONTH(created)
+	GROUP BY MONTH(created), YEAR(created)
 	ORDER BY created DESC
 	");
 
-
-//ORDER BY created DESC
-//GROUP BY MONTH(created) + '.' + YEAR(created)
 	$statement->execute();
 	$archive_monthlist = $statement->fetchAll(PDO::FETCH_ASSOC);

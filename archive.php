@@ -1,30 +1,41 @@
 <?php
-require 'partials/session.php';
 require 'partials/head.php';
 require 'partials/database.php';
+//require 'partials/session.php';
 ?>
 
 <body id="archive">
-	<?php require 'partials/header.php';?>
+	<?php require 'partials/header.php'; ?>
+	
 	<main class="profile_main" role="main">
 		<div class="profileWrapper">
 			
-			<h1>
-				<?= $_GET['month'] ?>
-			</h1>
-			<br/>
+			<h1><?= $_GET['month'] ?></h1><br/>
+			
+			<?php 
+				//Split up month_year into a separate month and year
+				$month_year = date_create(urldecode($_GET['month']));
+				$month = date_format($month_year, 'F');
+				$year = date_format($month_year, 'Y');
+			?>
+			
+			
 			<ul>
 			<?php
-				
-			/*Fetch users posts*/
-			$statement = $pdo->prepare("
-				SELECT title, post, created 
+				$statement = $pdo->prepare("
+				SELECT postID, title, post, created
 				FROM posts
-				WHERE created > '2017/11/01' AND created < '2017/11/30'
-				ORDER BY postID DESC");
-				$statement->execute();
-				$posts_per_month = $statement->fetchAll(PDO::FETCH_ASSOC);
+				WHERE monthname(created) = :month AND year(created) = :year
+				ORDER BY created DESC
+				");
 				
+				//GROUP BY MONTH(created)
+				$statement->execute(array(
+					":month" => $month,
+					":year" => $year
+				));
+				$posts_per_month = $statement->fetchAll(PDO::FETCH_ASSOC);
+	
 				foreach($posts_per_month as $post_single_month) { ?>
 					<li class="post">
 						<a href="single_post.php?postID=<?= $post_single_month['postID'] ?>">

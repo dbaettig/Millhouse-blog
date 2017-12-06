@@ -9,5 +9,4 @@ foreach ($archive_monthlist as $month) {
 			</a>
 		</p>
 <?php } 
-
 ?>
