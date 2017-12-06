@@ -22,5 +22,5 @@
 
     }
     else {
-      header("Location: ../register.php?success=false&username=taken");
+      header("Location: ../register.php?success=false&email=notvalid");
     }
