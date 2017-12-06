@@ -31,9 +31,7 @@
 			<img src="../img/millhouse-logo.svg" alt="Millhouse logo" class="logo">
 			<img src="../img/millhouse-favicon.png" alt="Millhouse icon." class="icon">
 			</a>
-	</div>
-
-
+	
 	<!-- MOBILE CREATE NEW POST BUTTON -->
 	<div class="mobile_post_button">
 		<?php
@@ -43,14 +41,16 @@
 			</p>
 			<?php } ?>
 	</div>
+	</div>
 
 	<!-- NAVBAR -->
 
 	<nav role="navigation" class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-end">
 		<a class="navbar-brand mobile" href="#">Navbar</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				  </button>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+				  
 		<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -73,9 +73,10 @@
 				<li class="nav-item">
 					<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 				</li>
+			</ul>
 				<div class="login_signup">
 					<ul>
-						<div class="dropdown-divider"></div>
+						<li class="dropdown-divider"></li>
 						<?php
 		if(isset($_SESSION["user"])){ ?>
 
@@ -91,12 +92,12 @@
 							<li class="nav-item">
 								<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
 							</li>
+							<li>
 							<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
 							</li>
 							<?php } ?>
 					</ul>
 				</div>
-			</ul>
 
 
 		</div>
