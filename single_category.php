@@ -66,8 +66,8 @@ require 'logic/single_category_db.php';
                     	echo '<div class="no_post">Sorry, there are  no posts in this category yet!</div>';
                     } 
 				?>
-                </div><!--categorywrapper close-->
+                </div><!--categorywrapper close-->   
             </div><!--wrapper close-->
-            <?php
+<?php
 require "partials/footer.php";
 ?>
