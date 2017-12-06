@@ -25,6 +25,9 @@ header("Location:../single_post.php?postID=".$id);
 
 }
 
+else {
+      header("Location: ../single_post.php?postID=".$_POST['postID']."email=notvalid");
+    }
 ?>
 
 
