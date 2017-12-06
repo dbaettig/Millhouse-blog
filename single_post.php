@@ -31,7 +31,7 @@ require 'partials/head.php';
 						</p>
 					</div><br/><br/>
 					
-					<?php include 'partials/edit_buttons.php'?>
+					<?php include 'partials/edit_buttons.php';?>
 					
 				</article>
 			<?php } ?>
@@ -44,18 +44,18 @@ require 'partials/head.php';
 					<!-- Comment form if not logged in -->
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 						
-							<label for="comment" class="doNotShow">Write a comment</label>
-							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<label for="comment" class="doNotShow" required>Write a comment</label>
+							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6" required></textarea>
 							
 							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							
 							<input class="input_comment" type="hidden" name="userID" value="0"><br/>
 							
 							<label for="text" class="doNotShow">Your name</label>
-							<input class="input_commentName" id ="text" type="text" name="name" placeholder="Name">
+							<input class="input_commentName" id ="text" type="text" name="name" placeholder="Name" required>
 							
 							<label for="email" class="doNotShow">Your email</label>
-							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email"><br/>
+							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email" required><br/>
 							
 							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Post">
 							
@@ -65,8 +65,9 @@ require 'partials/head.php';
 						<!-- Comment form if logged in -->
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 
-							<label for="comment" class="doNotShow">Write a comment</label>
-							<textarea class="textarea_comment" id="comment" name="comment" placeholder="Write your comment..." rows="6"></textarea>
+							<label for="comment" class="doNotShow" required>Write a comment</label>
+							<textarea class="textarea_comment" id="comment" name="comment" 
+							placeholder="Write your comment..." rows="6" requried></textarea>
 
 							<input type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							<input type="hidden" name="userID" value=" <?=$_SESSION['user']['id']?>">
