@@ -31,9 +31,7 @@
 			<img src="../img/millhouse-logo.svg" alt="Millhouse logo" class="logo">
 			<img src="../img/millhouse-favicon.png" alt="Millhouse icon." class="icon">
 			</a>
-	</div>
-
-
+	
 	<!-- MOBILE CREATE NEW POST BUTTON -->
 	<div class="mobile_post_button">
 		<?php
@@ -42,6 +40,7 @@
 				<a class="button button_turquoise nav-link" href="new_post.php"> + Create new post </a>
 			</p>
 			<?php } ?>
+	</div>
 	</div>
 
 	<!-- NAVBAR -->
@@ -74,9 +73,10 @@
 				<li class="nav-item">
 					<a class="nav-link" href="http://millhouse.com" target="_blank">Shop</a>
 				</li>
+			</ul>
 				<div class="login_signup">
 					<ul>
-						<div class="dropdown-divider"></div>
+						<li class="dropdown-divider"></li>
 						<?php
 		if(isset($_SESSION["user"])){ ?>
 
@@ -92,12 +92,12 @@
 							<li class="nav-item">
 								<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
 							</li>
+							<li>
 							<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
 							</li>
 							<?php } ?>
 					</ul>
 				</div>
-			</ul>
 
 
 		</div>
