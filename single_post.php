@@ -58,6 +58,12 @@ require 'partials/head.php';
 							
 							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email" required><br/>
 							
+							<?php if (isset($_GET['validemail'])) { ?>
+								<p class="validate"><?= $_GET['validemail']; ?></p>
+							<?php } ?>
+							
+							
+
 							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Comment">
 							
 						</form>

@@ -21,13 +21,14 @@ $new_comment->execute(array(
 ));
 
 $id = $_POST['postID'];
-header("Location:../single_post.php?postID=".$id);
+$message = ' ';
+header("Location:../single_post.php?postID=".$id . "&validemail=" . urlencode($message));
 
 }
 
 else {
-      header("Location: ../single_post.php?postID=".$_POST['postID']."email=notvalid");
-    
+	$message = 'Please enter a valid email.';
+    header("Location: ../single_post.php?postID=".$_POST['postID']. "&validemail=" . urlencode($message));
     }
 ?>
 
