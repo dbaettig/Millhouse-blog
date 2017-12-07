@@ -13,7 +13,8 @@ if( !empty($_FILES["uploaded_file"]["name"]) ){
 		title = :title, 
 		post = :post,
 		image = :image,
-		category = :category
+		category = :category,
+        alt_text = :alt_text
 		WHERE postID = :postID"
 		);
 
@@ -22,14 +23,16 @@ if( !empty($_FILES["uploaded_file"]["name"]) ){
 		":title" => $_POST['title'],
 		":post" => $_POST['text'],
 		":image" => "resized/" . $filename,
-		":category" => $_POST['category']
+		":category" => $_POST['category'],
+        ":alt_text" => $_POST['alt_text'] 
 	));
 } else {
 		$update_post = $pdo->prepare(
 		"UPDATE posts SET 
 		title = :title, 
 		post = :post,
-		category = :category
+		category = :category,
+        alt_text = :alt_text
 		WHERE postID = :postID"
 		);
 
@@ -37,7 +40,8 @@ if( !empty($_FILES["uploaded_file"]["name"]) ){
 		":postID" => $_POST['postID'],
 		":title" => $_POST['title'],
 		":post" => $_POST['text'],
-		":category" => $_POST['category']
+		":category" => $_POST['category'],
+        ":alt_text" => $_POST['alt_text'] 
 	));
 }
 
