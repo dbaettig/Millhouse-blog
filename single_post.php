@@ -18,7 +18,7 @@ require 'partials/head.php';
 						<?=$blogpost['title']?>
 					</h1>
 					<figure class="blogpost__image">
-						<img class="index_image" src="<?= $blogpost['image']?>" alt="<?= $blogpost['alt_text']?>">
+						<img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
 					</figure>
 					<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
@@ -58,6 +58,12 @@ require 'partials/head.php';
 							
 							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email" required><br/>
 							
+							<?php if (isset($_GET['validemail'])) { ?>
+								<p class="validate"><?= $_GET['validemail']; ?></p>
+							<?php } ?>
+							
+							
+
 							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Comment">
 							
 						</form>
