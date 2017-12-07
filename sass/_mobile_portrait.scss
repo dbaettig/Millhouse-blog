@@ -162,7 +162,7 @@ h5 {
 
 /* HEADER */
 
-div.login_signup--tablet {
+.header__usernav--loggedin, .header__usernav--loggedout {
 	display:none;
 }
 

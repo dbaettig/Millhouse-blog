@@ -30,7 +30,7 @@ div.mobile_post_button p.nav-item.new__post{
 
 
 .header__usernav {
-	padding: 1.5rem 1.5rem 0;
+	//padding: 1.5rem 1.5rem 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -54,8 +54,13 @@ div.mobile_post_button p.nav-item.new__post{
 	display: none;
 }
 
-div.login_signup--tablet {
-	display: block;
+p.new__post {
+	padding: 30px 0 0 20px;
+}
+
+.header__usernav--loggedin, .header__usernav--loggedout {
+	display:block;
+	padding: 30px 20px 0 0;
 }
 
 li.nav-item.dropdown {
