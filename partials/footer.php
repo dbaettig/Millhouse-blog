@@ -14,10 +14,12 @@
 			   <H4>Contact</H4>
 				<p>info@millhouse.com <br> 123-4567890 Wayway 2,<br><br> 12345 Place<br> COUNTRY</p>
 
-					<a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+					<a href="www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true" ></i><span class="sr-only">Twitter</span></a>
+					
 					<a href="https://www.facebook.com/groups/509879569361835/" target="_blank">
-					<i class="fa fa-facebook"></i></a>
-					<a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+					<i class="fa fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+					
+					<a href="www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
 
 			</li>
 
