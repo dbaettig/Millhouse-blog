@@ -18,7 +18,15 @@ require 'partials/database.php';
 				$month = date_format($month_year, 'F');
 				$year = date_format($month_year, 'Y');
 			?>
+			<div class="sort">
+				
+				<a class="button button_turquoise" href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=DESC">Newest first</a>
+				<a class="button button_turquoise" href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=ASC">Oldest first</a>
+				
+				<br/><br/><br/>
+			</div>
 			
+			</a>
 			
 			<ul>
 			<?php
@@ -37,6 +45,7 @@ require 'partials/database.php';
 					</li>
 				<?php } //close foreach 
 				?> 
+				
 			</ul>
 		</div>
 
