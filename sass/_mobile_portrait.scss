@@ -811,3 +811,7 @@ footer {
 .pagination {
 	float: right;
 }
+
+.page-link:hover {
+	color:$categoryFontColor;
+}
