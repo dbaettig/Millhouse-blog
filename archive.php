@@ -20,13 +20,16 @@ require 'partials/database.php';
 			?>
 			<div class="sort">
 				
-				<a class="button button_turquoise" href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=DESC">Newest first</a>
-				<a class="button button_turquoise" href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=ASC">Oldest first</a>
-				
+				<a  class="button button_turquoise <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'DESC')) { echo 'sort_active'; } ?>" 
+					href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=DESC">
+						Newest first
+				</a>
+				<a  class="button button_turquoise <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'ASC')) { echo 'sort_active'; } ?>" 
+					href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=ASC">
+						Oldest first
+				</a>
 				<br/><br/><br/>
 			</div>
-			
-			</a>
 			
 			<ul>
 			<?php
