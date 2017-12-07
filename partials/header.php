@@ -19,7 +19,7 @@
 				<?php } 
 		else { ?>
 				<p class="header__usernav--loggedout">
-					<a href="../login.php">Log in </a>
+					<a href="../login.php">Log in</a>
 					<a class="button_large button_turquoise button" href="../register.php">Sign up</a>
 				</p>
 			</div>
