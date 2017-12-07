@@ -162,6 +162,10 @@ h5 {
 
 /* HEADER */
 
+div.login_signup--tablet {
+	display:none;
+}
+
 .header__inner {
 	display: flex;
 	justify-content: space-between;
