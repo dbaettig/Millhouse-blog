@@ -58,7 +58,7 @@ require 'partials/head.php';
 							
 							<input class="input_commentEmail" id="email"  type="text" name="email" placeholder="Email" required><br/>
 							
-							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Post">
+							<input class="comment_submit button_large button_turquoise button" type="submit" name="submit" value="Comment">
 							
 						</form>
 						
@@ -77,7 +77,7 @@ require 'partials/head.php';
 							
 							<input type="hidden" name="email" value=" <?=$_SESSION['user']['email']?>">
 
-							<input class="comment_submit button_large button_turquoise button" class="comment_submit" type="submit" name="submit" value="Post">
+							<input class="comment_submit button_large button_turquoise button" class="comment_submit" type="submit" name="submit" value="Comment">
 
 						</form>
 					<?php }	?>
