@@ -19,12 +19,12 @@ require 'partials/database.php';
 				$year = date_format($month_year, 'Y');
 			?>
 			<div class="sort">
-				
-				<a  class="button button_turquoise <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'DESC')) { echo 'sort_active'; } ?>" 
+				<!-- add the class sort_active if the button is pushed -->
+				<a  class="button button_grey sort <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'DESC')) { echo 'sort_active'; } ?>" 
 					href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=DESC">
 						Newest first
 				</a>
-				<a  class="button button_turquoise <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'ASC')) { echo 'sort_active'; } ?>" 
+				<a  class="button button_grey sort <?php if(isset($_GET['orderby']) && ($_GET['orderby'] == 'ASC')) { echo 'sort_active'; } ?>" 
 					href="archive.php?month=<?= urlencode($_GET['month']) ?>&orderby=ASC">
 						Oldest first
 				</a>

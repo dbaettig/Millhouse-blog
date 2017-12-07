@@ -149,7 +149,7 @@ h5 {
 }
 
 .button_grey {
-	background: $footerFontColor;
+	background: $brandColor3;
 }
 
 .button_grey:hover {
@@ -158,6 +158,15 @@ h5 {
 
 .edit_buttons {
 	margin: 1em 0;
+}
+
+.sort {
+	.sort:first-child {
+		margin-right:10px;
+	}
+	.sort_active {
+		background: $linksFontColor;
+	}
 }
 
 /* HEADER */
@@ -792,7 +801,7 @@ footer {
     padding: 6px 12px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: $categoryFontColor;
+    color: #5d7e93;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
