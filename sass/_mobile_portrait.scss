@@ -283,8 +283,9 @@ div.dropdown-menu.show {
 	font-size: 1rem;
 	border-radius: $borderRadiusSmall;
 	margin-bottom: 25px;
-	border: solid 2px rgba(255, 255, 255, 0.5);
+	border: 2px solid rgba(255, 255, 255, 0.5);
 	padding: 3%;
+	font-weight:700;
 }
 
 .button_login,
@@ -505,9 +506,36 @@ textarea,
 input {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.1);
-	margin: 15px 0px; //border: solid 2px rgba(0, 0, 0, 0.5);
+	margin: 15px 0px; 
 	border-radius: $borderRadiusSmall;
 	padding: 3% 2%;
+}
+
+.textarea_comment, 
+.input_commentName, 
+.input_commentEmail {
+	border:2px solid $footerFontColor;
+	font-weight:500;
+}
+
+.input_comment {
+	line-height: 1;
+	background-color: white;
+}
+
+.textarea_comment {
+	background-color: white;
+}
+
+.input_commentName, 
+.input_commentEmail {
+	height: 40px;
+	width: 48%;
+	background-color: white;
+}
+
+.input_commentEmail {
+	float: right;
 }
 
 .comment_submit {
@@ -517,29 +545,6 @@ input {
 	padding: 10px 20px; 
 }
 
-.input_comment {
-	line-height: 1;
-	background-color: white;
-}
-
-.input_commentName {
-	line-height: 1;
-	height: 40px;
-	width: 48%;
-	background-color: white;
-}
-
-.input_commentEmail {
-	line-height: 1;
-	height: 40px;
-	width: 48%;
-	float: right;
-	background-color: white;
-}
-
-.textarea_comment {
-	background-color: white;
-}
 
 .fa-circle:before {
 	font-size: 0.3em;
