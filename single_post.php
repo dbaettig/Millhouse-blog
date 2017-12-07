@@ -18,7 +18,7 @@ require 'partials/head.php';
 						<?=$blogpost['title']?>
 					</h1>
 					<figure class="blogpost__image">
-						<img class="index_image" src="<?= $blogpost['image']?>" alt="<?= $blogpost['alt_text']?>">
+						<img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
 					</figure>
 					<small class="center">
 					By <?=  $blogpost['username'] ?> <i class="fa fa-circle" aria-hidden="true"></i>  in
