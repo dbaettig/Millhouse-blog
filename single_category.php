@@ -30,7 +30,7 @@ require 'logic/single_category_db.php';
                     <article class="categoryblogpost">
 
                         <figure class="categoryblogpost__image">
-                            <img src="<?= $blogpost['image'] ?>" alt="Blogpost image.">
+                           <img class="index_image" src="<?= $blogpost['image']?>" alt="<?= $blogpost['alt_text']?>">
                         </figure>
 
                         <div class="categoryblogpost__text">

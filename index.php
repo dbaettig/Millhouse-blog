@@ -27,7 +27,7 @@ require 'logic/functions.php';
 <?php foreach($blog as $blogpost) { ?>
 		<article class="blogpost index">
 			<figure class="blogpost__image">
-				<img class="index_image" src="<?= $blogpost['image'] ?>" alt="Blogpost image">
+				<img class="index_image" src="<?= $blogpost['image']?>" alt="<?= $blogpost['alt_text']?>">
 			</figure>
 
 			<div class="blogpost__text">

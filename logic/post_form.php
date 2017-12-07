@@ -12,8 +12,8 @@ require("../partials/database.php");
 require 'resize_image.php';
 
 $new_post = $pdo->prepare(
-	"INSERT INTO posts (userID, title, post, image, created, category)
-	VALUES (:userID, :title, :post, :image, NOW(), :category)"
+	"INSERT INTO posts (userID, title, post, image, created, category, alt_text)
+	VALUES (:userID, :title, :post, :image, NOW(), :category, :alt_text)"
 );
 
 $new_post->execute(array(
@@ -21,7 +21,8 @@ $new_post->execute(array(
 	":title" => $_POST['title'],
 	":post" => $_POST['text'],
 	":image" => "resized/" . $filename,
-	":category" => $_POST['category']
+	":category" => $_POST['category'],
+    ":alt_text" => $_POST['alt_text']
 ));
 
 $get_newID = $pdo->prepare(

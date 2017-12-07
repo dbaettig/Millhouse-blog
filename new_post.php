@@ -19,6 +19,7 @@ require 'partials/head.php';
             <label for="editor" class="doNotShow">Write your post here</label><textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
             
             <input class="input_newpost" type="file" name="uploaded_file"><small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br/>
+            <input class ="image_text" type="text" name="alt_text" placeholder="image description">
 
 			<h4>Choose category</h4>
 				<div class="buttons">
