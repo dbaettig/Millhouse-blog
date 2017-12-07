@@ -3,10 +3,11 @@ require 'partials/session.php';
 require 'partials/database.php';
 require 'partials/head.php';
 require 'logic/index_db.php';
+require 'logic/functions.php';
 
 ?>
 
-   <body id="index">
+   <body id="blog">
      <?php require 'partials/header.php'; ?>
         <main>
             <div class="wrapper">
@@ -51,7 +52,7 @@ require 'logic/index_db.php';
 							 } ?> 
 					</small>
 
-					<?php include 'partials/edit_buttons.php'?>
+					<?php include 'partials/edit_buttons.php';?>
 				</div>
 				<div class="blogpost__text--bodytext">
 					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</span></a></p>
@@ -59,8 +60,18 @@ require 'logic/index_db.php';
 				</div>
 			</div>
 		</article>
-	<?php } ?>
+	<?php } ?>	
    </div><!-- close .posts -->
+
+	   <div class="pagination">  
+	    <?php
+	        $total_records = postamount();
+	        require 'logic/pagination_db.php';
+	    ?> 
+	    </div>
+
+	    <div class="clear"></div> 
+
 </div><!--wrapper-->
 
 <?php

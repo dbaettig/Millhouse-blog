@@ -17,9 +17,10 @@ if (isset ($_GET["style"])){
     WHERE category = 'style'");
     $statement->execute();
     $blog = $statement ->fetchALL(PDO::FETCH_ASSOC);
+
     
 }
-
+ 
 if (isset ($_GET["interior"])){
     
     $statement = $pdo->prepare("SELECT * FROM posts INNER JOIN users ON posts.userID = users.id
