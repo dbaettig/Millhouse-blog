@@ -2,8 +2,6 @@
 
 if( isset($_GET['orderby']) &&  $_GET['orderby'] == 'ASC') {
 	
-		var_dump($_GET['orderby']);
-	
 		$statement = $pdo->prepare("
 			SELECT postID, title, post, category, created
 			FROM posts
