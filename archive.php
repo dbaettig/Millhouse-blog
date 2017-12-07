@@ -23,7 +23,7 @@ require 'partials/database.php';
 			<ul>
 			<?php
 				$statement = $pdo->prepare("
-				SELECT postID, title, post, created
+				SELECT postID, title, post, category, created
 				FROM posts
 				WHERE monthname(created) = :month AND year(created) = :year
 				ORDER BY created DESC
@@ -41,7 +41,12 @@ require 'partials/database.php';
 						<a href="single_post.php?postID=<?= $post_single_month['postID'] ?>">
 							<?= $post_single_month['title'] ?>
 						</a>
-						<small><?= $post_single_month['created'] ?></small><br/>
+						<small>
+						in <a href="single_category.php?<?= $post_single_month['category'] ?>">
+								<?= $post_single_month['category'] ?>
+							</a>
+							<i class="fa fa-circle" aria-hidden="true"></i>
+							<?= $post_single_month['created'] ?></small><br/>
 					</li>
 				<?php } //close foreach 
 				?> 
