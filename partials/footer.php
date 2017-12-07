@@ -21,8 +21,11 @@
 
 			</li>
 
-			<li class="footer-inner__info shop">
-				<H4>Shop</H4>
+			<li class="footer-inner__info archive">
+				<H4>Archive</H4>
+<!--				<a href="archive.php">November 2017</a>-->
+				<?php require 'logic/archive_monthlist_db.php'; ?>
+				<?php require 'partials/archive_monthlist.php'; ?>
 			</li>
 	   </ul>
 	</div>
