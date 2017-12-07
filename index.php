@@ -56,7 +56,7 @@ require 'logic/functions.php';
 				</div>
 				<div class="blogpost__text--bodytext">
 					<p><?= substr($blogpost['post'],0,200) . "... " ; ?><a href="single_post.php?postID=<?= $blogpost['postID'] ?>"><span class="readmore">Read more</span></a></p>
-					<p class="comment_link right"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment </a><i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+					<p class="comment_link right"><a href="single_post.php?postID=<?= $blogpost['postID'] ?>">Comment <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
 				</div>
 			</div>
 		</article>
