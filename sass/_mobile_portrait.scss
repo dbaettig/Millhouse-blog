@@ -167,8 +167,8 @@ h5 {
 
 /* HEADER */
 
-.header__usernav--loggedin, .header__usernav--loggedout {
-	display:none;
+div.header__usernav--loggedin, div.header__usernav--loggedout {
+	display: none;
 }
 
 .header__inner {
@@ -190,26 +190,6 @@ h5 {
 }
 }
 
-.header__usernav--loggedin,
-.header__usernav--loggedout {
-	text-align: right;
-	a:nth-child(1) {
-		font-weight: 700;
-	}
-
-	.button {
-		margin-left: .7em;
-	}
-}
-
-.header__usernav--loggedin a {
-	padding: 0px;
-}
-
-.header__usernav {
-	display: none;
-}
-
 
 .navbar-brand.mobile {
 	display: none;
@@ -217,6 +197,10 @@ h5 {
 
 div.dropdown-menu.show {
 	background-color: $footerFontColor;
+}
+
+.mobile__usernav--loggedin, .mobile__usernav--loggedout {
+	text-align: right;
 }
 
 /* LOGIN/REGISTER */
