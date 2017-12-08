@@ -32,7 +32,8 @@ $borderRadiusLarge:15px;
 
 //FLEX
 .flex {
+	display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+	display: -webkit-flex;
 }
