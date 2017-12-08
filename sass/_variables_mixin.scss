@@ -58,6 +58,18 @@ $borderRadiusLarge:15px;
 	justify-content: center;
 }
 
+.content_between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.content_end {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	@extend .content_end
+}
+
 .wrap {
 	-webkit-box-flex: wrap;
 	-ms-flex: wrap;

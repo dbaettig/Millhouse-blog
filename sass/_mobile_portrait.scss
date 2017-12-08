@@ -173,7 +173,7 @@ div.header__usernav--loggedin, div.header__usernav--loggedout {
 
 .header__inner {
 	@extend .flex;
-	justify-content: space-between;
+	@extend .content_between;
 	padding: 15px;
 	.icon {
 		height: 100%;
@@ -349,7 +349,7 @@ div.dropdown-menu.show {
 	@extend .flex;
 	@extend .direction_column;
 	margin-top: 1.5em;
-	justify-content: space-between;
+	@extend .content_between;
 
 	.blogpost__text--meta {
 		flex-basis: 40%;

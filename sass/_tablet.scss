@@ -19,7 +19,7 @@
     width:80%;
     }
 	.blogpost__text {
-	flex-direction: row;
+	@extend .direction:row;
 		.blogpost__text--bodytext {
 			padding: 0 0 0 2rem;
 			p {
@@ -78,7 +78,7 @@
 }
 
 .buttons {
-	flex-direction: row;
+	@extend .direction:row;
 	margin-top: 20px;
 }
 
@@ -92,8 +92,8 @@
 
 .categorywrapper{
     max-width:$contentWidth;
-    display:flex;
-    flex-wrap:wrap;
+    @extend .flex;
+    @extend .wrap;
 }
 
 .categoryblogpost{
@@ -124,11 +124,11 @@
  /*PROFILE*/
 
 .profileheader {
-    display:flex;
+    @extend .flex;
     width: 100%;
     padding-top: 0px;
-    flex-direction: row;
-    //flex-wrap:wrap;
+    @extend .direction:row;
+    //@extend .wrap;
 }
 
 .profileheader__image {
@@ -138,10 +138,10 @@
 }
 
 .profileheader__info {
-    display: flex;
+    @extend .flex;
 	flex:1;
     width: 50%;
-    flex-direction: column;
+    @extend .direction_column
 }
 
 .profileheader__info--name h1{
@@ -162,10 +162,10 @@
 }
 
 .latestInfo{
-    display:flex;
+    @extend .flex
     width: 100%;
     margin-top:4em;
-    flex-direction: row;
+    @extend .direction:row;
 	div {
 		padding:2em 2.5em;
 	}
@@ -194,10 +194,10 @@
 	margin:0 auto;
 	padding-bottom:12em;
 	ul {
-		flex-direction:row;
+		@extend .direction_row;
 	}
 	.footer-inner__info {
 		flex-basis: 33%;
-		justify-content: space-between;
+		@extend .content_between;
 	}
 }
