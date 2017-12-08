@@ -77,6 +77,10 @@
     height: 40px;
 }
 
+.image_upload {
+	display: flex;
+}
+
 .buttons {
 	flex-direction: row;
 	margin-top: 20px;
@@ -138,7 +142,7 @@
 }
 
 .profileheader__info {
-    display: flex;
+    @extend .flex;
 	flex:1;
     width: 50%;
     flex-direction: column;

@@ -18,27 +18,31 @@ require 'partials/head.php';
             
             <label for="editor" class="doNotShow">Write your post here</label><textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
             
-            <input class="input_newpost" type="file" name="uploaded_file"><small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small><br/>
-            <input class ="image_text" type="text" name="alt_text" placeholder="image description">
+            <div class="image_upload">
+				<div class="image_upload">
+					<input class="input_newpost" type="file" name="uploaded_file">
+					<small style="text-align:left;">JPEG, Recommended file size 1000px x 564px.</small>
+				</div>
+           		<input class ="image_text" type="text" name="alt_text" placeholder="image description" required>
+			</div>
+			
+			<div class="buttons">
+					<h4>Choose category</h4>
+				<div class="select_button">
+					<select class="select" name="category">
+						<option value="news">News</option>
+						<option value="style">Style</option>
+						<option value="interior">Interior</option>
+						<option value="featured">Featured</option>
+				  	</select>
+				</div> <!-- .select_buttons -->
 
-			<h4>Choose category</h4>
-				<div class="buttons">
-				
-					<div class="select_button">
-					  <select class="select" name="category">
-						 <option value="news">News</option>
-						 <option value="style">Style</option>
-						 <option value="interior">Interior</option>
-						 <option value="featured">Featured</option>
-					  </select>
-					</div> <!-- .select_buttons -->
-
-				  <div class="publish_button">
-					 <input class="input_newpost" type="submit" name="submit" value="Publish">
-				  </div>
-				</div> <!-- .buttons -->
-			</form>
-		</div> <!-- .container -->
-	</div> <!-- .wrapper -->
+			  <div class="publish_button">
+				 <input class="input_newpost" type="submit" name="submit" value="Publish">
+			  </div>
+			</div> <!-- .buttons -->
+		</form>
+	</div> <!-- .container -->
+</div> <!-- .wrapper -->
 
 <?php require 'partials/footer.php'; ?>

@@ -175,9 +175,14 @@ input {
 }
 
 input[type='text'],
-select {
+select,
+textarea {
 	border:2px solid $footerFontColor;
-	background:#fff;
+	background: #fff;
+}
+
+textarea {
+	width:100%;
 }
 
 input[type='submit'] {
@@ -394,7 +399,7 @@ div.dropdown-menu.show {
 	a {
 		color: $linksFontColor;
 		font-family: $categoryFont;
-		font-weight: 700; //	font-size:1.2em;
+		font-weight: 700; 
 	}
 	.fa {
 		color: $linksFontColor;
@@ -403,7 +408,7 @@ div.dropdown-menu.show {
 
 .blogpost.index {
 	small {
-		margin: 2em auto 1.5em;
+		margin: 2em auto 1.8em;
 	}
 }
 
@@ -451,8 +456,7 @@ div.dropdown-menu.show {
 //	color: black;
 //}
 
-.input_title,
-input[type='file']{
+.input_title {
 	width: 100%;
 	padding: 3% 2%;
 }

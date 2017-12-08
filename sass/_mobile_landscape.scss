@@ -1,9 +1,5 @@
 /* HEADER */
 
-div.header__usernav {
-	display: block;
-}
-
 div.mobile_post_button p.nav-item.new__post{
 	display: none;
 }
@@ -24,35 +20,26 @@ div.mobile_post_button p.nav-item.new__post{
 		img.logo {
 			display: block;
 			height: 100%;
-
 		}
-		.icon {
+		.icon { 
 			display: none;
 		}
 	}
 }
 
-p.header__usernav--loggedin {
-	display: inline-block;
-}
 
-p.header__usernav--loggedin, p.header__usernav--loggedout {
-	padding: 30px 20px 0 0;
-	text-align: right;
-	a:nth-child(1) {
-		font-weight: 700;
-	}
-
-	.button {
-		margin-left: .7em;
-	}
-}
-
-
-
-div.header__usernav--loggedin {
+.header__usernav {
+	//padding: 1.5rem 1.5rem 0;
 	display: flex;
 	justify-content: space-between;
+}
+
+.header__usernav--loggedin a,
+.header__usernav--loggedout a {
+	font-size: 1.2em;
+}
+
+.header__usernav--loggedin {
 	a:nth-child(1) {
 		font-weight: 700;
 		margin-right: 14px;
@@ -62,25 +49,18 @@ div.header__usernav--loggedin {
 	}
 }
 
-div.header__usernav--loggedout {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.header__usernav--loggedin a,
-.header__usernav--loggedout a {
-	font-size: 1.2em;
-}
-
 .login_signup {
 	display: none;
 }
 
 p.new__post {
-	display: inline-block;
 	padding: 30px 0 0 20px;
 }
 
+.header__usernav--loggedin, .header__usernav--loggedout {
+	display:block;
+	padding: 30px 20px 0 0;
+}
 
 li.nav-item.dropdown {
 	display: none;
