@@ -36,6 +36,7 @@ require 'partials/head.php';
 				</article>
 			<?php } ?>
 			<br/>
+			
 				<section class="comments_wrapper_container">
 
 					<h3 class="comments_header">Comments</h3>

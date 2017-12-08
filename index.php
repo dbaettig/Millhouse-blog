@@ -66,7 +66,7 @@ require 'logic/functions.php';
 	   <div class="pagination">  
 	    <?php
 	        $total_records = postamount();
-	        require 'logic/pagination_db.php';
+	        require 'partials/pagination.php';
 	    ?> 
 	    </div>
 
