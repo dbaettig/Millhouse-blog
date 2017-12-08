@@ -17,8 +17,7 @@ require 'partials/head.php';
             <label for="title" class="doNotShow">Title</label><input class="input_title" id="title" type="text" name="title" placeholder="title"> <br/>
             
             <label for="editor" class="doNotShow">Write your post here</label><textarea class="textarea" name="text" id="editor" placeholder="Write your post..." rows="30"></textarea> <br/>
-            
-<<<<<<< HEAD
+
             <div class="image_upload">
 				<div class="image_upload">
 					<input class="input_newpost" type="file" name="uploaded_file">

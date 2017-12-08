@@ -19,7 +19,7 @@
     width:80%;
     }
 	.blogpost__text {
-	@extend .direction:row;
+	@include direction_row();
 		.blogpost__text--bodytext {
 			padding: 0 0 0 2rem;
 			p {
@@ -82,7 +82,7 @@
 }
 
 .buttons {
-	@extend .direction:row;
+	@include direction_row();
 	margin-top: 20px;
 }
 
@@ -96,8 +96,8 @@
 
 .categorywrapper{
     max-width:$contentWidth;
-    @extend .flex;
-    @extend .wrap;
+    @include flex();
+    @include wrap();
 }
 
 .categoryblogpost{
@@ -128,11 +128,11 @@
  /*PROFILE*/
 
 .profileheader {
-    @extend .flex;
+    @include flex();
     width: 100%;
     padding-top: 0px;
-    @extend .direction:row;
-    //@extend .wrap;
+    @include direction_row();
+    //@include wrap();
 }
 
 .profileheader__image {
@@ -142,10 +142,10 @@
 }
 
 .profileheader__info {
-    @extend .flex;
+    @include flex();
 	flex:1;
     width: 50%;
-    @extend .direction_column
+    @include direction_column()
 }
 
 .profileheader__info--name h1{
@@ -166,10 +166,10 @@
 }
 
 .latestInfo{
-    @extend .flex
+    @include flex();
     width: 100%;
     margin-top:4em;
-    @extend .direction:row;
+    @include direction_row();
 	div {
 		padding:2em 2.5em;
 	}
@@ -198,10 +198,10 @@
 	margin:0 auto;
 	padding-bottom:12em;
 	ul {
-		@extend .direction_row;
+		@include direction_row();
 	}
 	.footer-inner__info {
 		flex-basis: 33%;
-		@extend .content_between;
+		@include content_between();
 	}
 }
