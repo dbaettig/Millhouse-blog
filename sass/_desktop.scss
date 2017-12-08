@@ -20,7 +20,7 @@
 }
 
 .latestInfo{
-    flex-direction: row;
+    @extend .direction:row;
 	div {
 		padding:2.5em 3em 3em;
 	}

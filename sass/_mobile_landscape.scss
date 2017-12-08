@@ -7,12 +7,12 @@ div.mobile_post_button p.nav-item.new__post{
 .navbar-nav {
 	width: 40%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
+	@extend .flex;
+	@extend .content_between;
 }
 
 .header__inner {
-	justify-content: center;
+	@extend .content_center;
 	height: 25vh;
 	a {
 		margin: 10px auto;
@@ -39,7 +39,14 @@ div.mobile_post_button p.nav-item.new__post{
 	font-size: 1.2em;
 }
 
+<<<<<<< HEAD
 .header__usernav--loggedin {
+=======
+
+div.header__usernav--loggedin {
+	@extend .flex;
+	@extend .content_between;
+>>>>>>> fa69a13b5f1bd4340629e220bb1486a9916b3529
 	a:nth-child(1) {
 		font-weight: 700;
 		margin-right: 14px;
@@ -49,6 +56,19 @@ div.mobile_post_button p.nav-item.new__post{
 	}
 }
 
+<<<<<<< HEAD
+=======
+div.header__usernav--loggedout {
+	@extend .flex;
+	@extend .content_end
+}
+
+.header__usernav--loggedin a,
+.header__usernav--loggedout a {
+	font-size: 1.2em;
+}
+
+>>>>>>> fa69a13b5f1bd4340629e220bb1486a9916b3529
 .login_signup {
 	display: none;
 }
@@ -69,8 +89,8 @@ li.nav-item.dropdown {
 /*CATEGORIES*/
 
 .categorymenu {
-	display: flex;
-	justify-content: center;
+	@extend .flex;
+	@extend .content_center;
 	margin: 10px;
 	li {
 		list-style-type: none;
