@@ -36,7 +36,6 @@ $borderRadiusLarge:15px;
     display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-<<<<<<< HEAD
 	display: -webkit-flex;
 }
 
@@ -59,14 +58,27 @@ $borderRadiusLarge:15px;
 	flex-wrap: wrap;
 }
 
+
 .content_center {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 }
-=======
-    display: -webkit-flex;
-    
+
+.content_between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
->>>>>>> 01c67cb58b66b8c3971c9cb67e3930fbcff11c11
+.content_end {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	@extend .content_end
+}
+
+.wrap {
+	-webkit-box-flex: wrap;
+	-ms-flex: wrap;
+	flex: wrap;
+}
