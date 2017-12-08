@@ -189,7 +189,10 @@ input[type='submit'] {
 	border:none;
 }
 
-
+input[type='file'] {
+	padding:3%;
+	background:$footerFontColor;
+}
 
 /* HEADER */
 
@@ -235,17 +238,10 @@ div.dropdown-menu.show {
 	background-image: url("../img/millhouse-accessories.jpg");
 	background-position: center center;
 	background-size: cover;
-<<<<<<< HEAD
-	@extend .flex;
-	@extend .direction_column;
-	align-items: center;
-	@extend .content_center;
-=======
 	@include flex();
 	@include direction_column();
 	@include items_center();
 	@include content_center();
->>>>>>> 26921eb75661525dc5d26a652632d48bfc616268
 	width: 100%;
 	height: 90vh;
 	text-align: center;
@@ -299,7 +295,7 @@ div.dropdown-menu.show {
 .input__login,
 .input__register {
 	background-color: rgba(255, 255, 255, 0.7);
-	height: 50px;
+	//height: 50px;
 	width: 90%;
 	color: #000;
 	font-size: 1rem;
@@ -454,10 +450,10 @@ div.dropdown-menu.show {
 	height: 250px;
 }
 
-.input_newpost,
-.ck-toolbar {
-	background-color: #a6c9c6;
-}
+//.input_newpost,
+//.ck-toolbar {
+	//background-color: #a6c9c6;
+//}
 //
 //.input_newpost {
 //	color: black;
@@ -468,13 +464,13 @@ div.dropdown-menu.show {
 	padding: 3% 2%;
 }
 
-//.input_title::placeholder {
-//	color: black;
-//}
-
 .buttons {
 	@include flex();
 	@include direction_column();
+	
+	select, .input_newpost {
+		width:100%;
+	}
 }
 
 .select_button {
@@ -482,12 +478,19 @@ div.dropdown-menu.show {
 }
 
 .publish_button {
-	flex: 1;
 	.input_newpost {
 		margin-top: 30px;
 	}
 }
 
+.image_upload {
+	input {
+		width:100%;
+	}
+	.image_text {
+		height:52px;
+	}
+}
 
 /*SINGLE POST*/
 
@@ -521,35 +524,6 @@ div.dropdown-menu.show {
 	width: 100%;
 	margin: auto;
 }
-
-
-//input[type='text'],
-//select {
-//	
-//}
-
-//.select {
-//	border-radius: $borderRadiusSmall;
-//	padding: 10px;
-//	border: solid 2px rgba(0, 0, 0, 0.5);
-//	width: 100%;
-//}
-
-//.textarea_comment, 
-//.input_commentName, 
-//.input_commentEmail {
-//	border:2px solid $footerFontColor;
-//	font-weight:500;
-//}
-
-//.input_comment {
-//	line-height: 1;
-//	background-color: white;
-//}
-
-//.textarea_comment {
-//	background-color: white;
-//}
 
 .input_commentName, 
 .input_commentEmail {
@@ -652,6 +626,7 @@ h5 {
 		input {
 			font-size: .8em;
 			padding: 11px;
+			width:50%;
 		}
 		.input_upload {
 			margin-right: 10px;
