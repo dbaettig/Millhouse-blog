@@ -26,9 +26,7 @@ require 'partials/head.php';
 						<?php foreach($comments_toPosts as $comment) { ?> <?= $comment ?> <?php } ?> comments
 					</small>
 					<div class="blogpost__bodytext">
-						<p>
-							<?= $blogpost['post'] ?>
-						</p>
+						<?= $blogpost['post'] ?>
 					</div><br/><br/>
 					
 					<?php include 'partials/edit_buttons.php';?>
@@ -36,7 +34,7 @@ require 'partials/head.php';
 				</article>
 			<?php } ?>
 			<br/>
-			
+
 				<section class="comments_wrapper_container">
 
 					<h3 class="comments_header">Comments</h3>
@@ -46,7 +44,7 @@ require 'partials/head.php';
 						<form class="input_comment comment_form" action="logic/comment_form.php" method="POST">
 						
 							<label for="comment" class="doNotShow">Write a comment</label>
-							<textarea class="textarea_comment" name="comment" placeholder="Write your comment..." rows="6" required></textarea>
+							<textarea class="textarea_comment" name="comment" id="comment" placeholder="Write your comment..." rows="6" required></textarea>
 							
 							<input class="input_comment" type="hidden" name="postID" value=" <?=$_GET['postID']?>">
 							
