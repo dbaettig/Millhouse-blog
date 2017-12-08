@@ -74,7 +74,7 @@ $borderRadiusLarge:15px;
 @mixin wrap() {
 	-webkit-box-flex: wrap;
 	-ms-flex: wrap;
-	flex: wrap;
+	flex-wrap: wrap;
 }
 
 @mixin items_center {

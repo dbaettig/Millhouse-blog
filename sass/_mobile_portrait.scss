@@ -235,10 +235,17 @@ div.dropdown-menu.show {
 	background-image: url("../img/millhouse-accessories.jpg");
 	background-position: center center;
 	background-size: cover;
+<<<<<<< HEAD
+	@extend .flex;
+	@extend .direction_column;
+	align-items: center;
+	@extend .content_center;
+=======
 	@include flex();
 	@include direction_column();
 	@include items_center();
 	@include content_center();
+>>>>>>> 26921eb75661525dc5d26a652632d48bfc616268
 	width: 100%;
 	height: 90vh;
 	text-align: center;
