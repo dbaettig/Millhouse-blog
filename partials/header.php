@@ -16,15 +16,18 @@
 					<a href="../profile.php">My profile</a>
 					<a href="../logic/logout.php">Sign out</a>
 				</p>
-				<?php } 
+			</div> <!-- .header__usernav -->	
+			<?php } 
+
 		else { ?>
+			<div class="header__usernav">
 				<p class="header__usernav--loggedout">
 					<a href="../login.php">Log in</a>
 					<a class="button_large button_turquoise button" href="../register.php">Sign up</a>
 				</p>
-			</div>
+			</div> <!-- .header__usernav -->
 			<?php } ?>
-	</div>
+	</div> <!-- .login_signup--tablet -->
 
 	<div class="header__inner">
 		<a href="../index.php">
