@@ -11,7 +11,7 @@ require "partials/database.php";
     
 
        /*Fetch five latest posts*/
-       $statement2 = $pdo->prepare("SELECT title, post, created 
+       $statement2 = $pdo->prepare("SELECT title, post, created, postID
 	   FROM posts
 	   INNER JOIN users ON posts.userID = users.id
 	   WHERE userID = :userID 
