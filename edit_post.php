@@ -33,15 +33,11 @@ foreach($single_post as $blogpost) { ?>
             
           <!--<button class="uploadFileButton">Select File</button> -->
           <small class="left">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
-<<<<<<< HEAD
+
            <input class ="image_text" type="text" name="alt_text" 
-           value="<?= $blogpost['alt_text']; ?>" placeholder="image description">
-          
-=======
-           <input class ="image_text" type="text" name="alt_text" value="<?= $blogpost['alt_text']; ?>">
+           value="<?= $blogpost['alt_text']; ?>" placeholder="image description" required>
            
           <h4>Choose category</h4>
->>>>>>> 01c67cb58b66b8c3971c9cb67e3930fbcff11c11
           <div class="buttons">
              <div class="select_button">
               <select class="select" name="category">
