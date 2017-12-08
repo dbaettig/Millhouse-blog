@@ -18,7 +18,7 @@ $footerFontColor: #d3d0d1; //light gray
 $categoryFontColor: #577487; // medium blue
 $postRelatedColor: #c1b3ad; //warm gray
 $linksFontColor: #4e7176; // dark turqoise
-$bgAccentColor: #d3d0d170; //light light grey
+$bgAccentColor: #d3d0d1; //light light grey
 
 //LAYOUT
 $contentWidth: 980px;
@@ -29,4 +29,12 @@ $responsiveHeight: 56.25%; //6:9 aspect ratio
 //BORDER RADIUSES
 $borderRadiusSmall: 5px;
 $borderRadiusLarge:15px;
+
+
+//FLEX
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 
