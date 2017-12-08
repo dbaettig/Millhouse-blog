@@ -1,7 +1,7 @@
 <?php 
 
 /*Fetch users posts*/
-$allposts = $pdo->prepare("SELECT title, post, created 
+$allposts = $pdo->prepare("SELECT title, post, created, postID
 	   FROM posts
 	   INNER JOIN users ON posts.userID = users.id
 	   WHERE userID = :userID 
