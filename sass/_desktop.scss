@@ -20,7 +20,7 @@
 }
 
 .latestInfo{
-    @extend .direction:row;
+    @include direction_row();
 	div {
 		padding:2.5em 3em 3em;
 	}
