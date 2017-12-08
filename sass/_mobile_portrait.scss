@@ -571,8 +571,8 @@ input {
 
 .profileheader {
 	@extend .flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	@extend .direction_column;
+	@extend .wrap;
 	width: 100%;
 	text-align: left;
 	padding-top: 20px;
@@ -592,7 +592,7 @@ h5 {
 	width: 100%;
 	margin: 0 auto;
 	@extend .flex;
-	justify-content: center;
+	@extend .content_center
 	img {
 		border-radius: $borderRadiusLarge;
 		box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.1);
@@ -628,13 +628,13 @@ h5 {
 
 .profileheader__info {
 	@extend .flex;
-	flex-direction: column;
+	@extend .direction_column;
 }
 
 .numberInfo {
 	@extend .flex;
-	flex-direction: row;
-	justify-content: center;
+	@extend .direction_row;
+	@extend .content_center;
 }
 
 .numberOfposts {
@@ -666,8 +666,8 @@ h5 {
 	@extend .flex;
 	width: 100%;
 	margin-top: 4em;
-	flex-direction: column;
-	flex-wrap: wrap; //	text-transform: capitalize;
+	@extend .direction_column;
+	@extend .wrap;
 	div {
 		padding: 1.5em 2em;
 		background: $brandColor1;
@@ -742,7 +742,8 @@ footer {
 		padding: 20px 15px;
 		@extend .flex;
 		@extend .flex;
-		flex-flow: column wrap;
+		@extend .direction_column;
+		@extend .wrap;
 		list-style: none;
 		justify-content: space-around;
 		font-size: .9em;
