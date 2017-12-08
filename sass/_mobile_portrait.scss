@@ -210,7 +210,7 @@ div.dropdown-menu.show {
 	background-position: center center;
 	background-size: cover;
 	@extend .flex;
-	@extend .direction_column
+	@extend .direction_column;
 	align-items: center;
 	@extend .content_center;
 	width: 100%;
