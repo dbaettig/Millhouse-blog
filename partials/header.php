@@ -1,6 +1,6 @@
 <header role="banner">
 	<!-- back to top anchor -->
-	<a name="top"></a>
+	<a id="top"></a>
 
 	<div class="login_signup--tablet">
 		<?php
@@ -17,8 +17,7 @@
 					<a href="../logic/logout.php">Sign out</a>
 				</p>
 			</div> <!-- .header__usernav -->	
-			<?php } 
-
+		<?php }   
 		else { ?>
 			<div class="header__usernav--loggedout">
 				<p class="header__usernav--loggedout">
