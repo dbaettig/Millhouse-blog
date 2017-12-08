@@ -28,15 +28,18 @@ foreach($single_post as $blogpost) { ?>
             <?= $blogpost['post']; ?>
           </textarea> <br/>
 
-          <label for="uploaded_file"><?= $blogpost['image']?></label>
-          <input class="uploadFileInput input_newpost" id="uploaded_file" type="file" name="uploaded_file">
-            
-          <!--<button class="uploadFileButton">Select File</button> -->
-          <small class="left">JPEG, Recommended file size 1000px x 564px.</small><br/><br/>
+    <label for="uploaded_file"><?= $blogpost['image']?></label>
+       <div class="image_upload">
+		   <div class="image_upload__inner">
+			  <input class="uploadFileInput input_newpost" id="uploaded_file" type="file" name="uploaded_file">
 
-           <input class ="image_text" type="text" name="alt_text" 
-           value="<?= $blogpost['alt_text']; ?>" placeholder="image description" required>
-           
+			  <small class="left">JPEG, Recommended file size 1000px x 564px.</small><br/>
+			</div><!-- .image_upload__inner -->
+
+		   <input class ="image_text" type="text" name="alt_text" 
+		   value="<?= $blogpost['alt_text']; ?>" placeholder="image description" required>
+		</div><!-- .image_upload -->
+         
           <h4>Choose category</h4>
           <div class="buttons">
              <div class="select_button">
@@ -50,14 +53,14 @@ foreach($single_post as $blogpost) { ?>
             </div> <!-- .select_button -->
 
             <div class="publish_button">
-              <input class="button button_large button_turquoise" type="submit" name="submit" value="Update">
+              <input class="input_newpost button button_large button_turquoise" type="submit" name="submit" value="Update">
             </div> <!-- .publish_button -->
 
           </div> <!-- .buttons -->
 
-			</form>
-		</div> <!-- .container -->
-	</div> <!-- .wrapper -->
+		</form>
+	</div> <!-- .container -->
+</div> <!-- .wrapper -->
     
 		<!--<script>
 			$('.uploadFileButton').on('click', function(){

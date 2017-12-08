@@ -39,12 +39,6 @@
 	margin-bottom: 1rem;
 }
 
-//.comment_submit {
-//    line-height:1;
-//    width:70%;
-//    max-width: 250px;
-//}
-
 /* COMMENTS */
 .comments_wrapper_container {
 	width:80%;
@@ -70,7 +64,11 @@
 }
 
 .select {
-    width: 70%;
+    width: 90%;
+}
+
+input {
+	margin:15px 0;
 }
 
 .input_title {
@@ -79,17 +77,35 @@
 
 .image_upload {
 	display: flex;
+	input {
+		flex:1;
+		@include content_between();
+	}
+	.image_upload__inner {
+		margin-right:10px;
+	}
 }
 
 .buttons {
 	@include direction_row();
 	margin-top: 20px;
-}
-
-.publish_button {
-	.input_newpost {
-		margin-top: 0px;
+	@include content_between();
+	
+	.select_button {
+		width:44%;
 	}
+	.publish_button {
+		width:55%;
+		input {
+			margin-top:0;
+			width:100%;
+		}
+	}
+}
+.publish_button,
+.input_newpost,
+.image_text {
+	margin:0;
 }
 
 /*CATEGORIES*/
