@@ -7,7 +7,7 @@
 		if(isset($_SESSION["user"])){ ?>
 
 			<!-- BUTTONS FOR SCREENS BIGGER THAN MOBILE -->
-			<div class="header__usernav">
+			<div class="header__usernav--loggedin">
 				<p class="new__post">
 					<a class="button_large button_turquoise button" href="../new_post.php">+ Create new post</a>
 				</p>
@@ -19,9 +19,9 @@
 			</div> <!-- .header__usernav -->	
 		<?php }   
 		else { ?>
-			<div class="header__usernav">
+			<div class="header__usernav--loggedout">
 				<p class="header__usernav--loggedout">
-					<a href="../login.php">Log in</a>
+					<a href="../login.php" class="button_large">Log in</a>
 					<a class="button_large button_turquoise button" href="../register.php">Sign up</a>
 				</p>
 			</div> <!-- .header__usernav -->
@@ -83,19 +83,19 @@
 		if(isset($_SESSION["user"])){ ?>
 
 							<li class="nav-item">
-								<a class="nav-link header__usernav--loggedin" href="profile.php">Profile page</a>
+								<a class="nav-link mobile__usernav--loggedin" href="profile.php">Profile page</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link header__usernav--loggedin" href="../logic/logout.php">Sign out</a>
+								<a class="nav-link mobile__usernav--loggedin" href="../logic/logout.php">Sign out</a>
 							</li>
 
 							<?php } else { ?>
 
 							<li class="nav-item">
-								<a class="nav-link header__usernav--loggedout" href="../login.php">Log in </a>
+								<a class="nav-link mobile__usernav--loggedout" href="../login.php">Log in </a>
 							</li>
 							<li>
-							<a class="nav-link header__usernav--loggedout" href="../register.php">Sign up</a>
+							<a class="nav-link mobile__usernav--loggedout" href="../register.php">Sign up</a>
 							</li>
 							<?php } ?>
 					</ul>
