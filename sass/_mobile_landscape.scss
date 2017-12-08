@@ -11,12 +11,12 @@ div.mobile_post_button p.nav-item.new__post{
 .navbar-nav {
 	width: 40%;
 	margin: 0 auto;
-	@extend .flex;
-	@extend .content_between;
+	@include flex();
+	@include content_between();
 }
 
 .header__inner {
-	@extend .content_center;
+	@include content_center();
 	height: 25vh;
 	a {
 		margin: 10px auto;
@@ -51,8 +51,8 @@ p.header__usernav--loggedin, p.header__usernav--loggedout {
 
 
 div.header__usernav--loggedin {
-	@extend .flex;
-	@extend .content_between;
+	@include flex();
+	@include content_between();
 	a:nth-child(1) {
 		font-weight: 700;
 		margin-right: 14px;
@@ -63,8 +63,8 @@ div.header__usernav--loggedin {
 }
 
 div.header__usernav--loggedout {
-	@extend .flex;
-	@extend .content_end
+	@include flex();
+	@include content_end();
 }
 
 .header__usernav--loggedin a,
@@ -89,8 +89,8 @@ li.nav-item.dropdown {
 /*CATEGORIES*/
 
 .categorymenu {
-	@extend .flex;
-	@extend .content_center;
+	@include flex();
+	@include content_center();
 	margin: 10px;
 	li {
 		list-style-type: none;

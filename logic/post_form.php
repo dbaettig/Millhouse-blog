@@ -2,8 +2,6 @@
 require '../partials/session.php';
 $message = urlencode("You need to write something in every field");
 
-/*Create a post*/
-
 if(empty($_POST["title"] || $_POST["text"])){    
     header("Location: ../new_post.php?message=".$message);
 } else {
