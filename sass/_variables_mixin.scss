@@ -30,11 +30,13 @@ $responsiveHeight: 56.25%; //6:9 aspect ratio
 $borderRadiusSmall: 5px;
 $borderRadiusLarge:15px;
 
+
 //FLEX
 .flex {
-	display: flex;
+    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+<<<<<<< HEAD
 	display: -webkit-flex;
 }
 
@@ -62,3 +64,9 @@ $borderRadiusLarge:15px;
 	-ms-flex-pack: center;
 	justify-content: center;
 }
+=======
+    display: -webkit-flex;
+    
+}
+
+>>>>>>> 01c67cb58b66b8c3971c9cb67e3930fbcff11c11
