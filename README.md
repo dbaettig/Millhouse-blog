@@ -1,4 +1,5 @@
-Blog for fictional company Millhouse
+# Blog for fictional company Millhouse
 
-HTML/CSS 
-PHP
+## HTML/CSS 
+## PHP
+
